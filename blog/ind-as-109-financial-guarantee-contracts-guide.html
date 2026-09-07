@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Financial Guarantee Contracts Under IND AS 109 — Intra-Group Guarantees Explained | Finosutra</title>
+<meta name="description" content="How IND AS 109 requires financial guarantee contracts to be recognised at fair value on Day 1 — including free intra-group guarantees, the 'higher of' subsequent measurement rule, ECL on guarantees, and a full worked example vs the old AS 29 contingent liability treatment."/>
+<meta name="keywords" content="financial guarantee contract IND AS 109, parent company guarantee subsidiary loan, intra group guarantee fair value, letter of comfort vs guarantee, guarantee ECL impairment, AS 29 contingent liability vs IND AS 109"/>
+<meta name="author" content="Finosutra"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://finosutra.com/blog/ind-as-109-financial-guarantee-contracts-guide.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Finosutra"/>
+<meta property="og:title" content="Financial Guarantee Contracts Under IND AS 109 — Intra-Group Guarantees Explained"/>
+<meta property="og:description" content="How IND AS 109 requires financial guarantee contracts to be recognised at fair value on Day 1, including free intra-group guarantees, the 'higher of' subsequent measurement rule, and ECL on guarantees."/>
+<meta property="og:url" content="https://finosutra.com/blog/ind-as-109-financial-guarantee-contracts-guide.html"/>
+<meta property="og:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Financial Guarantee Contracts Under IND AS 109 — Complete Guide"/>
+<meta name="twitter:description" content="Fair value recognition of intra-group guarantees, the 'higher of' rule, ECL, and a full worked example."/>
+<meta name="twitter:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="../finosutra.css?v=17"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2G710PHNQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z2G710PHNQ');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Financial Guarantee Contracts Under IND AS 109 — Intra-Group Guarantees Explained",
+  "description": "How IND AS 109 requires financial guarantee contracts to be recognised at fair value on Day 1 — including free intra-group guarantees, the 'higher of' subsequent measurement rule, ECL on guarantees, and a full worked example vs the old AS 29 contingent liability treatment.",
+  "author": {"@type": "Organization", "name": "Finosutra", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]},
+  "publisher": {"@type": "Organization", "name": "Finosutra", "url": "https://finosutra.com", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]},
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://finosutra.com/blog/ind-as-109-financial-guarantee-contracts-guide.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is a financial guarantee contract under IND AS 109?", "acceptedAnswer": {"@type": "Answer", "text": "A contract that requires the issuer to make specified payments to reimburse the holder for a loss it incurs because a specified debtor fails to make payment when due, in accordance with the original or modified terms of a debt instrument. The most common example in Indian corporate groups is a parent company guaranteeing a subsidiary's bank loan or other borrowing."}},
+    {"@type": "Question", "name": "Does a parent company need to charge a fee for a guarantee to have to recognise it?", "acceptedAnswer": {"@type": "Answer", "text": "No. IND AS 109 requires a financial guarantee contract to be recognised at fair value on initial recognition regardless of whether any consideration was received. This is exactly the situation with most intra-group guarantees, which are typically given for no fee — the absence of a fee doesn't mean the guarantee has no value; it just means the fair value has to be estimated rather than taken from the price paid."}},
+    {"@type": "Question", "name": "How is a financial guarantee's fair value estimated when it's given for free?", "acceptedAnswer": {"@type": "Answer", "text": "A common technique is the interest rate differential approach — estimating the difference between the interest rate the guaranteed borrower would have paid without the guarantee and the (lower) rate it actually pays with the guarantee in place, then discounting that annual benefit over the guarantee's expected term. Other valuation techniques (such as an expected-loss or credit-spread based approach) may also be used, but the underlying discipline is the same: fair value must be genuinely estimated, not assumed to be nil just because no cash fee was charged."}},
+    {"@type": "Question", "name": "Does the subsidiary receiving a free guarantee from its parent recognise anything?", "acceptedAnswer": {"@type": "Answer", "text": "Generally, no. IND AS 109's recognition requirements for financial guarantee contracts apply to the issuer (the guarantor) — there is no equivalent standard requiring the beneficiary (the guaranteed borrower) to recognise an asset or deemed income for a benefit received free of charge. This creates a real asymmetry: the parent recognises a liability (and typically capitalises the offsetting amount as part of its investment in the subsidiary), while the subsidiary's own standalone financial statements show nothing for the guarantee it benefits from."}},
+    {"@type": "Question", "name": "How does ECL apply to financial guarantee contracts?", "acceptedAnswer": {"@type": "Answer", "text": "Financial guarantee contracts are explicitly within the scope of IND AS 109's impairment requirements. The issuer estimates expected credit losses on the guarantee — broadly, the expected shortfall it will have to pay the holder to reimburse a loss, less amounts it expects to recover — using the same staged logic (12-month vs lifetime ECL, based on whether there's been a significant increase in the underlying guaranteed debtor's credit risk) as for loans under the general approach."}},
+    {"@type": "Question", "name": "Is a letter of comfort the same as a financial guarantee?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. A letter of comfort only meets the definition of a financial guarantee contract if its specific wording creates a legally enforceable obligation for the issuer to make good a shortfall if the borrower defaults. Many letters of comfort are deliberately drafted as expressions of intent or moral support rather than legal commitments, in which case they fall outside IND AS 109's financial guarantee recognition requirements — but this depends entirely on the actual legal substance of the wording used, not on what the document is titled."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --brand:#6366F1;--brand-dark:#4F46E5;--brand-light:#EEF2FF;--brand-mid:#C7D2FE;
+  --bg:#F9FAFB;--card:#FFFFFF;--border:rgba(99,102,241,0.18);--border-light:rgba(99,102,241,0.08);
+  --text:#111827;--muted:#6B7280;--muted2:#9CA3AF;
+  --green:#059669;--green-light:#ECFDF5;
+  --red:#DC2626;--red-light:#FEF2F2;
+  --orange:#D97706;--orange-light:#FFFBEB;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+.article-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted2);margin-bottom:24px;flex-wrap:wrap;}
+.breadcrumb a{color:var(--muted2);text-decoration:none;transition:color .15s;}
+.breadcrumb a:hover{color:var(--brand);}
+
+.article-tag{display:inline-block;background:var(--brand-light);color:var(--brand);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.4px;margin-bottom:16px;}
+.article-title{font-size:clamp(24px,4vw,36px);font-weight:800;line-height:1.2;letter-spacing:-0.5px;color:var(--text);margin-bottom:16px;}
+.article-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;flex-wrap:wrap;}
+.article-meta span{display:flex;align-items:center;gap:5px;}
+.article-divider{height:1px;background:var(--border-light);margin-bottom:36px;}
+
+.toc{background:var(--brand-light);border:1px solid var(--brand-mid);border-radius:14px;padding:22px 26px;margin-bottom:40px;}
+.toc h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px;}
+.toc ol{padding-left:18px;}
+.toc ol li{margin-bottom:6px;}
+.toc ol li a{font-size:14px;color:var(--brand-dark);text-decoration:none;font-weight:500;}
+.toc ol li a:hover{text-decoration:underline;}
+
+.article-body h2{font-size:22px;font-weight:800;color:var(--text);margin:40px 0 14px;letter-spacing:-0.3px;}
+.article-body h3{font-size:17px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{margin-bottom:16px;color:#1F2937;}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:16px;}
+.article-body ul li,.article-body ol li{margin-bottom:8px;color:#1F2937;}
+.article-body strong{font-weight:700;color:var(--text);}
+
+.callout{background:var(--brand-light);border-left:4px solid var(--brand);border-radius:0 10px 10px 0;padding:16px 20px;margin:24px 0;}
+.callout p{margin:0;font-size:14px;color:var(--brand-dark);}
+.callout strong{color:var(--brand-dark);}
+.callout-green{background:var(--green-light);border-left-color:var(--green);}
+.callout-green p{color:#065F46;}
+.callout-orange{background:var(--orange-light);border-left-color:var(--orange);}
+.callout-orange p{color:#92400E;}
+.callout-red{background:var(--red-light);border-left-color:var(--red);}
+.callout-red p{color:#991B1B;}
+
+.table-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:360px;}
+table th{background:linear-gradient(135deg,#6366F1,#8B5CF6);color:#fff;font-weight:700;padding:10px 14px;text-align:left;}
+table th.r{text-align:right;}
+table td{padding:9px 14px;border-bottom:1px solid #F3F4F6;color:#1F2937;}
+table td.r{text-align:right;}
+table tr:nth-child(even) td{background:#F9FAFB;}
+table tr:last-child td{border-bottom:none;}
+table tfoot td{background:#EEF2FF;font-weight:700;border-top:2px solid var(--brand-mid);}
+
+.je-block{background:#F9FAFB;border:1px solid var(--border-light);border-radius:12px;padding:20px 22px;margin:20px 0;}
+.je-title{font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;text-transform:uppercase;letter-spacing:.4px;}
+.je-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #F3F4F6;}
+.je-row:last-child{border-bottom:none;}
+.je-account{font-size:14px;font-weight:600;color:var(--text);}
+.je-account.cr{padding-left:24px;font-weight:500;color:var(--muted);}
+.je-amounts{display:flex;gap:32px;}
+.je-dr{font-size:14px;font-weight:700;color:#10B981;min-width:100px;text-align:right;}
+.je-cr{font-size:14px;font-weight:700;color:#6366F1;min-width:100px;text-align:right;}
+
+.step-card{border:1px solid var(--border-light);border-radius:12px;padding:20px 22px;margin:16px 0;position:relative;padding-left:60px;}
+.step-num{position:absolute;left:18px;top:18px;width:28px;height:28px;background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;}
+.step-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;margin-top:0;}
+.step-card p{font-size:14px;color:var(--muted);margin:0;}
+
+.cta-box{background:linear-gradient(135deg,#6366F1,#8B5CF6);border-radius:16px;padding:28px 30px;margin:40px 0;text-align:center;}
+.cta-box h3{font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;}
+.cta-box p{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:18px;}
+.cta-box a{display:inline-block;background:#fff;color:var(--brand);font-size:14px;font-weight:700;padding:12px 26px;border-radius:10px;text-decoration:none;transition:transform .15s;}
+.cta-box a:hover{transform:translateY(-1px);}
+
+.related-links{border:1px solid var(--border-light);border-radius:12px;padding:20px 24px;margin-top:40px;}
+.related-links h3{font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;}
+.related-links a{display:block;font-size:14px;color:var(--brand);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--border-light);font-weight:500;}
+.related-links a:last-child{border-bottom:none;}
+.related-links a:hover{text-decoration:underline;}
+
+@media(max-width:600px){.article-wrap{padding:32px 16px 60px;}.je-amounts{gap:16px;}.step-card{padding-left:50px;}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../auth.js?v=12"></script>
+</head>
+<body>
+
+<div id="fs-nav"></div>
+
+<div class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../blog.html">Blog</a>
+    <span>›</span>
+    <span>Financial Guarantee Contracts</span>
+  </nav>
+
+  <div class="article-tag">IND AS 109 — Financial Guarantee Contracts</div>
+  <h1 class="article-title">Financial Guarantee Contracts Under IND AS 109 — Intra-Group Guarantees Explained</h1>
+  <div class="article-meta">
+    <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+    <span><i class="fa-regular fa-clock"></i> 16 min read</span>
+    <span><i class="fa-solid fa-user"></i> Finosutra Team</span>
+  </div>
+  <p style="font-size:16px;line-height:1.65;color:#374151;max-width:760px;margin:4px 0 14px;">A parent company guaranteeing its subsidiary's bank loan — for <strong>no fee at all</strong> — is one of the most common transactions in Indian corporate groups, and one of the most frequently mishandled under <strong>IND AS 109</strong>. Old habits treat it as a mere footnote contingent liability. IND AS 109 requires it to be recognised at <strong>fair value on Day 1</strong>, regardless of whether any consideration changed hands — with a genuinely counterintuitive twist on which side of the balance sheet the entry lands.</p>
+  <div class="article-divider"></div>
+
+  <div class="toc">
+    <h3>In This Article</h3>
+    <ol>
+      <li><a href="#definition">What is a Financial Guarantee Contract</a></li>
+      <li><a href="#scope">Scope — Financial Guarantees vs Insurance vs Letters of Comfort</a></li>
+      <li><a href="#initial">Initial Recognition — Fair Value, Even With No Fee</a></li>
+      <li><a href="#intra-group">The Intra-Group Guarantee Problem — Where Does the Debit Go?</a></li>
+      <li><a href="#beneficiary">The Beneficiary's Side — Why the Subsidiary Recognises Nothing</a></li>
+      <li><a href="#subsequent">Subsequent Measurement — the "Higher Of" Rule</a></li>
+      <li><a href="#ecl">ECL on Financial Guarantee Contracts</a></li>
+      <li><a href="#example">Worked Example — Parent Guarantees a Subsidiary's Bank Loan</a></li>
+      <li><a href="#comparison">Vs Old IGAAP (AS 29) — Key Differences</a></li>
+      <li><a href="#disclosures">Disclosures Required</a></li>
+      <li><a href="#errors">Common Mistakes CAs Make</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+
+    <h2 id="definition">1. What is a Financial Guarantee Contract</h2>
+    <p>IND AS 109 defines a financial guarantee contract as one that requires the issuer to make specified payments to reimburse the holder for a loss it incurs because a specified debtor <strong>fails to make payment when due</strong>, in accordance with the original or modified terms of a debt instrument. The most common Indian scenario: a parent company (or another group entity) guarantees a subsidiary's bank loan, so that if the subsidiary defaults, the bank can call on the parent to pay.</p>
+
+    <h2 id="scope">2. Scope — Financial Guarantees vs Insurance vs Letters of Comfort</h2>
+    <p>An issuer can elect, contract by contract, to apply insurance-contract accounting (IND AS 117) instead of IND AS 109 to a financial guarantee contract, but only where it has previously asserted explicitly that it regards such contracts as insurance contracts. Absent that election, financial guarantee contracts fall under IND AS 109 by default.</p>
+    <div class="callout-orange">
+      <p><strong>A letter of comfort is not automatically the same thing.</strong> It only meets the financial guarantee definition if its specific wording creates a <strong>legally enforceable obligation</strong> to make good a shortfall on default. Many letters of comfort are deliberately drafted as expressions of intent or moral support rather than binding commitments — whether a given document is in scope depends entirely on its actual legal substance, not its title.</p>
+    </div>
+
+    <h2 id="initial">3. Initial Recognition — Fair Value, Even With No Fee</h2>
+    <p>A financial guarantee contract is initially recognised at <strong>fair value</strong>. Where the guarantee is given to an unrelated party for an arm's-length fee, that fee is usually the best evidence of fair value. The complexity arises because most intra-group guarantees are given for <strong>no consideration at all</strong> — and IND AS 109 doesn't let the absence of a fee become an excuse for recognising nothing. Fair value still has to be genuinely estimated, commonly using an <strong>interest rate differential</strong> technique: the difference between the rate the borrower would pay without the guarantee and the (lower) rate it actually pays with it, discounted over the guarantee's term.</p>
+
+    <h2 id="intra-group">4. The Intra-Group Guarantee Problem — Where Does the Debit Go?</h2>
+    <p>Since no cash fee is received, recognising the fair value liability needs an offsetting debit somewhere — and it isn't an expense. In a parent's <strong>separate financial statements</strong>, the fair value of a guarantee given for free to a subsidiary is generally treated as an additional cost of the <strong>investment in that subsidiary</strong> — a deemed capital contribution, on the reasoning that the parent has effectively transferred value to the subsidiary (a cheaper cost of borrowing) without receiving anything back in return, which is economically indistinguishable from investing additional capital.</p>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Initial recognition (parent's separate financial statements)</div>
+      <div class="je-row"><span class="je-account">Investment in Subsidiary</span><span class="je-amounts"><span class="je-dr">Dr. [Fair value]</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Financial Guarantee Liability</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">[Fair value]</span></span></div>
+    </div>
+
+    <h2 id="beneficiary">5. The Beneficiary's Side — Why the Subsidiary Recognises Nothing</h2>
+    <div class="callout-red">
+      <p><strong>This is the asymmetry that catches most first-time preparers off guard.</strong> IND AS 109's recognition requirements for financial guarantee contracts apply to the <strong>issuer</strong>. There is no equivalent IND AS requiring the <strong>beneficiary</strong> — the guaranteed subsidiary — to recognise an asset or deemed income for a benefit received free of charge. So the parent's books show a liability (offset against its investment cost), while the subsidiary's own standalone financial statements show <strong>nothing at all</strong> for the guarantee it's actually benefiting from, even though it's genuinely paying a lower interest rate because of it.</p>
+    </div>
+
+    <h2 id="subsequent">6. Subsequent Measurement — the "Higher Of" Rule</h2>
+    <p>After initial recognition, a financial guarantee liability is measured at the <strong>higher of</strong>:</p>
+    <ul>
+      <li>The loss allowance determined under IND AS 109's ECL impairment requirements, or</li>
+      <li>The amount initially recognised, less cumulative amortisation recognised as income over the guarantee period (where appropriate)</li>
+    </ul>
+    <p>In the ordinary course, the liability simply amortises down (released to income, since the risk period is passing without deterioration). But if the guaranteed debtor's credit risk deteriorates enough that the ECL estimate <strong>exceeds</strong> where straight-line amortisation would otherwise leave the balance, the liability must be topped back up to the higher ECL figure — this is the mechanism demonstrated in the worked example below.</p>
+
+    <h2 id="ecl">7. ECL on Financial Guarantee Contracts</h2>
+    <p>Financial guarantee contracts are explicitly within scope of IND AS 109's impairment requirements. The issuer estimates ECL as the expected shortfall it will have to pay the holder to reimburse a loss, net of amounts it expects to recover, using the same staged logic covered in our <a href="ind-as-109-ecl-general-approach-guide.html">ECL 3-stage model guide</a> — 12-month ECL where the underlying guaranteed debtor's credit risk hasn't significantly increased, moving to lifetime ECL where it has.</p>
+
+    <h2 id="example">8. Worked Example — Parent Guarantees a Subsidiary's Bank Loan</h2>
+    <p><strong>Facts:</strong> Prime Holdings Ltd guarantees a <strong>₹5,00,00,000</strong>, 5-year bank loan taken by its wholly-owned subsidiary Apex Manufacturing Ltd, for no fee. Without the guarantee, Apex would pay <strong>11% p.a.</strong>; with it, Apex pays only <strong>9% p.a.</strong> — a 2% p.a. benefit attributable to the guarantee.</p>
+
+    <h3>Step 1 — Estimate fair value at inception (interest rate differential method)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Annual interest saving (2% × ₹5,00,00,000)</td><td class="r">₹10,00,000</td></tr>
+          <tr><td>PV annuity factor, 5 years @ 11%</td><td class="r">3.696</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>Fair value of guarantee at inception</strong></td><td class="r"><strong>₹36,96,000</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Day 1 (Prime's separate financial statements)</div>
+      <div class="je-row"><span class="je-account">Investment in Subsidiary (Apex)</span><span class="je-amounts"><span class="je-dr">Dr. ₹36,96,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Financial Guarantee Liability</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹36,96,000</span></span></div>
+    </div>
+
+    <h3>Years 1 and 2 — normal amortisation (no credit deterioration)</h3>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Each of Years 1 and 2 (₹36,96,000 ÷ 5)</div>
+      <div class="je-row"><span class="je-account">Financial Guarantee Liability</span><span class="je-amounts"><span class="je-dr">Dr. ₹7,39,200</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Guarantee Fee Income (P&amp;L)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹7,39,200</span></span></div>
+    </div>
+    <p>Balance after Year 2: ₹36,96,000 − (2 × ₹7,39,200) = <strong>₹22,17,600</strong>.</p>
+
+    <h3>Year 3 — Apex's credit quality deteriorates; the "higher of" rule kicks in</h3>
+    <p>Straight-line amortisation would normally reduce the balance to ₹22,17,600 − ₹7,39,200 = ₹14,78,400. But Apex has since missed covenant tests and its credit risk has significantly increased — the guarantee's ECL, reassessed at Year 3, is now <strong>₹15,00,000</strong>, which exceeds the amortised figure.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Basis</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Amortised balance (if amortisation continued unchanged)</td><td class="r">₹14,78,400</td></tr>
+          <tr><td>Reassessed ECL</td><td class="r">₹15,00,000</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>Liability held at the higher figure</strong></td><td class="r"><strong>₹15,00,000</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Year 3 (top-up to the higher ECL figure)</div>
+      <div class="je-row"><span class="je-account">Impairment Loss on Financial Guarantee (P&amp;L)</span><span class="je-amounts"><span class="je-dr">Dr. ₹21,600</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Financial Guarantee Liability (₹15,00,000 − ₹14,78,400)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹21,600</span></span></div>
+    </div>
+    <div class="callout-green">
+      <p><strong>The lesson:</strong> as long as Apex's credit quality was stable, Prime simply released the guarantee liability to income as the risk period passed — ordinary amortisation. The moment the underlying debtor's credit risk genuinely deteriorated, the "higher of" rule forced Prime to stop amortising and instead recognise a fresh impairment loss, keeping the liability at a level that actually reflects the increased risk Prime is carrying.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Explore Finosutra's IND AS tools</h3>
+      <p>Free calculators for lease accounting, security deposits, ECL provisioning and financial statement generation — audit-ready workpapers in minutes.</p>
+      <a href="../indas-tools.html">Explore IND AS Tools →</a>
+    </div>
+
+    <h2 id="comparison">9. Vs Old IGAAP (AS 29) — Key Differences</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspect</th><th>Old IGAAP (AS 29)</th><th>IND AS 109</th></tr></thead>
+        <tbody>
+          <tr><td>Recognition trigger</td><td>Only if outflow is probable and reliably estimable</td><td>Always recognised at fair value on Day 1, regardless of probability</td></tr>
+          <tr><td>Default treatment</td><td>Disclosed as a contingent liability in notes, no balance sheet entry</td><td>Recognised on the balance sheet as a liability, even for guarantees given free</td></tr>
+          <tr><td>Free intra-group guarantees</td><td>Typically no accounting entry at all — treated as a disclosure-only matter</td><td>Fair value estimated and capitalised as investment cost (parent) / liability (issuer)</td></tr>
+          <tr><td>Subsequent measurement</td><td>Reassessed only if/when outflow becomes probable</td><td>Ongoing ECL assessment, held at the higher of ECL and unamortised balance</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="disclosures">10. Disclosures Required</h2>
+    <ul>
+      <li>Guarantee amounts outstanding, typically by counterparty, including related parties</li>
+      <li>Maximum exposure to credit risk under guarantees issued</li>
+      <li>The fair value methodology and key assumptions used to estimate guarantees given for no consideration</li>
+      <li>Related party disclosures under IND AS 24, since most Indian corporate guarantees are intra-group</li>
+      <li>Reconciliation of the loss allowance recognised on financial guarantee contracts</li>
+    </ul>
+
+    <h2 id="errors">11. Common Mistakes CAs Make</h2>
+
+    <div class="callout-red">
+      <p><strong>Error 1 — Treating every guarantee as a mere contingent liability disclosure.</strong> This is the single most common carryover habit from the old AS 29 approach — IND AS 109 requires actual balance sheet recognition at fair value, not just a notes disclosure, for financial guarantee contracts.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 2 — Assuming "no fee charged" means "no value, no entry."</strong> Fair value must be estimated even where no consideration was received — the absence of a fee is not evidence the guarantee has no value.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 3 — Expensing the Day 1 fair value through P&amp;L instead of capitalising it as investment cost.</strong> For a guarantee given to a subsidiary for free, the offsetting debit in the parent's separate financial statements is generally an addition to the cost of investment in the subsidiary, not an expense.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 4 — Forgetting the ongoing ECL assessment.</strong> A financial guarantee liability isn't a one-time Day 1 entry that then just amortises mechanically — it needs to be reassessed for ECL every reporting period and held at the higher of ECL and the amortised balance.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 5 — Assuming the guaranteed subsidiary should recognise something too.</strong> The beneficiary side genuinely doesn't recognise an asset or deemed income under IND AS for a free guarantee received — trying to "balance" the transaction symmetrically on both sides of the group is a common but mistaken instinct.</p>
+    </div>
+
+    <h2 id="faq">12. FAQs</h2>
+
+    <h3>What is a financial guarantee contract under IND AS 109?</h3>
+    <p>A contract that requires the issuer to make specified payments to reimburse the holder for a loss it incurs because a specified debtor fails to make payment when due, in accordance with the original or modified terms of a debt instrument. The most common example in Indian corporate groups is a parent company guaranteeing a subsidiary's bank loan or other borrowing.</p>
+
+    <h3>Does a parent company need to charge a fee for a guarantee to have to recognise it?</h3>
+    <p>No. IND AS 109 requires a financial guarantee contract to be recognised at fair value on initial recognition regardless of whether any consideration was received. This is exactly the situation with most intra-group guarantees, which are typically given for no fee — the absence of a fee doesn't mean the guarantee has no value; it just means the fair value has to be estimated rather than taken from the price paid.</p>
+
+    <h3>How is a financial guarantee's fair value estimated when it's given for free?</h3>
+    <p>A common technique is the interest rate differential approach — estimating the difference between the interest rate the guaranteed borrower would have paid without the guarantee and the (lower) rate it actually pays with the guarantee in place, then discounting that annual benefit over the guarantee's expected term. Other valuation techniques (such as an expected-loss or credit-spread based approach) may also be used, but the underlying discipline is the same: fair value must be genuinely estimated, not assumed to be nil just because no cash fee was charged.</p>
+
+    <h3>Does the subsidiary receiving a free guarantee from its parent recognise anything?</h3>
+    <p>Generally, no. IND AS 109's recognition requirements for financial guarantee contracts apply to the issuer (the guarantor) — there is no equivalent standard requiring the beneficiary (the guaranteed borrower) to recognise an asset or deemed income for a benefit received free of charge. This creates a real asymmetry: the parent recognises a liability (and typically capitalises the offsetting amount as part of its investment in the subsidiary), while the subsidiary's own standalone financial statements show nothing for the guarantee it benefits from.</p>
+
+    <h3>How does ECL apply to financial guarantee contracts?</h3>
+    <p>Financial guarantee contracts are explicitly within the scope of IND AS 109's impairment requirements. The issuer estimates expected credit losses on the guarantee — broadly, the expected shortfall it will have to pay the holder to reimburse a loss, less amounts it expects to recover — using the same staged logic (12-month vs lifetime ECL, based on whether there's been a significant increase in the underlying guaranteed debtor's credit risk) as for loans under the general approach.</p>
+
+    <h3>Is a letter of comfort the same as a financial guarantee?</h3>
+    <p>Not necessarily. A letter of comfort only meets the definition of a financial guarantee contract if its specific wording creates a legally enforceable obligation for the issuer to make good a shortfall if the borrower defaults. Many letters of comfort are deliberately drafted as expressions of intent or moral support rather than legal commitments, in which case they fall outside IND AS 109's financial guarantee recognition requirements — but this depends entirely on the actual legal substance of the wording used, not on what the document is titled.</p>
+
+  </div>
+
+  <div class="related-links">
+    <h3>Related tools &amp; articles</h3>
+    <a href="ind-as-109-financial-instruments-guide.html">→ IND AS 109 Financial Instruments — Complete Guide</a>
+    <a href="ind-as-109-ecl-general-approach-guide.html">→ Expected Credit Loss — Full 3-Stage Model for Loans, NBFCs &amp; Banks</a>
+    <a href="ind-as-109-hedge-accounting-guide.html">→ Hedge Accounting Under IND AS 109 — Cash Flow Hedge Worked Example</a>
+    <a href="ind-as-24-related-party-disclosures-guide.html">→ IND AS 24 Related Party Disclosures — Complete Guide</a>
+    <a href="ind-as-27-separate-financial-statements-guide.html">→ IND AS 27 Separate Financial Statements — Complete Guide</a>
+    <a href="../blog.html">← All Articles</a>
+  </div>
+
+</div>
+
+<div id="fs-footer"></div>
+<script src="../nav.js?v=9"></script>
+<script src="../footer.js?v=8"></script>
+<script src="../share.js"></script>
+</body>
+</html>
