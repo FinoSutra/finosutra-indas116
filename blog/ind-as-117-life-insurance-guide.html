@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>IND AS 117 for Life Insurance — GMM, VFA, CSM Roll-Forward vs Old Actuarial Valuation | Finosutra</title>
+<meta name="description" content="Detailed IND AS 117 guide for life insurers — GMM for non-par term, VFA for participating/with-profit products, a multi-year CSM roll-forward worked example, ULIP treatment, onerous contracts, and a full comparison to IRDAI Gross Premium Valuation and bonus mechanics."/>
+<meta name="keywords" content="IND AS 117 life insurance, VFA variable fee approach, CSM roll forward, gross premium valuation vs IND AS 117, participating policy bonus IFRS 17, ULIP accounting IND AS 117, actuarial liability vs fulfilment cash flows"/>
+<meta name="author" content="Finosutra"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://finosutra.com/blog/ind-as-117-life-insurance-guide.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Finosutra"/>
+<meta property="og:title" content="IND AS 117 for Life Insurance — GMM, VFA, CSM Roll-Forward vs Old Actuarial Valuation"/>
+<meta property="og:description" content="GMM for non-par term, VFA for participating products, a multi-year CSM roll-forward worked example, ULIP treatment, and a full comparison to IRDAI Gross Premium Valuation and bonus mechanics."/>
+<meta property="og:url" content="https://finosutra.com/blog/ind-as-117-life-insurance-guide.html"/>
+<meta property="og:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="IND AS 117 for Life Insurance — Complete Guide"/>
+<meta name="twitter:description" content="GMM, VFA and a multi-year CSM roll-forward worked example vs the old IRDAI actuarial valuation regime."/>
+<meta name="twitter:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="../finosutra.css?v=17"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2G710PHNQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z2G710PHNQ');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "IND AS 117 for Life Insurance — GMM, VFA, CSM Roll-Forward vs Old Actuarial Valuation",
+  "description": "Detailed IND AS 117 guide for life insurers — GMM for non-par term, VFA for participating/with-profit products, a multi-year CSM roll-forward worked example, ULIP treatment, onerous contracts, and a full comparison to IRDAI Gross Premium Valuation and bonus mechanics.",
+  "author": {"@type": "Organization", "name": "Finosutra", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]},
+  "publisher": {"@type": "Organization", "name": "Finosutra", "url": "https://finosutra.com", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]},
+  "datePublished": "2026-09-07",
+  "dateModified": "2026-09-07",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://finosutra.com/blog/ind-as-117-life-insurance-guide.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Why do life insurers need both GMM and VFA?", "acceptedAnswer": {"@type": "Answer", "text": "GMM is the default model for long-duration contracts and applies to non-participating products like term and non-par endowment, where the insurer's obligation doesn't vary with the performance of an underlying pool of assets. VFA is a modified version of GMM used specifically for participating (with-profit) contracts, where policyholders share in investment returns from a defined pool of underlying items — the insurer's variable fee. Using GMM for a participating product would force market-driven investment swings straight into profit or loss, even though the insurer merely passes most of that return through to policyholders; VFA routes those swings through the CSM instead, which is the more faithful representation."}},
+    {"@type": "Question", "name": "How does the CSM roll-forward work year to year?", "acceptedAnswer": {"@type": "Answer", "text": "Each period, the opening CSM is increased for interest accretion at the locked-in discount rate and for favourable changes in estimated future cash flows (relating to future service), and decreased for unfavourable changes in future-service cash flows and for the amount of CSM released to profit or loss as insurance revenue for coverage provided in that period. The release amount is based on coverage units — a measure of the quantity of insurance benefits provided in the period relative to the remaining expected total, so a larger, longer-duration policy releases CSM more slowly than a smaller, shorter one."}},
+    {"@type": "Question", "name": "What happens to the old system of reversionary and terminal bonus under IND AS 117?", "acceptedAnswer": {"@type": "Answer", "text": "The policyholder communication and product mechanics of bonus declaration are unaffected — reversionary and terminal bonuses continue to exist as product features governed by IRDAI regulations and the participating fund's actuarial surplus. What changes is the accounting: under VFA, the policyholder's share of underlying item returns is recognised continuously within the CSM as investment performance emerges, rather than being recognised as a discrete expense only when the Board formally declares a bonus each year."}},
+    {"@type": "Question", "name": "How are ULIPs accounted for under IND AS 117?", "acceptedAnswer": {"@type": "Answer", "text": "This is one of the more actively-debated implementation questions. If a ULIP's investment component is distinct and can be measured separately from its insurance component, the investment component is unbundled and accounted for separately (typically under IND AS 109), leaving only the mortality/morbidity rider charges within IND AS 117. If the components are highly interrelated and cannot be measured independently, the whole contract is treated as a single insurance contract, generally under VFA where there is significant sharing of underlying item returns. Each product's specific terms need individual assessment rather than a blanket sector-wide answer."}},
+    {"@type": "Question", "name": "What is the difference between Gross Premium Valuation and the IND AS 117 fulfilment cash flow approach?", "acceptedAnswer": {"@type": "Answer", "text": "Both are prospective, discounted valuations of future cash flows — in that sense they're conceptually similar. The key differences are in the margins: GPV builds prudence into individual assumptions (margins for adverse deviation, or MADs) that are not separately visible, whereas IND AS 117 requires a best-estimate (unbiased) projection of cash flows plus one explicit, separately disclosed Risk Adjustment. IND AS 117 also separates the resulting number into a liability component (FCF) and an unearned-profit component (CSM), released systematically over the coverage period — GPV simply produces a single actuarial liability figure, with profit emerging through the policyholders'/shareholders' account transfer mechanism instead."}},
+    {"@type": "Question", "name": "Can the CSM become negative?", "acceptedAnswer": {"@type": "Answer", "text": "No. The CSM is capped at zero. If unfavourable changes in future-service cash flows would otherwise push the CSM negative, the excess beyond zero is instead recognised immediately as a loss in profit or loss, creating (or adding to) a loss component — the same onerous-contract mechanism used at initial recognition. Correspondingly, favourable subsequent changes must first reverse any existing loss component before any amount can be credited back to a positive CSM."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --brand:#6366F1;--brand-dark:#4F46E5;--brand-light:#EEF2FF;--brand-mid:#C7D2FE;
+  --bg:#F9FAFB;--card:#FFFFFF;--border:rgba(99,102,241,0.18);--border-light:rgba(99,102,241,0.08);
+  --text:#111827;--muted:#6B7280;--muted2:#9CA3AF;
+  --green:#059669;--green-light:#ECFDF5;
+  --red:#DC2626;--red-light:#FEF2F2;
+  --orange:#D97706;--orange-light:#FFFBEB;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+.article-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted2);margin-bottom:24px;flex-wrap:wrap;}
+.breadcrumb a{color:var(--muted2);text-decoration:none;transition:color .15s;}
+.breadcrumb a:hover{color:var(--brand);}
+
+.article-tag{display:inline-block;background:var(--brand-light);color:var(--brand);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.4px;margin-bottom:16px;}
+.article-title{font-size:clamp(24px,4vw,36px);font-weight:800;line-height:1.2;letter-spacing:-0.5px;color:var(--text);margin-bottom:16px;}
+.article-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;flex-wrap:wrap;}
+.article-meta span{display:flex;align-items:center;gap:5px;}
+.article-divider{height:1px;background:var(--border-light);margin-bottom:36px;}
+
+.toc{background:var(--brand-light);border:1px solid var(--brand-mid);border-radius:14px;padding:22px 26px;margin-bottom:40px;}
+.toc h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px;}
+.toc ol{padding-left:18px;}
+.toc ol li{margin-bottom:6px;}
+.toc ol li a{font-size:14px;color:var(--brand-dark);text-decoration:none;font-weight:500;}
+.toc ol li a:hover{text-decoration:underline;}
+
+.article-body h2{font-size:22px;font-weight:800;color:var(--text);margin:40px 0 14px;letter-spacing:-0.3px;}
+.article-body h3{font-size:17px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{margin-bottom:16px;color:#1F2937;}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:16px;}
+.article-body ul li,.article-body ol li{margin-bottom:8px;color:#1F2937;}
+.article-body strong{font-weight:700;color:var(--text);}
+
+.callout{background:var(--brand-light);border-left:4px solid var(--brand);border-radius:0 10px 10px 0;padding:16px 20px;margin:24px 0;}
+.callout p{margin:0;font-size:14px;color:var(--brand-dark);}
+.callout strong{color:var(--brand-dark);}
+.callout-green{background:var(--green-light);border-left-color:var(--green);}
+.callout-green p{color:#065F46;}
+.callout-orange{background:var(--orange-light);border-left-color:var(--orange);}
+.callout-orange p{color:#92400E;}
+.callout-red{background:var(--red-light);border-left-color:var(--red);}
+.callout-red p{color:#991B1B;}
+
+.table-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:360px;}
+table th{background:linear-gradient(135deg,#6366F1,#8B5CF6);color:#fff;font-weight:700;padding:10px 14px;text-align:left;}
+table th.r{text-align:right;}
+table td{padding:9px 14px;border-bottom:1px solid #F3F4F6;color:#1F2937;}
+table td.r{text-align:right;}
+table tr:nth-child(even) td{background:#F9FAFB;}
+table tr:last-child td{border-bottom:none;}
+table tfoot td{background:#EEF2FF;font-weight:700;border-top:2px solid var(--brand-mid);}
+
+.je-block{background:#F9FAFB;border:1px solid var(--border-light);border-radius:12px;padding:20px 22px;margin:20px 0;}
+.je-title{font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;text-transform:uppercase;letter-spacing:.4px;}
+.je-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #F3F4F6;}
+.je-row:last-child{border-bottom:none;}
+.je-account{font-size:14px;font-weight:600;color:var(--text);}
+.je-account.cr{padding-left:24px;font-weight:500;color:var(--muted);}
+.je-amounts{display:flex;gap:32px;}
+.je-dr{font-size:14px;font-weight:700;color:#10B981;min-width:100px;text-align:right;}
+.je-cr{font-size:14px;font-weight:700;color:#6366F1;min-width:100px;text-align:right;}
+
+.step-card{border:1px solid var(--border-light);border-radius:12px;padding:20px 22px;margin:16px 0;position:relative;padding-left:60px;}
+.step-num{position:absolute;left:18px;top:18px;width:28px;height:28px;background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;}
+.step-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;margin-top:0;}
+.step-card p{font-size:14px;color:var(--muted);margin:0;}
+
+.cta-box{background:linear-gradient(135deg,#6366F1,#8B5CF6);border-radius:16px;padding:28px 30px;margin:40px 0;text-align:center;}
+.cta-box h3{font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;}
+.cta-box p{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:18px;}
+.cta-box a{display:inline-block;background:#fff;color:var(--brand);font-size:14px;font-weight:700;padding:12px 26px;border-radius:10px;text-decoration:none;transition:transform .15s;}
+.cta-box a:hover{transform:translateY(-1px);}
+
+.related-links{border:1px solid var(--border-light);border-radius:12px;padding:20px 24px;margin-top:40px;}
+.related-links h3{font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;}
+.related-links a{display:block;font-size:14px;color:var(--brand);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--border-light);font-weight:500;}
+.related-links a:last-child{border-bottom:none;}
+.related-links a:hover{text-decoration:underline;}
+
+@media(max-width:600px){.article-wrap{padding:32px 16px 60px;}.je-amounts{gap:16px;}.step-card{padding-left:50px;}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../auth.js?v=12"></script>
+</head>
+<body>
+
+<div id="fs-nav"></div>
+
+<div class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../blog.html">Blog</a>
+    <span>›</span>
+    <span>IND AS 117 for Life Insurance</span>
+  </nav>
+
+  <div class="article-tag">IND AS 117 / IFRS 17 — Life Insurance</div>
+  <h1 class="article-title">IND AS 117 for Life Insurance — GMM, VFA &amp; the CSM Roll-Forward Explained</h1>
+  <div class="article-meta">
+    <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+    <span><i class="fa-regular fa-clock"></i> 24 min read</span>
+    <span><i class="fa-solid fa-user"></i> Finosutra Team</span>
+  </div>
+  <p style="font-size:16px;line-height:1.65;color:#374151;max-width:760px;margin:4px 0 14px;">Life insurance is where <strong>IND AS 117</strong> genuinely upends existing practice. The <strong>Gross Premium Valuation</strong> actuarial liability and the annual <strong>reversionary bonus declaration</strong> — the two pillars of how Indian life insurers report today — are replaced by a <strong>Contractual Service Margin (CSM)</strong> that rolls forward continuously, and a <strong>Variable Fee Approach</strong> that embeds policyholder participation directly into the balance sheet. This guide builds a full multi-year CSM roll-forward, a participating-product VFA example, and a considered look at ULIPs — each measured against how insurers account for these products today.</p>
+  <div class="article-divider"></div>
+
+  <div class="toc">
+    <h3>In This Article</h3>
+    <ol>
+      <li><a href="#why-both">Why Life Insurance Needs Both GMM and VFA</a></li>
+      <li><a href="#old-regime">The Old Regime — Gross Premium Valuation &amp; the Participating Fund</a></li>
+      <li><a href="#example-term">Worked Example 1 — Non-Par Term Life, Day 1 (GMM)</a></li>
+      <li><a href="#rollforward">The CSM Roll-Forward Mechanics — Interest, Experience &amp; Release</a></li>
+      <li><a href="#example-term-y2">Worked Example 1 Continued — Year 2 Roll-Forward</a></li>
+      <li><a href="#vfa">VFA for Participating (With-Profit) Products</a></li>
+      <li><a href="#example-par">Worked Example 2 — Par Endowment, Fund Performance Through the CSM</a></li>
+      <li><a href="#ulip">A Note on ULIPs</a></li>
+      <li><a href="#onerous">Onerous Contract Testing for Life Products</a></li>
+      <li><a href="#comparison">Old IGAAP vs IND AS 117 — Side-by-Side Comparison</a></li>
+      <li><a href="#disclosures">Disclosures Required</a></li>
+      <li><a href="#errors">Common Mistakes CAs Make</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+
+    <h2 id="why-both">1. Why Life Insurance Needs Both GMM and VFA</h2>
+    <p>Unlike general insurance, where PAA dominates, life insurers routinely need <strong>two</strong> of IND AS 117's three measurement models. Non-participating products (term, non-par endowment, most annuities) use the <strong>General Measurement Model (GMM)</strong> — the full Fulfilment Cash Flows + Contractual Service Margin building-block approach. Participating, with-profit products use the <strong>Variable Fee Approach (VFA)</strong> — a modified GMM specifically for contracts where policyholders share in the returns of a defined pool of underlying items. This article assumes familiarity with FCF, Risk Adjustment and CSM from our <a href="ind-as-117-insurance-contracts.html">foundational IND AS 117 guide</a> — read that first if these terms are new.</p>
+
+    <h2 id="old-regime">2. The Old Regime — Gross Premium Valuation &amp; the Participating Fund</h2>
+    <p>Indian life insurers currently value policy liabilities using <strong>actuarial valuation</strong> under IRDAI regulations, almost always via the <strong>Gross Premium Valuation (GPV)</strong> method — a prospective calculation: present value of future benefits and expenses, minus present value of future gross premiums, using assumptions that deliberately build in prudence through <strong>margins for adverse deviation (MADs)</strong>. This is certified annually by the Appointed Actuary.</p>
+    <p>Financial statements follow a distinctive structure not found outside insurance:</p>
+    <ul>
+      <li><strong>Policyholders' Account (Technical Account)</strong> — Form A-RA, the Revenue Account, segmented by fund (Participating, Non-Participating, Linked, etc.)</li>
+      <li><strong>Shareholders' Account (Non-Technical Account)</strong> — Form A-PL, receiving a <strong>transfer of surplus</strong> from the Policyholders' Account</li>
+      <li>For <strong>participating business</strong>, the Insurance Act and IRDAI regulations mandate that shareholders can take at most <strong>10%</strong> of the distributable surplus of the participating fund, with the remaining <strong>90%</strong> allocated to policyholders</li>
+    </ul>
+    <p>That 90% policyholder allocation is distributed through <strong>bonus declaration</strong> — the Board, on the Appointed Actuary's recommendation, declares a <strong>reversionary bonus</strong> once a year (added to the sum assured, guaranteed once declared, paid at claim or maturity), and potentially a <strong>terminal bonus</strong> (paid only on exit, not guaranteed in advance).</p>
+    <div class="callout">
+      <p><strong>The core shift IND AS 117 makes:</strong> GPV produces one number — an actuarial liability — with profit emerging through the Policyholders'-to-Shareholders' account transfer, and policyholder participation recognised through a once-a-year <strong>discrete bonus declaration event</strong>. IND AS 117 instead splits the liability into FCF and CSM, releases the CSM <strong>continuously</strong> over the coverage period as insurance revenue, and — for participating business — embeds the policyholder's share of investment performance <strong>directly and continuously</strong> into the CSM via VFA, with no separate declaration event as such.</p>
+    </div>
+
+    <h2 id="example-term">3. Worked Example 1 — Non-Par Term Life, Day 1 (GMM)</h2>
+    <p><strong>Facts:</strong> Suraksha Life issues a 10-year non-participating term policy on 1 April 2025. Annual premium: <strong>₹8,000</strong> (paid at the start of each year). Sum assured: <strong>₹10,00,000</strong>. Locked-in discount rate: <strong>7.5% p.a.</strong> PV of expected claims: <strong>₹30,000</strong>. PV of expected expenses: <strong>₹6,000</strong>. Risk Adjustment: <strong>₹4,500</strong>. Acquisition cost: <strong>₹2,500</strong>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Step</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>PV of future premiums (10-yr annuity-due, ₹8,000 @ 7.5%)</td><td class="r">₹59,032</td></tr>
+          <tr><td>Less: PV of expected claims + expenses (₹30,000 + ₹6,000)</td><td class="r">(₹36,000)</td></tr>
+          <tr><td>Net PVFCF (surplus)</td><td class="r">₹23,032</td></tr>
+          <tr><td>Less: Risk Adjustment</td><td class="r">(₹4,500)</td></tr>
+          <tr><td>Less: Acquisition cost (outflow)</td><td class="r">(₹2,500)</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>CSM at inception (to bring net liability to zero)</strong></td><td class="r"><strong>₹16,032</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Day 1 Recognition (1 April 2025)</div>
+      <div class="je-row"><span class="je-account">Bank (Year 1 premium)</span><span class="je-amounts"><span class="je-dr">Dr. ₹8,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account">Insurance Acquisition Cash Flow (asset)</span><span class="je-amounts"><span class="je-dr">Dr. ₹2,500</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Insurance Contract Liability</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹10,500</span></span></div>
+    </div>
+    <p>Net insurance contract liability on Day 1 is <strong>₹0</strong> (the FCF's negative ₹16,032 is exactly offset by the ₹16,032 CSM) — a profitable contract creates no day-one liability; the entire expected profit sits in the CSM, to be released as the insurer provides coverage over the next 10 years.</p>
+
+    <h2 id="rollforward">4. The CSM Roll-Forward Mechanics — Interest, Experience &amp; Release</h2>
+    <p>Unlike PAA, GMM requires the CSM to be actively rolled forward every reporting period:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Step</th><th>What happens</th></tr></thead>
+        <tbody>
+          <tr><td>1. Opening CSM</td><td>Balance brought forward from the prior period</td></tr>
+          <tr><td>2. + Interest accretion</td><td>Unwind of discount on the opening CSM, at the <strong>locked-in</strong> rate from inception</td></tr>
+          <tr><td>3. ± Changes for future service</td><td>Favourable/unfavourable changes in expected future cash flows (e.g. updated mortality or lapse assumptions) adjust the CSM — not P&amp;L</td></tr>
+          <tr><td>4. − CSM release</td><td>The portion allocated to <strong>coverage units</strong> consumed in the period, recognised as insurance revenue</td></tr>
+          <tr><td>5. = Closing CSM</td><td>Carried forward to the next period</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout-orange">
+      <p><strong>Coverage units</strong> quantify the insurance benefit provided in a period relative to the total expected over the remaining contract life — commonly the sum at risk multiplied by the probability of coverage continuing. A larger, longer-duration policy releases its CSM more slowly than a smaller or shorter one; the release pattern is not automatically straight-line.</p>
+    </div>
+
+    <h2 id="example-term-y2">5. Worked Example 1 Continued — Year 2 Roll-Forward</h2>
+    <p>Continuing Suraksha's term policy. Assume, for simplicity, one coverage unit is consumed per policy year (10 total), so <strong>Year 1's CSM release</strong> = ₹16,032 ÷ 10 ≈ <strong>₹1,603</strong>, leaving an opening CSM for Year 2 of <strong>₹14,429</strong>.</p>
+    <p>At the start of Year 2 (1 April 2026), Suraksha's actuaries update mortality assumptions based on emerging experience — expected future claims fall by <strong>₹1,000</strong> (favourable, and it relates to <em>future</em> service, so it adjusts the CSM rather than hitting P&amp;L immediately).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Year 2 CSM roll-forward</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Opening CSM (after Year 1 release)</td><td class="r">₹14,429</td></tr>
+          <tr><td>+ Interest accretion (7.5% locked-in rate)</td><td class="r">₹1,082</td></tr>
+          <tr><td>+ Favourable future-service assumption change</td><td class="r">₹1,000</td></tr>
+          <tr><td>CSM before Year 2 release</td><td class="r">₹16,511</td></tr>
+          <tr><td>− Year 2 release (1 of 9 remaining coverage units)</td><td class="r">(₹1,835)</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>Closing CSM (start of Year 3)</strong></td><td class="r"><strong>₹14,676</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Year 2 CSM roll-forward &amp; release</div>
+      <div class="je-row"><span class="je-account">Insurance Finance Expense (interest accretion)</span><span class="je-amounts"><span class="je-dr">Dr. ₹1,082</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Insurance Contract Liability (CSM)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹1,082</span></span></div>
+      <div class="je-row"><span class="je-account">(No P&amp;L entry — future-service assumption change)</span><span class="je-amounts"><span class="je-dr">Dr. ₹1,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Insurance Contract Liability (CSM) [FCF ↓, CSM ↑]</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹1,000</span></span></div>
+      <div class="je-row"><span class="je-account">Insurance Contract Liability (CSM release)</span><span class="je-amounts"><span class="je-dr">Dr. ₹1,835</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Insurance Revenue</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹1,835</span></span></div>
+    </div>
+    <div class="callout-green">
+      <p><strong>The key contrast with GPV:</strong> under the old regime, this favourable mortality experience would simply reduce the actuarial liability, flow through as a larger valuation surplus, and eventually inform next year's bonus recommendation — a single aggregated number. Under IND AS 117, you can see <strong>exactly</strong> how much of the change came from discounting (interest accretion), how much from genuinely better-than-expected future experience, and how much represents earned profit for the year — three separately visible, separately auditable figures instead of one.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Explore Finosutra's IND AS tools</h3>
+      <p>Free calculators for lease accounting, security deposits, ECL provisioning and financial statement generation — audit-ready workpapers in minutes.</p>
+      <a href="../indas-tools.html">Explore IND AS Tools →</a>
+    </div>
+
+    <h2 id="vfa">6. VFA for Participating (With-Profit) Products</h2>
+    <p>The VFA applies where the policyholder's benefits are contractually tied to a defined pool of underlying items (e.g. the participating fund's investment portfolio), and the insurer's own compensation is, in substance, a <strong>variable fee</strong> for managing that pool and providing insurance coverage. The critical mechanical difference from GMM: changes in the insurer's share of the underlying items' fair value <strong>adjust the CSM</strong> rather than hitting P&amp;L directly.</p>
+    <div class="callout">
+      <p><strong>Why this matters:</strong> if the par fund earns a strong return and 90% of it is contractually owed to policyholders, the insurer's liability rises almost in lockstep with the fund's value. Routing both the asset gain and the matching liability increase through the CSM means the insurer's reported profit reflects only its own genuine fee for the service — not a gross-up of investment market movements it was always going to pass through.</p>
+    </div>
+
+    <h2 id="example-par">7. Worked Example 2 — Par Endowment, Fund Performance Through the CSM</h2>
+    <p><strong>Facts:</strong> Suraksha issues a 15-year participating endowment on 1 April 2025, annual premium ₹50,000, sum assured ₹10,00,000. The policy shares in the participating fund's investment performance, with policyholders entitled to <strong>90%</strong> of the fund's return and Suraksha retaining a <strong>10% variable fee</strong>. In Year 3, the underlying par fund investments backing this cohort earn a return of <strong>₹5,00,000</strong>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Fund investment return, Year 3</td><td class="r">₹5,00,000</td></tr>
+          <tr><td>Policyholders' contractual share (90%)</td><td class="r">₹4,50,000</td></tr>
+          <tr><td>Insurer's variable fee (10%)</td><td class="r">₹50,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Year 3, policyholders' share of fund return</div>
+      <div class="je-row"><span class="je-account">Fair Value Gain on Underlying Items (investment)</span><span class="je-amounts"><span class="je-dr">Dr. ₹5,00,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Investment Income</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹5,00,000</span></span></div>
+      <div class="je-row"><span class="je-account">Insurance Finance Expense (policyholders' 90% share)</span><span class="je-amounts"><span class="je-dr">Dr. ₹4,50,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Insurance Contract Liability (CSM)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹4,50,000</span></span></div>
+    </div>
+    <div class="callout-red">
+      <p><strong>Vs old regime:</strong> under GPV, this ₹4,50,000 becomes part of the participating fund's valuation surplus, and would be recommended by the Appointed Actuary as a <strong>reversionary bonus addition</strong> to the policyholder's sum assured — a discrete, once-a-year Board-approved event, disconnected in timing from when the underlying return was actually earned. Under VFA, the ₹4,50,000 is recognised as an adjustment to the CSM in the <strong>same period</strong> the fund performance occurs — continuously, not as an annual declared event. Only Suraksha's own 10% fee ultimately emerges as profit through CSM release over the remaining coverage period.</p>
+    </div>
+
+    <h2 id="ulip">8. A Note on ULIPs</h2>
+    <p>Unit-Linked Insurance Plans raise a genuinely unsettled implementation question. If a ULIP's investment (fund-value) component is <strong>distinct</strong> — separately identifiable and capable of being measured independently of the insurance component — that investment component is unbundled and accounted for separately (typically under IND AS 109), leaving only the mortality and morbidity rider charges within IND AS 117's scope. Where the components are too interrelated to separate, the whole contract is treated as a single insurance contract, generally under VFA if there is significant sharing of underlying item returns. This is a judgement each insurer needs to work through product by product — it is not a sector-wide default either way, and is one of the areas Indian insurers and their auditors are still actively working through as implementation approaches.</p>
+
+    <h2 id="onerous">9. Onerous Contract Testing for Life Products</h2>
+    <p><strong>Facts:</strong> A competitively-priced non-par product cohort has PV of expected premiums of <strong>₹40,00,000</strong>, against PV of expected claims and expenses of <strong>₹43,00,000</strong> and a Risk Adjustment of <strong>₹2,00,000</strong>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>PV of expected claims + expenses</td><td class="r">₹43,00,000</td></tr>
+          <tr><td>Risk Adjustment</td><td class="r">₹2,00,000</td></tr>
+          <tr><td>Less: PV of expected premiums</td><td class="r">(₹40,00,000)</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>Net loss at inception (onerous)</strong></td><td class="r"><strong>₹5,00,000</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <p>This ₹5,00,000 is recognised immediately in P&amp;L at inception. <strong>Vs old regime:</strong> GPV's margins for adverse deviation, applied assumption-by-assumption across an entire product line, tend to obscure a specific loss-making cohort within an otherwise-profitable book — IND AS 117's per-cohort Day 1 test surfaces it immediately and specifically.</p>
+
+    <h2 id="comparison">10. Old IGAAP vs IND AS 117 — Side-by-Side Comparison</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspect</th><th>Old IRDAI regime</th><th>IND AS 117</th></tr></thead>
+        <tbody>
+          <tr><td>Liability basis</td><td>Gross Premium Valuation, prospective, with margins for adverse deviation</td><td>Fulfilment cash flows + explicit Risk Adjustment + CSM</td></tr>
+          <tr><td>Profit emergence</td><td>Actuarial valuation surplus, 90:10 transfer (par business)</td><td>CSM released systematically as insurance revenue over coverage</td></tr>
+          <tr><td>Participation mechanism</td><td>Discrete annual reversionary/terminal bonus declaration</td><td>Continuous CSM adjustment for policyholder's share of returns (VFA)</td></tr>
+          <tr><td>Accounts structure</td><td>Separate Policyholders' (Technical) &amp; Shareholders' (Non-Technical) Accounts</td><td>Single set of financial statements; insurance revenue / service expense / finance income-expense</td></tr>
+          <tr><td>Prudence margins</td><td>Implicit — margins for adverse deviation built into assumptions</td><td>Explicit, separately disclosed Risk Adjustment</td></tr>
+          <tr><td>Loss recognition</td><td>Can be masked by portfolio-wide margins, often not immediate</td><td>Mandatory Day 1 onerous contract loss per annual cohort</td></tr>
+          <tr><td>Discount rates</td><td>Valuation-basis rates set with prudence</td><td>Market-consistent discount rates required</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="disclosures">11. Disclosures Required</h2>
+    <ul>
+      <li>Full CSM reconciliation table — opening, new business added, interest accretion, changes for future/current/past service, release, closing</li>
+      <li>Risk Adjustment — the confidence level used</li>
+      <li>Expected pattern of future CSM release (a maturity-style analysis by future period)</li>
+      <li>Onerous contracts — loss components created and reversed</li>
+      <li>Sensitivity analysis to key actuarial assumptions (mortality, lapse, discount rate)</li>
+      <li>Transition disclosures — which transition approach (modified retrospective, fair value, or full retrospective) was used for existing back-book policies, since full retrospective is often impracticable for long-duration business written years ago</li>
+    </ul>
+
+    <h2 id="errors">12. Common Mistakes CAs Make</h2>
+
+    <div class="callout-red">
+      <p><strong>Error 1 — Applying GMM instead of VFA to a participating product.</strong> Missing the "significant sharing of underlying item returns" test pushes market-driven investment volatility straight into P&amp;L instead of the CSM — materially misstating both profit and its volatility.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 2 — Treating "bonus" as a discrete annual event for accounting purposes.</strong> Under VFA, policyholder participation in fund performance is recognised continuously in the CSM as it emerges — waiting for the annual Board bonus declaration to record it is a timing error, even though the product-level bonus communication to customers is unaffected.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 3 — Ignoring the annual cohort requirement.</strong> Policies issued more than a year apart cannot sit in the same group of contracts — this affects CSM tracking, onerous contract testing, and disclosure granularity.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 4 — Crediting the CSM past zero.</strong> Favourable changes must first reverse any existing loss component before increasing a positive CSM — the CSM itself can never go negative, and getting this sequencing wrong overstates unearned profit.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 5 — Not assessing whether a ULIP's investment component should be unbundled.</strong> Defaulting every ULIP into a single VFA treatment (or, conversely, always unbundling) without a genuine distinctness assessment risks a systematically wrong scope conclusion across an entire product line.</p>
+    </div>
+
+    <h2 id="faq">13. FAQs</h2>
+
+    <h3>Why do life insurers need both GMM and VFA?</h3>
+    <p>GMM is the default model for long-duration contracts and applies to non-participating products like term and non-par endowment, where the insurer's obligation doesn't vary with the performance of an underlying pool of assets. VFA is a modified version of GMM used specifically for participating (with-profit) contracts, where policyholders share in investment returns from a defined pool of underlying items — the insurer's variable fee. Using GMM for a participating product would force market-driven investment swings straight into profit or loss, even though the insurer merely passes most of that return through to policyholders; VFA routes those swings through the CSM instead, which is the more faithful representation.</p>
+
+    <h3>How does the CSM roll-forward work year to year?</h3>
+    <p>Each period, the opening CSM is increased for interest accretion at the locked-in discount rate and for favourable changes in estimated future cash flows (relating to future service), and decreased for unfavourable changes in future-service cash flows and for the amount of CSM released to profit or loss as insurance revenue for coverage provided in that period. The release amount is based on coverage units — a measure of the quantity of insurance benefits provided in the period relative to the remaining expected total, so a larger, longer-duration policy releases CSM more slowly than a smaller, shorter one.</p>
+
+    <h3>What happens to the old system of reversionary and terminal bonus under IND AS 117?</h3>
+    <p>The policyholder communication and product mechanics of bonus declaration are unaffected — reversionary and terminal bonuses continue to exist as product features governed by IRDAI regulations and the participating fund's actuarial surplus. What changes is the accounting: under VFA, the policyholder's share of underlying item returns is recognised continuously within the CSM as investment performance emerges, rather than being recognised as a discrete expense only when the Board formally declares a bonus each year.</p>
+
+    <h3>How are ULIPs accounted for under IND AS 117?</h3>
+    <p>This is one of the more actively-debated implementation questions. If a ULIP's investment component is distinct and can be measured separately from its insurance component, the investment component is unbundled and accounted for separately (typically under IND AS 109), leaving only the mortality/morbidity rider charges within IND AS 117. If the components are highly interrelated and cannot be measured independently, the whole contract is treated as a single insurance contract, generally under VFA where there is significant sharing of underlying item returns. Each product's specific terms need individual assessment rather than a blanket sector-wide answer.</p>
+
+    <h3>What is the difference between Gross Premium Valuation and the IND AS 117 fulfilment cash flow approach?</h3>
+    <p>Both are prospective, discounted valuations of future cash flows — in that sense they're conceptually similar. The key differences are in the margins: GPV builds prudence into individual assumptions (margins for adverse deviation, or MADs) that are not separately visible, whereas IND AS 117 requires a best-estimate (unbiased) projection of cash flows plus one explicit, separately disclosed Risk Adjustment. IND AS 117 also separates the resulting number into a liability component (FCF) and an unearned-profit component (CSM), released systematically over the coverage period — GPV simply produces a single actuarial liability figure, with profit emerging through the policyholders'/shareholders' account transfer mechanism instead.</p>
+
+    <h3>Can the CSM become negative?</h3>
+    <p>No. The CSM is capped at zero. If unfavourable changes in future-service cash flows would otherwise push the CSM negative, the excess beyond zero is instead recognised immediately as a loss in profit or loss, creating (or adding to) a loss component — the same onerous-contract mechanism used at initial recognition. Correspondingly, favourable subsequent changes must first reverse any existing loss component before any amount can be credited back to a positive CSM.</p>
+
+  </div>
+
+  <div class="related-links">
+    <h3>Related tools &amp; articles</h3>
+    <a href="../indas-tools.html">→ All IND AS Tools</a>
+    <a href="ind-as-117-insurance-contracts.html">→ IND AS 117 / IFRS 17 — Foundations (FCF, CSM, GMM/PAA/VFA)</a>
+    <a href="ind-as-117-general-insurance-guide.html">→ IND AS 117 for General Insurance — PAA, Motor TP &amp; Fire</a>
+    <a href="ind-as-19-employee-benefits-guide.html">→ IND AS 19 Employee Benefits — Complete Guide</a>
+    <a href="ind-as-109-financial-instruments-guide.html">→ IND AS 109 Financial Instruments — Complete Guide</a>
+    <a href="../blog.html">← All Articles</a>
+  </div>
+
+</div>
+
+<div id="fs-footer"></div>
+<script src="../nav.js?v=9"></script>
+<script src="../footer.js?v=8"></script>
+<script src="../share.js"></script>
+</body>
+</html>

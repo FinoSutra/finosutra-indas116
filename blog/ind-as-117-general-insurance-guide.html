@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>IND AS 117 for General Insurance — PAA, Motor TP, Fire, Onerous Contracts vs Old IGAAP | Finosutra</title>
+<meta name="description" content="Detailed IND AS 117 guide for general/non-life insurers — PAA mechanics, Motor Own Damage, Motor Third Party (long-tail), Fire and onerous contract worked examples, reinsurance held, with a full comparison to the old IRDAI UPR/IBNR reserving regime."/>
+<meta name="keywords" content="IND AS 117 general insurance, PAA premium allocation approach, motor third party IBNR, unearned premium reserve vs LRC, onerous contract general insurance, reinsurance contracts held IFRS 17, IRDAI reserving vs IND AS 117"/>
+<meta name="author" content="Finosutra"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://finosutra.com/blog/ind-as-117-general-insurance-guide.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Finosutra"/>
+<meta property="og:title" content="IND AS 117 for General Insurance — PAA, Motor TP, Fire, Onerous Contracts vs Old IGAAP"/>
+<meta property="og:description" content="PAA mechanics, Motor Own Damage, Motor Third Party (long-tail), Fire and onerous contract worked examples, reinsurance held — with a full comparison to the old IRDAI UPR/IBNR reserving regime."/>
+<meta property="og:url" content="https://finosutra.com/blog/ind-as-117-general-insurance-guide.html"/>
+<meta property="og:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="IND AS 117 for General Insurance — Complete Guide"/>
+<meta name="twitter:description" content="PAA, Motor TP, Fire and onerous contract worked examples vs the old IRDAI UPR/IBNR regime."/>
+<meta name="twitter:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="../finosutra.css?v=17"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2G710PHNQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z2G710PHNQ');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "IND AS 117 for General Insurance — PAA, Motor TP, Fire, Onerous Contracts vs Old IGAAP",
+  "description": "Detailed IND AS 117 guide for general/non-life insurers — PAA mechanics, Motor Own Damage, Motor Third Party (long-tail), Fire and onerous contract worked examples, reinsurance held, with a full comparison to the old IRDAI UPR/IBNR reserving regime.",
+  "author": {"@type": "Organization", "name": "Finosutra", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]},
+  "publisher": {"@type": "Organization", "name": "Finosutra", "url": "https://finosutra.com", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]},
+  "datePublished": "2026-09-07",
+  "dateModified": "2026-09-07",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://finosutra.com/blog/ind-as-117-general-insurance-guide.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Do general insurers have to use GMM, or can they always use PAA?", "acceptedAnswer": {"@type": "Answer", "text": "PAA is automatically available for contracts with a coverage period of 12 months or less — which covers the vast majority of Indian general insurance (annual Motor, Fire, Health, Marine cargo policies). For longer-duration contracts, an insurer can still use PAA if it can demonstrate the result would not materially differ from GMM; this is a policy choice that must be tested and documented, not simply assumed."}},
+    {"@type": "Question", "name": "How is IND AS 117 different from the current IRDAI Unearned Premium Reserve method?", "acceptedAnswer": {"@type": "Answer", "text": "Mechanically, the Liability for Remaining Coverage under PAA closely resembles the existing UPR — both release the liability over the coverage period, usually on a straight-line/day-count basis. The real differences are elsewhere: acquisition costs are deferred and matched to revenue rather than expensed immediately, claims liabilities (LIC) must be discounted and carry an explicit Risk Adjustment rather than being held as undiscounted case reserves and IBNR, and onerous contracts are tested per annual cohort rather than at a broader class level via a Premium Deficiency Reserve."}},
+    {"@type": "Question", "name": "Why does Motor Third Party insurance need special attention under IND AS 117?", "acceptedAnswer": {"@type": "Answer", "text": "Motor TP claims in India are notoriously long-tail — a claim reported this year can take several years to settle through litigation and tribunal processes. While the premium side (Liability for Remaining Coverage) can use the PAA simplification, once a claim is incurred it moves to the Liability for Incurred Claims, which must always be measured using full discounted fulfilment cash flows plus a Risk Adjustment — the PAA simplification never applies to claims liabilities, only to remaining coverage."}},
+    {"@type": "Question", "name": "What is a loss component and when is it created?", "acceptedAnswer": {"@type": "Answer", "text": "A loss component arises when a group of contracts is onerous at inception — i.e. the present value of expected claims and expenses, plus the Risk Adjustment, exceeds the present value of expected premiums. Because the CSM can never be negative, this excess is recognised immediately as a loss in profit or loss at inception, rather than being smoothed over the coverage period. This is tested per annual cohort, so a specific loss-making underwriting year can be flagged even while the insurer's broader class of business remains profitable overall."}},
+    {"@type": "Question", "name": "Does IND AS 117 change how reinsurance is accounted for?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Reinsurance contracts held are measured separately from the underlying insurance contracts they cover, generally mirroring the PAA or GMM approach used for the underlying business. A key new feature is the loss-recovery component — when an underlying group of contracts is onerous, the ceding insurer recognises an offsetting gain on its reinsurance held to the extent losses are recoverable, a mechanism that has no direct equivalent under the current net presentation of reinsurance in the Revenue Account."}},
+    {"@type": "Question", "name": "Is IBNR reserving still required under IND AS 117?", "acceptedAnswer": {"@type": "Answer", "text": "The concept survives but the mechanics change. Actuaries will still estimate incurred-but-not-reported claims using development triangles and similar techniques, but that estimate now becomes an input into the discounted fulfilment cash flows that make up the Liability for Incurred Claims, alongside an explicit Risk Adjustment — rather than being held, undiscounted, as a standalone IBNR reserve line item as under the current regime."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --brand:#6366F1;--brand-dark:#4F46E5;--brand-light:#EEF2FF;--brand-mid:#C7D2FE;
+  --bg:#F9FAFB;--card:#FFFFFF;--border:rgba(99,102,241,0.18);--border-light:rgba(99,102,241,0.08);
+  --text:#111827;--muted:#6B7280;--muted2:#9CA3AF;
+  --green:#059669;--green-light:#ECFDF5;
+  --red:#DC2626;--red-light:#FEF2F2;
+  --orange:#D97706;--orange-light:#FFFBEB;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+.article-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted2);margin-bottom:24px;flex-wrap:wrap;}
+.breadcrumb a{color:var(--muted2);text-decoration:none;transition:color .15s;}
+.breadcrumb a:hover{color:var(--brand);}
+
+.article-tag{display:inline-block;background:var(--brand-light);color:var(--brand);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.4px;margin-bottom:16px;}
+.article-title{font-size:clamp(24px,4vw,36px);font-weight:800;line-height:1.2;letter-spacing:-0.5px;color:var(--text);margin-bottom:16px;}
+.article-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;flex-wrap:wrap;}
+.article-meta span{display:flex;align-items:center;gap:5px;}
+.article-divider{height:1px;background:var(--border-light);margin-bottom:36px;}
+
+.toc{background:var(--brand-light);border:1px solid var(--brand-mid);border-radius:14px;padding:22px 26px;margin-bottom:40px;}
+.toc h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px;}
+.toc ol{padding-left:18px;}
+.toc ol li{margin-bottom:6px;}
+.toc ol li a{font-size:14px;color:var(--brand-dark);text-decoration:none;font-weight:500;}
+.toc ol li a:hover{text-decoration:underline;}
+
+.article-body h2{font-size:22px;font-weight:800;color:var(--text);margin:40px 0 14px;letter-spacing:-0.3px;}
+.article-body h3{font-size:17px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{margin-bottom:16px;color:#1F2937;}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:16px;}
+.article-body ul li,.article-body ol li{margin-bottom:8px;color:#1F2937;}
+.article-body strong{font-weight:700;color:var(--text);}
+
+.callout{background:var(--brand-light);border-left:4px solid var(--brand);border-radius:0 10px 10px 0;padding:16px 20px;margin:24px 0;}
+.callout p{margin:0;font-size:14px;color:var(--brand-dark);}
+.callout strong{color:var(--brand-dark);}
+.callout-green{background:var(--green-light);border-left-color:var(--green);}
+.callout-green p{color:#065F46;}
+.callout-orange{background:var(--orange-light);border-left-color:var(--orange);}
+.callout-orange p{color:#92400E;}
+.callout-red{background:var(--red-light);border-left-color:var(--red);}
+.callout-red p{color:#991B1B;}
+
+.table-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:360px;}
+table th{background:linear-gradient(135deg,#6366F1,#8B5CF6);color:#fff;font-weight:700;padding:10px 14px;text-align:left;}
+table th.r{text-align:right;}
+table td{padding:9px 14px;border-bottom:1px solid #F3F4F6;color:#1F2937;}
+table td.r{text-align:right;}
+table tr:nth-child(even) td{background:#F9FAFB;}
+table tr:last-child td{border-bottom:none;}
+table tfoot td{background:#EEF2FF;font-weight:700;border-top:2px solid var(--brand-mid);}
+
+.je-block{background:#F9FAFB;border:1px solid var(--border-light);border-radius:12px;padding:20px 22px;margin:20px 0;}
+.je-title{font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;text-transform:uppercase;letter-spacing:.4px;}
+.je-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #F3F4F6;}
+.je-row:last-child{border-bottom:none;}
+.je-account{font-size:14px;font-weight:600;color:var(--text);}
+.je-account.cr{padding-left:24px;font-weight:500;color:var(--muted);}
+.je-amounts{display:flex;gap:32px;}
+.je-dr{font-size:14px;font-weight:700;color:#10B981;min-width:100px;text-align:right;}
+.je-cr{font-size:14px;font-weight:700;color:#6366F1;min-width:100px;text-align:right;}
+
+.step-card{border:1px solid var(--border-light);border-radius:12px;padding:20px 22px;margin:16px 0;position:relative;padding-left:60px;}
+.step-num{position:absolute;left:18px;top:18px;width:28px;height:28px;background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;}
+.step-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;margin-top:0;}
+.step-card p{font-size:14px;color:var(--muted);margin:0;}
+
+.cta-box{background:linear-gradient(135deg,#6366F1,#8B5CF6);border-radius:16px;padding:28px 30px;margin:40px 0;text-align:center;}
+.cta-box h3{font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;}
+.cta-box p{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:18px;}
+.cta-box a{display:inline-block;background:#fff;color:var(--brand);font-size:14px;font-weight:700;padding:12px 26px;border-radius:10px;text-decoration:none;transition:transform .15s;}
+.cta-box a:hover{transform:translateY(-1px);}
+
+.related-links{border:1px solid var(--border-light);border-radius:12px;padding:20px 24px;margin-top:40px;}
+.related-links h3{font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;}
+.related-links a{display:block;font-size:14px;color:var(--brand);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--border-light);font-weight:500;}
+.related-links a:last-child{border-bottom:none;}
+.related-links a:hover{text-decoration:underline;}
+
+@media(max-width:600px){.article-wrap{padding:32px 16px 60px;}.je-amounts{gap:16px;}.step-card{padding-left:50px;}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../auth.js?v=12"></script>
+</head>
+<body>
+
+<div id="fs-nav"></div>
+
+<div class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../blog.html">Blog</a>
+    <span>›</span>
+    <span>IND AS 117 for General Insurance</span>
+  </nav>
+
+  <div class="article-tag">IND AS 117 / IFRS 17 — General Insurance</div>
+  <h1 class="article-title">IND AS 117 for General Insurance — PAA, Motor TP, Fire &amp; Onerous Contracts vs Old IGAAP</h1>
+  <div class="article-meta">
+    <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+    <span><i class="fa-regular fa-clock"></i> 22 min read</span>
+    <span><i class="fa-solid fa-user"></i> Finosutra Team</span>
+  </div>
+  <p style="font-size:16px;line-height:1.65;color:#374151;max-width:760px;margin:4px 0 14px;">For Indian general (non-life) insurers, <strong>IND AS 117</strong> mostly means the <strong>Premium Allocation Approach (PAA)</strong> — but "mostly means PAA" hides real complexity underneath: discounted claims liabilities, mandatory <strong>onerous contract testing per underwriting cohort</strong>, and a reinsurance loss-recovery mechanism with no equivalent in today's IRDAI reserving regime. This guide walks through Motor Own Damage, the long-tail Motor Third Party problem, Fire insurance, and reinsurance held — each with full worked examples against the old Unearned Premium Reserve / IBNR method.</p>
+  <div class="article-divider"></div>
+
+  <div class="toc">
+    <h3>In This Article</h3>
+    <ol>
+      <li><a href="#why-paa">Why General Insurance Almost Always Uses PAA</a></li>
+      <li><a href="#old-regime">The Old Regime — IRDAI UPR, IBNR &amp; Premium Deficiency Reserve</a></li>
+      <li><a href="#example-od">Worked Example 1 — Motor Own Damage (Short-Tail PAA)</a></li>
+      <li><a href="#example-tp">Worked Example 2 — Motor Third Party (Long-Tail LIC &amp; Discounting)</a></li>
+      <li><a href="#example-fire">Worked Example 3 — Fire Insurance (Multi-Year Policy)</a></li>
+      <li><a href="#onerous">Onerous Contract Testing — A Loss-Making Cohort</a></li>
+      <li><a href="#reinsurance">Reinsurance Contracts Held &amp; the Loss-Recovery Component</a></li>
+      <li><a href="#presentation">Financial Statement Presentation — Revenue Account to Insurance Revenue</a></li>
+      <li><a href="#comparison">Old IGAAP vs IND AS 117 — Side-by-Side Comparison</a></li>
+      <li><a href="#disclosures">Disclosures Required</a></li>
+      <li><a href="#errors">Common Mistakes CAs Make</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+
+    <h2 id="why-paa">1. Why General Insurance Almost Always Uses PAA</h2>
+    <p>IND AS 117's Premium Allocation Approach is automatically available for any group of contracts with a coverage period of 12 months or less — which describes the overwhelming majority of Indian general insurance: annual Motor, Fire, Marine cargo and Health policies. For this reason, PAA (not the full General Measurement Model, GMM) is the model most Indian non-life insurers will use for most of their book. This article assumes PAA throughout, and builds on the measurement concepts (Fulfilment Cash Flows, Risk Adjustment, CSM) explained in our <a href="ind-as-117-insurance-contracts.html">foundational IND AS 117 guide</a> — read that first if PAA, LRC and LIC are new terms to you.</p>
+    <div class="callout-orange">
+      <p><strong>PAA is a simplification of the liability for remaining coverage only.</strong> It never simplifies how you measure claims once they're incurred — that distinction drives most of the real complexity in this article, especially for Motor Third Party.</p>
+    </div>
+
+    <h2 id="old-regime">2. The Old Regime — IRDAI UPR, IBNR &amp; Premium Deficiency Reserve</h2>
+    <p>Before comparing anything, it's worth being precise about what "old IGAAP" actually means for an Indian general insurer. IND AS 104 was largely a placeholder that permitted existing practice to continue — the real "old regime" insurers use today is the <strong>IRDAI (Preparation of Financial Statements and Auditor's Report of Insurance Companies) Regulations</strong>, built around:</p>
+    <ul>
+      <li><strong>Unearned Premium Reserve (UPR)</strong> — premium is recognised as income on policy issuance (net of reinsurance), and an unexpired-risk portion is held back as a reserve, typically released on a 1/365 day-count basis over the policy term</li>
+      <li><strong>Outstanding Claims Reserve</strong> — case-by-case estimates for claims reported but not yet settled</li>
+      <li><strong>IBNR / IBNER</strong> — actuarially estimated reserves for claims Incurred But Not Reported, and for claims already reported but likely to develop further (Incurred But Not Enough Reported), typically derived using claims-development (chain-ladder style) triangles, certified by the Appointed Actuary</li>
+      <li><strong>Premium Deficiency Reserve (Unexpired Risk Reserve)</strong> — an additional reserve created, at the level of a broader class of business (e.g. the whole Motor segment), if the UPR is judged inadequate to cover expected future claims and expenses on unexpired risks</li>
+      <li><strong>Schedule B presentation</strong> — a segment-wise Revenue Account (Fire, Marine, Motor, Health, Miscellaneous), followed by a Profit &amp; Loss Account and Balance Sheet</li>
+    </ul>
+    <p>Acquisition costs (commission) are generally <strong>expensed as incurred</strong> under this regime, rather than deferred and matched against the period the related premium is earned.</p>
+    <div class="callout">
+      <p><strong>The headline similarity:</strong> mechanically, PAA's Liability for Remaining Coverage looks a lot like UPR — both release a premium-based liability over the coverage period. <strong>The real differences are in claims reserving (discounting + explicit Risk Adjustment), acquisition cost deferral, and how loss-making business is identified</strong> — covered through the worked examples below.</p>
+    </div>
+
+    <h2 id="example-od">3. Worked Example 1 — Motor Own Damage (Short-Tail PAA)</h2>
+    <p><strong>Facts:</strong> Shakti General Insurance issues a Motor Own Damage policy on 1 July 2025. Annual premium: <strong>₹15,000</strong>. Policy period: 1 July 2025 – 30 June 2026. Commission: <strong>₹1,500</strong> (10%, insurer's policy is to defer and match acquisition costs to coverage provided). FY end: 31 March 2026 — 9 of 12 months elapsed (75% of coverage provided). No claims reported in the period.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th class="r">At inception</th><th class="r">At 31 Mar 2026 (75% elapsed)</th></tr></thead>
+        <tbody>
+          <tr><td>Liability for Remaining Coverage (LRC)</td><td class="r">₹15,000</td><td class="r">₹3,750</td></tr>
+          <tr><td>Insurance revenue recognised (cumulative)</td><td class="r">₹0</td><td class="r">₹11,250</td></tr>
+          <tr><td>Deferred acquisition cash flow (asset)</td><td class="r">₹1,500</td><td class="r">₹375</td></tr>
+          <tr><td>Acquisition cost amortised (cumulative)</td><td class="r">₹0</td><td class="r">₹1,125</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Revenue &amp; acquisition cost recognition to 31 Mar 2026</div>
+      <div class="je-row"><span class="je-account">Liability for Remaining Coverage (LRC)</span><span class="je-amounts"><span class="je-dr">Dr. ₹11,250</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Insurance Revenue</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹11,250</span></span></div>
+      <div class="je-row"><span class="je-account">Insurance Service Expense</span><span class="je-amounts"><span class="je-dr">Dr. ₹1,125</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Deferred Acquisition Cash Flow (asset)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹1,125</span></span></div>
+    </div>
+    <p><strong>Vs old regime:</strong> the UPR would be an almost identical ₹3,750 (25% × ₹15,000) — no real difference here. But the <strong>full ₹1,500 commission would have been expensed immediately</strong> in July 2025 under the old regime, rather than deferred and matched 75:25 against revenue as above. For a short, simple, claim-free policy like this one, PAA is genuinely the "lower-effort transition" — the real complexity shows up once claims and long-tail lines enter the picture.</p>
+
+    <h2 id="example-tp">4. Worked Example 2 — Motor Third Party (Long-Tail LIC &amp; Discounting)</h2>
+    <p><strong>Facts:</strong> Shakti's Motor Third Party (TP) book for the underwriting year has an estimated <strong>ultimate incurred loss</strong> of <strong>₹75,00,000</strong> (a mix of reported claims and actuarially estimated IBNR/IBNER), of which <strong>₹25,00,000</strong> has already been paid. The remaining <strong>₹50,00,000</strong> is expected to be paid out over the next 3 years as tribunal proceedings and settlements conclude: ₹20,00,000 in Year 1, ₹20,00,000 in Year 2, ₹10,00,000 in Year 3. Discount rate: <strong>7% p.a.</strong> Risk Adjustment on the unsettled claims: <strong>₹4,50,000</strong>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Cash outflow</th><th class="r">Undiscounted</th><th class="r">Discount factor @7%</th><th class="r">Present value</th></tr></thead>
+        <tbody>
+          <tr><td>Year 1</td><td class="r">₹20,00,000</td><td class="r">0.9346</td><td class="r">₹18,69,159</td></tr>
+          <tr><td>Year 2</td><td class="r">₹20,00,000</td><td class="r">0.8734</td><td class="r">₹17,46,868</td></tr>
+          <tr><td>Year 3</td><td class="r">₹10,00,000</td><td class="r">0.8163</td><td class="r">₹8,16,298</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total PV of unsettled claims</td><td class="r">₹50,00,000</td><td></td><td class="r">₹44,32,325</td></tr></tfoot>
+      </table>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Liability for Incurred Claims (LIC)</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>PV of unsettled claim payments</td><td class="r">₹44,32,325</td></tr>
+          <tr><td>Risk Adjustment</td><td class="r">₹4,50,000</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>LIC under IND AS 117</strong></td><td class="r"><strong>₹48,82,325</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="callout-orange">
+      <p><strong>Vs old regime:</strong> the Outstanding Claims Reserve + IBNR under the current regime would simply be the undiscounted ₹50,00,000. IND AS 117's discounting reduces the liability by roughly ₹5,67,675 — but the explicit Risk Adjustment of ₹4,50,000 (which had no separate line item before, sitting implicitly inside conservative reserving assumptions) claws most of that back. The <strong>net LIC of ₹48,82,325 isn't wildly different in size</strong> from the old ₹50,00,000 reserve — what's genuinely different is that the number is now built from two <strong>separately visible, separately disclosed</strong> components (a discounted best estimate, plus an explicit price for uncertainty) instead of one opaque, prudently-loaded reserve figure.</p>
+    </div>
+    <p>Crucially, note what <strong>didn't</strong> get simplified here: even though Shakti's Motor TP premium (LRC) can use the PAA shortcut, the moment a claim is incurred it moves out of LRC and into LIC — and LIC <strong>always</strong> requires this full discounted fulfilment-cash-flow-plus-Risk-Adjustment treatment, PAA or not.</p>
+
+    <h2 id="example-fire">5. Worked Example 3 — Fire Insurance (Multi-Year Policy)</h2>
+    <p><strong>Facts:</strong> Shakti issues a 3-year commercial Fire policy on 1 January 2026, single premium of <strong>₹9,00,000</strong> for the full 36-month term, commission <strong>₹90,000</strong> (10%, deferred). FY end 31 March 2026 — 3 of 36 months elapsed (8.33%).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th class="r">At 31 Mar 2026 (8.33% elapsed)</th></tr></thead>
+        <tbody>
+          <tr><td>Insurance revenue recognised</td><td class="r">₹75,000</td></tr>
+          <tr><td>LRC remaining</td><td class="r">₹8,25,000</td></tr>
+          <tr><td>Acquisition cost amortised</td><td class="r">₹7,500</td></tr>
+          <tr><td>Deferred acquisition cash flow remaining</td><td class="r">₹82,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The mechanics here mirror Example 1 — straight-line release over the coverage period, just spread across 36 months instead of 12. Multi-year commercial policies like this one are exactly the kind of contract insurers must actively test for PAA eligibility (rather than simply assuming it) if the coverage period materially exceeds 12 months, though in practice most insurers can still demonstrate PAA doesn't differ materially from GMM for standard multi-year Fire covers.</p>
+
+    <div class="cta-box">
+      <h3>Explore Finosutra's IND AS tools</h3>
+      <p>Free calculators for lease accounting, security deposits, ECL provisioning and financial statement generation — audit-ready workpapers in minutes.</p>
+      <a href="../indas-tools.html">Explore IND AS Tools →</a>
+    </div>
+
+    <h2 id="onerous">6. Onerous Contract Testing — A Loss-Making Cohort</h2>
+    <p><strong>Facts:</strong> Shakti's Motor TP underwriting group for FY 2025-26 has expected premium (PV) of <strong>₹1,00,00,000</strong>, but expected claims and expenses (PV) of <strong>₹1,10,00,000</strong> and a Risk Adjustment of <strong>₹8,00,000</strong> — a segment that's been persistently loss-making at current TP tariff pricing.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>PV of expected claims + expenses</td><td class="r">₹1,10,00,000</td></tr>
+          <tr><td>Risk Adjustment</td><td class="r">₹8,00,000</td></tr>
+          <tr><td>Less: PV of expected premium</td><td class="r">(₹1,00,00,000)</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>Net loss at inception (onerous)</strong></td><td class="r"><strong>₹18,00,000</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Immediate loss recognition at inception</div>
+      <div class="je-row"><span class="je-account">Insurance Service Expense (loss component)</span><span class="je-amounts"><span class="je-dr">Dr. ₹18,00,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Liability for Remaining Coverage (loss component)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹18,00,000</span></span></div>
+    </div>
+    <div class="callout-red">
+      <p><strong>Vs old regime:</strong> the Premium Deficiency Reserve is tested at a broader class-of-business level (e.g. the whole Motor segment, OD + TP combined) — a specific loss-making TP underwriting year can be masked by profitable OD business in the same class until the entire class turns unprofitable. IND AS 117's <strong>per-annual-cohort</strong> test is far more granular: this specific TP group's loss is flagged and recognised in full, immediately, regardless of how the rest of the Motor book performs.</p>
+    </div>
+
+    <h2 id="reinsurance">7. Reinsurance Contracts Held &amp; the Loss-Recovery Component</h2>
+    <p>Shakti cedes 30% of its Motor TP business under a quota share treaty. Reinsurance contracts held are measured <strong>separately</strong> from the underlying insurance contracts — broadly mirroring the PAA mechanics used for the underlying book (a reinsurance asset for remaining coverage, released as the reinsurance protection is consumed) — but with one genuinely new feature:</p>
+    <div class="callout">
+      <p><strong>Loss-recovery component:</strong> since the underlying Motor TP group above is onerous (₹18,00,000 loss), and 30% of that loss is recoverable from the reinsurer, Shakti recognises a corresponding <strong>gain of ₹5,40,000</strong> (30% × ₹18,00,000) on its reinsurance held asset at the same time it recognises the underlying loss — rather than the loss and the recovery landing in different periods, as could easily happen under the old regime's simpler net presentation.</p>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Loss-recovery on reinsurance held</div>
+      <div class="je-row"><span class="je-account">Reinsurance Contract Asset (loss-recovery component)</span><span class="je-amounts"><span class="je-dr">Dr. ₹5,40,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Net Income/Expense from Reinsurance Contracts Held</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹5,40,000</span></span></div>
+    </div>
+
+    <h2 id="presentation">8. Financial Statement Presentation — Revenue Account to Insurance Revenue</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Old Schedule B Revenue Account</th><th>IND AS 117 presentation</th></tr></thead>
+        <tbody>
+          <tr><td>Premium earned (net of reinsurance)</td><td>Insurance revenue</td></tr>
+          <tr><td>Claims incurred (net)</td><td>Insurance service expense</td></tr>
+          <tr><td>Commission (net)</td><td>Included within insurance service expense (as acquisition costs amortise)</td></tr>
+          <tr><td>Operating expenses related to insurance business</td><td>Included within insurance service expense</td></tr>
+          <tr><td>— (no equivalent line)</td><td>Net expense/income from reinsurance contracts held (separate line)</td></tr>
+          <tr><td>— (no equivalent line)</td><td>Insurance finance income/expense (unwind of discount, separate line)</td></tr>
+          <tr><td>Operating profit/(loss) — segment-wise</td><td>Insurance service result (by portfolio, not statutory class)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="comparison">9. Old IGAAP vs IND AS 117 — Side-by-Side Comparison</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspect</th><th>Old IRDAI regime</th><th>IND AS 117 (PAA)</th></tr></thead>
+        <tbody>
+          <tr><td>Remaining coverage liability</td><td>Unearned Premium Reserve (day-count)</td><td>Liability for Remaining Coverage (LRC) — usually numerically similar</td></tr>
+          <tr><td>Claims liability</td><td>Undiscounted Outstanding Claims + IBNR/IBNER</td><td>Discounted fulfilment cash flows + explicit Risk Adjustment (LIC)</td></tr>
+          <tr><td>Adequacy testing</td><td>Premium Deficiency Reserve, at class-of-business level</td><td>Onerous contract test, per annual cohort, mandatory at Day 1</td></tr>
+          <tr><td>Acquisition costs</td><td>Expensed as incurred</td><td>Deferred, matched to coverage provided (or immediately if ≤12 months, per policy choice)</td></tr>
+          <tr><td>Reinsurance held</td><td>Net presentation within Revenue Account</td><td>Separate asset/liability, with loss-recovery component</td></tr>
+          <tr><td>Discounting</td><td>Not required — prudence implicit in reserving</td><td>Mandatory market-consistent discount rates</td></tr>
+          <tr><td>Risk margin</td><td>Implicit, embedded in conservative assumptions</td><td>Explicit, separately quantified Risk Adjustment</td></tr>
+          <tr><td>Presentation</td><td>Schedule B — Fire/Marine/Motor/Health/Miscellaneous segments</td><td>Insurance revenue / service expense / finance income-expense, by portfolio</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="disclosures">10. Disclosures Required</h2>
+    <ul>
+      <li>Reconciliation of insurance contract liabilities (LRC and LIC) from opening to closing balance</li>
+      <li>Risk Adjustment — the confidence level used to determine it</li>
+      <li>Onerous contracts — loss components created and reversed during the period</li>
+      <li>Reinsurance contracts held — a separate reconciliation, including the loss-recovery component</li>
+      <li>Claims development information (by accident/underwriting year), building on the same data actuaries already produce for IBNR</li>
+      <li>Sensitivity of the reported results to key assumptions (loss ratios, discount rates)</li>
+    </ul>
+
+    <h2 id="errors">11. Common Mistakes CAs Make</h2>
+
+    <div class="callout-red">
+      <p><strong>Error 1 — Treating PAA as "no change needed" and skipping the onerous contract test.</strong> PAA simplifies measurement, not the requirement to test every annual cohort for onerousness at inception — this test still has to be performed and documented even for the simplest short-tail policies.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 2 — Applying the PAA simplification to LIC as well as LRC.</strong> Once a claim is incurred — even under a PAA-measured policy — the resulting liability must always use full discounted fulfilment cash flows plus Risk Adjustment. This is the single most common conceptual error for long-tail lines like Motor TP.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 3 — Continuing to expense acquisition costs immediately without a documented policy choice.</strong> IND AS 117 permits expensing acquisition costs as incurred only for contracts of 12 months or less (as an accounting policy choice) — it isn't a default, and the choice needs to be applied consistently and disclosed.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 4 — Missing the reinsurance loss-recovery component on onerous underlying business.</strong> When ceded reinsurance genuinely covers losses on an onerous underlying group, failing to recognise the offsetting gain on the reinsurance asset understates the net financial impact and misstates timing.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 5 — Assuming PAA eligibility for multi-year contracts without testing it.</strong> For contracts materially longer than 12 months, an insurer must actually demonstrate PAA results don't differ materially from GMM — this is a testable, documentable judgement, not an automatic entitlement.</p>
+    </div>
+
+    <h2 id="faq">12. FAQs</h2>
+
+    <h3>Do general insurers have to use GMM, or can they always use PAA?</h3>
+    <p>PAA is automatically available for contracts with a coverage period of 12 months or less — which covers the vast majority of Indian general insurance (annual Motor, Fire, Health, Marine cargo policies). For longer-duration contracts, an insurer can still use PAA if it can demonstrate the result would not materially differ from GMM; this is a policy choice that must be tested and documented, not simply assumed.</p>
+
+    <h3>How is IND AS 117 different from the current IRDAI Unearned Premium Reserve method?</h3>
+    <p>Mechanically, the Liability for Remaining Coverage under PAA closely resembles the existing UPR — both release the liability over the coverage period, usually on a straight-line/day-count basis. The real differences are elsewhere: acquisition costs are deferred and matched to revenue rather than expensed immediately, claims liabilities (LIC) must be discounted and carry an explicit Risk Adjustment rather than being held as undiscounted case reserves and IBNR, and onerous contracts are tested per annual cohort rather than at a broader class level via a Premium Deficiency Reserve.</p>
+
+    <h3>Why does Motor Third Party insurance need special attention under IND AS 117?</h3>
+    <p>Motor TP claims in India are notoriously long-tail — a claim reported this year can take several years to settle through litigation and tribunal processes. While the premium side (Liability for Remaining Coverage) can use the PAA simplification, once a claim is incurred it moves to the Liability for Incurred Claims, which must always be measured using full discounted fulfilment cash flows plus a Risk Adjustment — the PAA simplification never applies to claims liabilities, only to remaining coverage.</p>
+
+    <h3>What is a loss component and when is it created?</h3>
+    <p>A loss component arises when a group of contracts is onerous at inception — i.e. the present value of expected claims and expenses, plus the Risk Adjustment, exceeds the present value of expected premiums. Because the CSM can never be negative, this excess is recognised immediately as a loss in profit or loss at inception, rather than being smoothed over the coverage period. This is tested per annual cohort, so a specific loss-making underwriting year can be flagged even while the insurer's broader class of business remains profitable overall.</p>
+
+    <h3>Does IND AS 117 change how reinsurance is accounted for?</h3>
+    <p>Yes. Reinsurance contracts held are measured separately from the underlying insurance contracts they cover, generally mirroring the PAA or GMM approach used for the underlying business. A key new feature is the loss-recovery component — when an underlying group of contracts is onerous, the ceding insurer recognises an offsetting gain on its reinsurance held to the extent losses are recoverable, a mechanism that has no direct equivalent under the current net presentation of reinsurance in the Revenue Account.</p>
+
+    <h3>Is IBNR reserving still required under IND AS 117?</h3>
+    <p>The concept survives but the mechanics change. Actuaries will still estimate incurred-but-not-reported claims using development triangles and similar techniques, but that estimate now becomes an input into the discounted fulfilment cash flows that make up the Liability for Incurred Claims, alongside an explicit Risk Adjustment — rather than being held, undiscounted, as a standalone IBNR reserve line item as under the current regime.</p>
+
+  </div>
+
+  <div class="related-links">
+    <h3>Related tools &amp; articles</h3>
+    <a href="../indas-tools.html">→ All IND AS Tools</a>
+    <a href="ind-as-117-insurance-contracts.html">→ IND AS 117 / IFRS 17 — Foundations (FCF, CSM, GMM/PAA/VFA)</a>
+    <a href="ind-as-117-life-insurance-guide.html">→ IND AS 117 for Life Insurance — GMM, VFA &amp; CSM Roll-Forward</a>
+    <a href="ind-as-37-provisions-contingent-liabilities-guide.html">→ IND AS 37 Provisions &amp; Contingent Liabilities — Complete Guide</a>
+    <a href="ind-as-109-financial-instruments-guide.html">→ IND AS 109 Financial Instruments — Complete Guide</a>
+    <a href="../blog.html">← All Articles</a>
+  </div>
+
+</div>
+
+<div id="fs-footer"></div>
+<script src="../nav.js?v=9"></script>
+<script src="../footer.js?v=8"></script>
+<script src="../share.js"></script>
+</body>
+</html>
