@@ -484,6 +484,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://finosutra.com/blog/ind-as-109-ecl-general-approach-guide.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://finosutra.com/blog/ind-as-109-hedge-accounting-guide.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
   <url>
     <loc>https://finosutra.com/blog/capital-gains-tax-india-2025-26.html</loc>

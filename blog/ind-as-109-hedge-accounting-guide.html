@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Hedge Accounting Under IND AS 109 — Cash Flow Hedge Worked Example with Journal Entries | Finosutra</title>
+<meta name="description" content="A full IND AS 109 hedge accounting worked example — a forward contract hedging a forecast export receivable, showing OCI deferral and recycling, plus a fair value hedge example for an interest rate swap, qualifying criteria, and documentation requirements."/>
+<meta name="keywords" content="hedge accounting IND AS 109, cash flow hedge journal entries, forward contract export hedge, OCI cash flow hedge reserve, fair value hedge interest rate swap, hedge effectiveness testing, IFRS 9 hedge accounting India"/>
+<meta name="author" content="Finosutra"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://finosutra.com/blog/ind-as-109-hedge-accounting-guide.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Finosutra"/>
+<meta property="og:title" content="Hedge Accounting Under IND AS 109 — Cash Flow Hedge Worked Example with Journal Entries"/>
+<meta property="og:description" content="A forward contract hedging a forecast export receivable, showing OCI deferral and recycling, plus a fair value hedge example for an interest rate swap."/>
+<meta property="og:url" content="https://finosutra.com/blog/ind-as-109-hedge-accounting-guide.html"/>
+<meta property="og:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Hedge Accounting Under IND AS 109 — Complete Guide"/>
+<meta name="twitter:description" content="Cash flow hedge and fair value hedge worked examples with full journal entries."/>
+<meta name="twitter:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="../finosutra.css?v=17"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2G710PHNQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z2G710PHNQ');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hedge Accounting Under IND AS 109 — Cash Flow Hedge Worked Example with Journal Entries",
+  "description": "A full IND AS 109 hedge accounting worked example — a forward contract hedging a forecast export receivable, showing OCI deferral and recycling, plus a fair value hedge example for an interest rate swap, qualifying criteria, and documentation requirements.",
+  "author": {"@type": "Organization", "name": "Finosutra", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]},
+  "publisher": {"@type": "Organization", "name": "Finosutra", "url": "https://finosutra.com", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]},
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://finosutra.com/blog/ind-as-109-hedge-accounting-guide.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is the main difference between a cash flow hedge and a fair value hedge in accounting terms?", "acceptedAnswer": {"@type": "Answer", "text": "In a cash flow hedge, the effective portion of the hedging instrument's gain or loss is deferred in other comprehensive income (OCI) and only reclassified to profit or loss when the hedged forecast transaction itself affects profit or loss. In a fair value hedge, both the gain or loss on the hedging instrument and the offsetting fair value change on the hedged item are recognised in profit or loss immediately, in the same period — there is no OCI deferral."}},
+    {"@type": "Question", "name": "What documentation does IND AS 109 require to qualify for hedge accounting?", "acceptedAnswer": {"@type": "Answer", "text": "At inception, an entity must formally designate and document the hedging relationship, including the entity's risk management objective and strategy for undertaking the hedge, identification of the hedging instrument and the hedged item, the nature of the risk being hedged, and how the entity will assess whether the hedging relationship meets the effectiveness requirements — including the causes of hedge ineffectiveness and how the hedge ratio is determined. Hedge accounting cannot be applied retrospectively; this documentation must exist before or at the point the hedge accounting relationship begins."}},
+    {"@type": "Question", "name": "Does IND AS 109 still use the old 80-125% effectiveness test?", "acceptedAnswer": {"@type": "Answer", "text": "No. The rigid 80-125% bright-line retrospective effectiveness test from the earlier IAS 39 / AS 30-era approach has been replaced with a more principles-based test: there must be an economic relationship between the hedged item and hedging instrument, credit risk must not dominate the value changes arising from that relationship, and the hedge ratio used must be consistent with the quantity actually used for risk management purposes. This is a deliberately lighter-touch, more judgement-based standard than the old numeric threshold."}},
+    {"@type": "Question", "name": "What happens to the accumulated OCI balance when a cash flow hedge is discontinued?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on why hedge accounting stopped. If the hedged future cash flow is still expected to occur, the accumulated gain or loss in the cash flow hedge reserve remains in OCI until that transaction eventually affects profit or loss. If the hedged forecast transaction is no longer expected to occur at all, the entire accumulated amount is reclassified from OCI to profit or loss immediately."}},
+    {"@type": "Question", "name": "How were FX forwards typically accounted for in India before IND AS 109?", "acceptedAnswer": {"@type": "Answer", "text": "Under the earlier regime, few Indian companies formally applied hedge accounting — AS 30 was optional and rarely adopted, and many entities followed the ICAI Guidance Note on derivative accounting, which generally required forward contracts to be marked to market through profit or loss without any deferral mechanism. This meant reported profit could swing significantly from period to period purely due to forward contract fair value movements, even though the underlying forecast transaction being hedged hadn't happened yet — exactly the mismatch hedge accounting under IND AS 109 is designed to prevent."}},
+    {"@type": "Question", "name": "Can a company hedge a forecast transaction that hasn't been contractually committed to yet?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, provided the forecast transaction is highly probable — this is the basis of cash flow hedge accounting, and is exactly how the export receivable example in this article works. The transaction doesn't need to be under a signed contract at the time the hedge is designated, but the entity does need a reasonable basis (historical pattern, confirmed orders, production capacity, etc.) to support that it is highly probable to occur."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --brand:#6366F1;--brand-dark:#4F46E5;--brand-light:#EEF2FF;--brand-mid:#C7D2FE;
+  --bg:#F9FAFB;--card:#FFFFFF;--border:rgba(99,102,241,0.18);--border-light:rgba(99,102,241,0.08);
+  --text:#111827;--muted:#6B7280;--muted2:#9CA3AF;
+  --green:#059669;--green-light:#ECFDF5;
+  --red:#DC2626;--red-light:#FEF2F2;
+  --orange:#D97706;--orange-light:#FFFBEB;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+.article-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted2);margin-bottom:24px;flex-wrap:wrap;}
+.breadcrumb a{color:var(--muted2);text-decoration:none;transition:color .15s;}
+.breadcrumb a:hover{color:var(--brand);}
+
+.article-tag{display:inline-block;background:var(--brand-light);color:var(--brand);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.4px;margin-bottom:16px;}
+.article-title{font-size:clamp(24px,4vw,36px);font-weight:800;line-height:1.2;letter-spacing:-0.5px;color:var(--text);margin-bottom:16px;}
+.article-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;flex-wrap:wrap;}
+.article-meta span{display:flex;align-items:center;gap:5px;}
+.article-divider{height:1px;background:var(--border-light);margin-bottom:36px;}
+
+.toc{background:var(--brand-light);border:1px solid var(--brand-mid);border-radius:14px;padding:22px 26px;margin-bottom:40px;}
+.toc h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px;}
+.toc ol{padding-left:18px;}
+.toc ol li{margin-bottom:6px;}
+.toc ol li a{font-size:14px;color:var(--brand-dark);text-decoration:none;font-weight:500;}
+.toc ol li a:hover{text-decoration:underline;}
+
+.article-body h2{font-size:22px;font-weight:800;color:var(--text);margin:40px 0 14px;letter-spacing:-0.3px;}
+.article-body h3{font-size:17px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{margin-bottom:16px;color:#1F2937;}
+.article-body ul,.article-body ol{padding-left:22px;margin-bottom:16px;}
+.article-body ul li,.article-body ol li{margin-bottom:8px;color:#1F2937;}
+.article-body strong{font-weight:700;color:var(--text);}
+
+.callout{background:var(--brand-light);border-left:4px solid var(--brand);border-radius:0 10px 10px 0;padding:16px 20px;margin:24px 0;}
+.callout p{margin:0;font-size:14px;color:var(--brand-dark);}
+.callout strong{color:var(--brand-dark);}
+.callout-green{background:var(--green-light);border-left-color:var(--green);}
+.callout-green p{color:#065F46;}
+.callout-orange{background:var(--orange-light);border-left-color:var(--orange);}
+.callout-orange p{color:#92400E;}
+.callout-red{background:var(--red-light);border-left-color:var(--red);}
+.callout-red p{color:#991B1B;}
+
+.table-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:360px;}
+table th{background:linear-gradient(135deg,#6366F1,#8B5CF6);color:#fff;font-weight:700;padding:10px 14px;text-align:left;}
+table th.r{text-align:right;}
+table td{padding:9px 14px;border-bottom:1px solid #F3F4F6;color:#1F2937;}
+table td.r{text-align:right;}
+table tr:nth-child(even) td{background:#F9FAFB;}
+table tr:last-child td{border-bottom:none;}
+table tfoot td{background:#EEF2FF;font-weight:700;border-top:2px solid var(--brand-mid);}
+
+.je-block{background:#F9FAFB;border:1px solid var(--border-light);border-radius:12px;padding:20px 22px;margin:20px 0;}
+.je-title{font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;text-transform:uppercase;letter-spacing:.4px;}
+.je-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #F3F4F6;}
+.je-row:last-child{border-bottom:none;}
+.je-account{font-size:14px;font-weight:600;color:var(--text);}
+.je-account.cr{padding-left:24px;font-weight:500;color:var(--muted);}
+.je-amounts{display:flex;gap:32px;}
+.je-dr{font-size:14px;font-weight:700;color:#10B981;min-width:100px;text-align:right;}
+.je-cr{font-size:14px;font-weight:700;color:#6366F1;min-width:100px;text-align:right;}
+
+.step-card{border:1px solid var(--border-light);border-radius:12px;padding:20px 22px;margin:16px 0;position:relative;padding-left:60px;}
+.step-num{position:absolute;left:18px;top:18px;width:28px;height:28px;background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;}
+.step-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;margin-top:0;}
+.step-card p{font-size:14px;color:var(--muted);margin:0;}
+
+.cta-box{background:linear-gradient(135deg,#6366F1,#8B5CF6);border-radius:16px;padding:28px 30px;margin:40px 0;text-align:center;}
+.cta-box h3{font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;}
+.cta-box p{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:18px;}
+.cta-box a{display:inline-block;background:#fff;color:var(--brand);font-size:14px;font-weight:700;padding:12px 26px;border-radius:10px;text-decoration:none;transition:transform .15s;}
+.cta-box a:hover{transform:translateY(-1px);}
+
+.related-links{border:1px solid var(--border-light);border-radius:12px;padding:20px 24px;margin-top:40px;}
+.related-links h3{font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;}
+.related-links a{display:block;font-size:14px;color:var(--brand);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--border-light);font-weight:500;}
+.related-links a:last-child{border-bottom:none;}
+.related-links a:hover{text-decoration:underline;}
+
+@media(max-width:600px){.article-wrap{padding:32px 16px 60px;}.je-amounts{gap:16px;}.step-card{padding-left:50px;}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../auth.js?v=12"></script>
+</head>
+<body>
+
+<div id="fs-nav"></div>
+
+<div class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../blog.html">Blog</a>
+    <span>›</span>
+    <span>Hedge Accounting Under IND AS 109</span>
+  </nav>
+
+  <div class="article-tag">IND AS 109 — Hedge Accounting</div>
+  <h1 class="article-title">Hedge Accounting Under IND AS 109 — Cash Flow Hedge Worked Example</h1>
+  <div class="article-meta">
+    <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+    <span><i class="fa-regular fa-clock"></i> 17 min read</span>
+    <span><i class="fa-solid fa-user"></i> Finosutra Team</span>
+  </div>
+  <p style="font-size:16px;line-height:1.65;color:#374151;max-width:760px;margin:4px 0 14px;">Our <a href="ind-as-109-financial-instruments-guide.html">main IND AS 109 guide</a> introduces the three hedge types in a few paragraphs. This article goes deeper on the one Indian exporters and importers actually use most — the <strong>cash flow hedge</strong> — with a full numeric worked example of a forward contract hedging a forecast export receivable, showing exactly how gains and losses move through <strong>OCI</strong> before landing in P&amp;L, plus a shorter fair value hedge example for contrast.</p>
+  <div class="article-divider"></div>
+
+  <div class="toc">
+    <h3>In This Article</h3>
+    <ol>
+      <li><a href="#why">Why Hedge Accounting Exists — the P&amp;L Mismatch Problem</a></li>
+      <li><a href="#qualifying">Qualifying Criteria — the Modern, Principles-Based Test</a></li>
+      <li><a href="#documentation">Hedge Documentation Requirements</a></li>
+      <li><a href="#cfh-mechanics">Cash Flow Hedge Mechanics — Effective Portion &amp; OCI Recycling</a></li>
+      <li><a href="#example">Worked Example — Forward Contract Hedging a Forecast Export Receivable</a></li>
+      <li><a href="#fvh">Fair Value Hedge — A Shorter Worked Example</a></li>
+      <li><a href="#discontinuation">Discontinuing Hedge Accounting</a></li>
+      <li><a href="#comparison">Vs Old IGAAP — Key Differences</a></li>
+      <li><a href="#disclosures">Disclosures Required</a></li>
+      <li><a href="#errors">Common Mistakes CAs Make</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+
+    <h2 id="why">1. Why Hedge Accounting Exists — the P&amp;L Mismatch Problem</h2>
+    <p>Without hedge accounting, a derivative used purely to manage risk (e.g. a forward contract locking in an export rate) is marked to fair value through P&amp;L every period — while the transaction it's economically hedging (a forecast sale that hasn't happened yet) isn't recognised at all until it actually occurs. The result is P&amp;L volatility that doesn't reflect the entity's real economic position: the derivative swings through profit or loss on its own, disconnected from the transaction it's protecting.</p>
+    <div class="callout">
+      <p><strong>Hedge accounting's entire purpose</strong> is to override this default timing mismatch — by deferring the hedging instrument's gains/losses (cash flow hedge) or by accelerating recognition of the hedged item's fair value change (fair value hedge), so that the accounting reflects the economic hedge relationship the entity actually has in place.</p>
+    </div>
+
+    <h2 id="qualifying">2. Qualifying Criteria — the Modern, Principles-Based Test</h2>
+    <p>To apply hedge accounting, a hedging relationship must meet three ongoing conditions:</p>
+    <ul>
+      <li><strong>An economic relationship</strong> exists between the hedged item and the hedging instrument — their values are expected to move in offsetting directions because of the same underlying risk</li>
+      <li><strong>Credit risk does not dominate</strong> the value changes that result from that economic relationship</li>
+      <li><strong>The hedge ratio</strong> used for accounting matches the quantity of the hedged item actually hedged for risk management purposes — not an artificially different ratio designed to produce a particular accounting outcome</li>
+    </ul>
+    <div class="callout-orange">
+      <p><strong>This replaced the old bright-line test.</strong> Pre-existing practice under IAS 39/AS 30 required a rigid, retrospective 80–125% effectiveness range — pass or fail a numeric band every period. IND AS 109's test is deliberately more judgement-based and forward-looking, and is generally easier to qualify for and maintain, provided the economic rationale is genuine and well documented.</p>
+    </div>
+
+    <h2 id="documentation">3. Hedge Documentation Requirements</h2>
+    <p>At inception, before hedge accounting can be applied, an entity must formally document:</p>
+    <ul>
+      <li>The risk management objective and strategy for undertaking the hedge</li>
+      <li>Identification of the hedging instrument and the hedged item</li>
+      <li>The nature of the risk being hedged (e.g. FX risk on a specific forecast USD receivable)</li>
+      <li>How the entity will assess the hedging relationship's effectiveness, including the causes of any expected ineffectiveness and how the hedge ratio was determined</li>
+    </ul>
+    <p>Hedge accounting cannot be applied retrospectively — this documentation must exist at or before the point the hedge relationship begins.</p>
+
+    <h2 id="cfh-mechanics">4. Cash Flow Hedge Mechanics — Effective Portion &amp; OCI Recycling</h2>
+    <p>For a cash flow hedge, the <strong>effective portion</strong> of the hedging instrument's gain or loss is recognised in <strong>other comprehensive income</strong>, accumulating in a <strong>Cash Flow Hedge Reserve</strong>. Any <strong>ineffective portion</strong> goes straight to P&amp;L. When the hedged forecast transaction eventually affects profit or loss (e.g. the export sale is invoiced), the accumulated OCI balance is <strong>reclassified ("recycled")</strong> to P&amp;L in the same period — typically adjusting the line item the hedged transaction itself hits (revenue, in an export sale hedge).</p>
+
+    <h2 id="example">5. Worked Example — Forward Contract Hedging a Forecast Export Receivable</h2>
+    <p><strong>Facts:</strong> Bharat Exports Ltd forecasts a <strong>highly probable</strong> export sale of USD 1,00,000, expected in 6 months. On 1 October 2025, it enters a forward contract to sell USD 1,00,000 at a locked rate of <strong>₹84.00/USD</strong>, settling 31 March 2026. At inception, the forward's fair value is ₹0 (it's priced at the current market forward rate). FY reporting date: 31 December 2025.</p>
+
+    <h3>1 October 2025 — Inception</h3>
+    <p>No journal entry required — the forward contract's fair value is nil at inception. Documentation of the hedge relationship (risk management objective, hedged item, hedging instrument, effectiveness assessment method) is completed at this date.</p>
+
+    <h3>31 December 2025 — Reporting date (3 months in)</h3>
+    <p>The market forward rate for the remaining 3-month period has moved to ₹83.20/USD — Bharat's locked rate of ₹84.00 is now more favourable than the market rate, so the forward contract is an asset.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th class="r">Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Locked forward rate</td><td class="r">₹84.00</td></tr>
+          <tr><td>Current market forward rate (remaining term)</td><td class="r">₹83.20</td></tr>
+          <tr><td>Favourable rate difference</td><td class="r">₹0.80</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>Fair value gain = ₹0.80 × 1,00,000</strong></td><td class="r"><strong>₹80,000</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <p>The hedge is fully effective (a 1:1 FX forward against a matching FX forecast transaction), so the entire gain goes to OCI.</p>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — 31 December 2025</div>
+      <div class="je-row"><span class="je-account">Forward Contract (Derivative Asset)</span><span class="je-amounts"><span class="je-dr">Dr. ₹80,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Cash Flow Hedge Reserve (OCI)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹80,000</span></span></div>
+    </div>
+
+    <h3>31 March 2026 — Settlement date</h3>
+    <p>The spot rate on the settlement date is ₹82.80/USD. The forward contract's total fair value gain since inception is now (₹84.00 − ₹82.80) × 1,00,000 = <strong>₹1,20,000</strong>. The incremental movement since 31 December is ₹1,20,000 − ₹80,000 = <strong>₹40,000</strong>, also taken to OCI.</p>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Further fair value movement to settlement</div>
+      <div class="je-row"><span class="je-account">Forward Contract (Derivative Asset)</span><span class="je-amounts"><span class="je-dr">Dr. ₹40,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Cash Flow Hedge Reserve (OCI)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹40,000</span></span></div>
+    </div>
+    <p>The export sale is invoiced at the spot rate, and the forward contract settles by physical delivery:</p>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Recognition of export sale (at spot rate)</div>
+      <div class="je-row"><span class="je-account">Trade Receivable (USD 1,00,000 × ₹82.80)</span><span class="je-amounts"><span class="je-dr">Dr. ₹82,80,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Revenue</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹82,80,000</span></span></div>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Settlement of forward contract</div>
+      <div class="je-row"><span class="je-account">Bank (USD 1,00,000 delivered, ₹84.00 received)</span><span class="je-amounts"><span class="je-dr">Dr. ₹84,00,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Forward Contract (Derivative Asset)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹1,20,000</span></span></div>
+      <div class="je-row"><span class="je-account cr">To Trade Receivable</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹82,80,000</span></span></div>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Reclassification ("recycling") of OCI to P&amp;L</div>
+      <div class="je-row"><span class="je-account">Cash Flow Hedge Reserve (OCI)</span><span class="je-amounts"><span class="je-dr">Dr. ₹1,20,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Revenue</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹1,20,000</span></span></div>
+    </div>
+    <div class="callout-green">
+      <p><strong>Net effect:</strong> total revenue recognised = ₹82,80,000 (spot-rate sale) + ₹1,20,000 (recycled hedge gain) = <strong>₹84,00,000</strong> — exactly the locked-in forward rate, ₹84.00 × 1,00,000. The hedge accounting mechanism successfully insulated P&amp;L from FX volatility during the 6-month forecast period, and delivered the economically locked-in revenue figure in the period the sale actually occurred — not spread across unrelated reporting periods as disconnected derivative fair value swings.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Explore Finosutra's IND AS tools</h3>
+      <p>Free calculators for lease accounting, security deposits, ECL provisioning and financial statement generation — audit-ready workpapers in minutes.</p>
+      <a href="../indas-tools.html">Explore IND AS Tools →</a>
+    </div>
+
+    <h2 id="fvh">6. Fair Value Hedge — A Shorter Worked Example</h2>
+    <p><strong>Facts:</strong> Kavya Industries has a <strong>₹1,00,00,000</strong> fixed-rate borrowing at 9% p.a. It enters an interest rate swap to receive fixed / pay floating, hedging the borrowing's fair value against interest rate movements. At the reporting date, market rates have fallen, so the fixed-rate borrowing is now more expensive relative to market (its fair value as a liability increases), while the swap (which pays fixed and receives floating) becomes less favourable to Kavya as floating rates fall.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th class="r">Fair value movement</th></tr></thead>
+        <tbody>
+          <tr><td>Fixed-rate borrowing (hedged item)</td><td class="r">₹1,50,000 increase (loss)</td></tr>
+          <tr><td>Interest rate swap (hedging instrument)</td><td class="r">₹1,45,000 increase in swap liability (loss)</td></tr>
+        </tbody>
+        <tfoot><tr><td><strong>Net P&amp;L impact (ineffectiveness)</strong></td><td class="r"><strong>₹5,000 net loss</strong></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="je-block">
+      <div class="je-title">Journal Entry — Fair value hedge, both sides to P&amp;L</div>
+      <div class="je-row"><span class="je-account">Loss on Fair Value Hedge — Borrowing (P&amp;L)</span><span class="je-amounts"><span class="je-dr">Dr. ₹1,50,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Borrowings (fair value adjustment)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹1,50,000</span></span></div>
+      <div class="je-row"><span class="je-account">Interest Rate Swap (Derivative Asset)</span><span class="je-amounts"><span class="je-dr">Dr. ₹1,45,000</span><span class="je-cr"></span></span></div>
+      <div class="je-row"><span class="je-account cr">To Gain on Fair Value Hedge — Swap (P&amp;L)</span><span class="je-amounts"><span class="je-dr"></span><span class="je-cr">₹1,45,000</span></span></div>
+    </div>
+    <div class="callout-orange">
+      <p><strong>The key mechanical contrast with the cash flow hedge above:</strong> here, <em>both</em> the hedged item's fair value change and the hedging instrument's fair value change hit P&amp;L directly, in the same period — there is no OCI deferral at all in a fair value hedge. The near-offset between the ₹1,50,000 loss and ₹1,45,000 gain (net ₹5,000) demonstrates the hedge is highly effective, with only a small residual ineffectiveness reaching net P&amp;L.</p>
+    </div>
+
+    <h2 id="discontinuation">7. Discontinuing Hedge Accounting</h2>
+    <p>Hedge accounting stops prospectively when the hedge ratio is no longer met and can't be rebalanced, the hedging instrument is sold/expires/is terminated, or the hedged item ceases to exist. What happens to any accumulated Cash Flow Hedge Reserve balance depends on the reason:</p>
+    <ul>
+      <li>If the hedged forecast transaction is <strong>still expected to occur</strong>, the accumulated balance stays in OCI until that transaction eventually affects P&amp;L</li>
+      <li>If the hedged forecast transaction is <strong>no longer expected to occur at all</strong>, the entire accumulated balance is reclassified to P&amp;L immediately</li>
+    </ul>
+
+    <h2 id="comparison">8. Vs Old IGAAP — Key Differences</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspect</th><th>Old regime</th><th>IND AS 109</th></tr></thead>
+        <tbody>
+          <tr><td>Adoption</td><td>AS 30 optional, rarely adopted; most followed the ICAI Guidance Note</td><td>Comprehensive, mandatory framework where hedge accounting is elected</td></tr>
+          <tr><td>Default derivative treatment</td><td>Forward contracts typically marked to market through P&amp;L directly</td><td>Effective portion deferred in OCI (cash flow hedge) or offsets hedged item (fair value hedge)</td></tr>
+          <tr><td>Effectiveness test</td><td>Rigid 80-125% bright-line, retrospective</td><td>Principles-based: economic relationship, credit risk not dominant, consistent hedge ratio</td></tr>
+          <tr><td>P&amp;L volatility from hedges</td><td>High — derivative MTM swings hit P&amp;L on their own</td><td>Substantially reduced — timing aligned with the hedged transaction</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="disclosures">9. Disclosures Required</h2>
+    <ul>
+      <li>The entity's risk management strategy and how it's applied to manage risk</li>
+      <li>How hedging activities may affect the amount, timing and uncertainty of future cash flows</li>
+      <li>The effect of hedge accounting on the financial statements — a reconciliation of each component of equity (e.g. the Cash Flow Hedge Reserve) affected</li>
+      <li>Nominal amounts of hedging instruments, by risk category</li>
+      <li>Sources and amounts of hedge ineffectiveness recognised in P&amp;L</li>
+    </ul>
+
+    <h2 id="errors">10. Common Mistakes CAs Make</h2>
+
+    <div class="callout-red">
+      <p><strong>Error 1 — Attempting to apply hedge accounting retrospectively.</strong> Documentation and designation must exist at or before inception of the hedge relationship — a derivative that's been running for months can't be retroactively designated into hedge accounting to smooth out results already reported.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 2 — Deferring the full derivative gain/loss to OCI without separating out ineffectiveness.</strong> Only the effective portion goes to OCI; any ineffective portion must still be identified and taken to P&amp;L in the period it arises.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 3 — Forgetting to recycle the OCI balance when the hedged transaction occurs.</strong> The whole point of a cash flow hedge is that the deferred amount eventually reaches P&amp;L, in the same period as the hedged transaction — leaving it parked in OCI indefinitely defeats the purpose.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 4 — Treating "highly probable" forecast transactions too loosely.</strong> A cash flow hedge of a forecast transaction needs a genuine, supportable basis for probability (confirmed orders, historical pattern, production capacity) — not just a general expectation that a sale of some kind will eventually happen.</p>
+    </div>
+
+    <div class="callout-red">
+      <p><strong>Error 5 — Applying fair value hedge OCI treatment by mistake.</strong> Confusing the two models is a real risk — a fair value hedge takes both sides to P&amp;L immediately; only a cash flow hedge defers the effective portion in OCI. Using the wrong mechanics for the wrong hedge type materially misstates both P&amp;L and OCI.</p>
+    </div>
+
+    <h2 id="faq">11. FAQs</h2>
+
+    <h3>What is the main difference between a cash flow hedge and a fair value hedge in accounting terms?</h3>
+    <p>In a cash flow hedge, the effective portion of the hedging instrument's gain or loss is deferred in other comprehensive income (OCI) and only reclassified to profit or loss when the hedged forecast transaction itself affects profit or loss. In a fair value hedge, both the gain or loss on the hedging instrument and the offsetting fair value change on the hedged item are recognised in profit or loss immediately, in the same period — there is no OCI deferral.</p>
+
+    <h3>What documentation does IND AS 109 require to qualify for hedge accounting?</h3>
+    <p>At inception, an entity must formally designate and document the hedging relationship, including the entity's risk management objective and strategy for undertaking the hedge, identification of the hedging instrument and the hedged item, the nature of the risk being hedged, and how the entity will assess whether the hedging relationship meets the effectiveness requirements — including the causes of hedge ineffectiveness and how the hedge ratio is determined. Hedge accounting cannot be applied retrospectively; this documentation must exist before or at the point the hedge accounting relationship begins.</p>
+
+    <h3>Does IND AS 109 still use the old 80-125% effectiveness test?</h3>
+    <p>No. The rigid 80-125% bright-line retrospective effectiveness test from the earlier IAS 39 / AS 30-era approach has been replaced with a more principles-based test: there must be an economic relationship between the hedged item and hedging instrument, credit risk must not dominate the value changes arising from that relationship, and the hedge ratio used must be consistent with the quantity actually used for risk management purposes. This is a deliberately lighter-touch, more judgement-based standard than the old numeric threshold.</p>
+
+    <h3>What happens to the accumulated OCI balance when a cash flow hedge is discontinued?</h3>
+    <p>It depends on why hedge accounting stopped. If the hedged future cash flow is still expected to occur, the accumulated gain or loss in the cash flow hedge reserve remains in OCI until that transaction eventually affects profit or loss. If the hedged forecast transaction is no longer expected to occur at all, the entire accumulated amount is reclassified from OCI to profit or loss immediately.</p>
+
+    <h3>How were FX forwards typically accounted for in India before IND AS 109?</h3>
+    <p>Under the earlier regime, few Indian companies formally applied hedge accounting — AS 30 was optional and rarely adopted, and many entities followed the ICAI Guidance Note on derivative accounting, which generally required forward contracts to be marked to market through profit or loss without any deferral mechanism. This meant reported profit could swing significantly from period to period purely due to forward contract fair value movements, even though the underlying forecast transaction being hedged hadn't happened yet — exactly the mismatch hedge accounting under IND AS 109 is designed to prevent.</p>
+
+    <h3>Can a company hedge a forecast transaction that hasn't been contractually committed to yet?</h3>
+    <p>Yes, provided the forecast transaction is highly probable — this is the basis of cash flow hedge accounting, and is exactly how the export receivable example in this article works. The transaction doesn't need to be under a signed contract at the time the hedge is designated, but the entity does need a reasonable basis (historical pattern, confirmed orders, production capacity, etc.) to support that it is highly probable to occur.</p>
+
+  </div>
+
+  <div class="related-links">
+    <h3>Related tools &amp; articles</h3>
+    <a href="ind-as-109-financial-instruments-guide.html">→ IND AS 109 Financial Instruments — Complete Guide</a>
+    <a href="ind-as-109-ecl-general-approach-guide.html">→ Expected Credit Loss — Full 3-Stage Model for Loans, NBFCs &amp; Banks</a>
+    <a href="ind-as-21-foreign-exchange-rates-guide.html">→ IND AS 21 Foreign Exchange Rates — Complete Guide</a>
+    <a href="ind-as-32-financial-instruments-presentation-guide.html">→ IND AS 32 Financial Instruments Presentation — Complete Guide</a>
+    <a href="../blog.html">← All Articles</a>
+  </div>
+
+</div>
+
+<div id="fs-footer"></div>
+<script src="../nav.js?v=9"></script>
+<script src="../footer.js?v=8"></script>
+<script src="../share.js"></script>
+</body>
+</html>
