@@ -133,23 +133,74 @@
   </div>
 
   <div class="book-toolbar">
-    <div class="book-toolbar-left"><i class="fa-solid fa-circle-info"></i> 2 of 36 standards available now — more added regularly.</div>
+    <div class="book-toolbar-left"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> All 36 IND AS standards available.</div>
     <button class="book-dl-btn" id="bookDlBtn" onclick="window.fsInitiateNotebookPurchase()"><i class="fa-solid fa-lock"></i> Download Full PDF — ₹79</button>
   </div>
 
   <div class="book-layout">
     <div class="book-sidebar" id="bookSidebar">
       <div class="book-sb-group">
-        <div class="book-sb-label">Available now</div>
+        <div class="book-sb-label">Presentation &amp; general</div>
         <button class="book-sb-item active" data-std="ind-as-1" onclick="fsBookShow('ind-as-1', this)">IND AS 1 — Presentation of FS</button>
-        <button class="book-sb-item" data-std="ind-as-116" onclick="fsBookShow('ind-as-116', this)">IND AS 116 — Leases</button>
+        <button class="book-sb-item" data-std="ind-as-7" onclick="fsBookShow('ind-as-7', this)">IND AS 7 — Cash Flows</button>
+        <button class="book-sb-item" data-std="ind-as-8" onclick="fsBookShow('ind-as-8', this)">IND AS 8 — Policies, Estimates &amp; Errors</button>
+        <button class="book-sb-item" data-std="ind-as-10" onclick="fsBookShow('ind-as-10', this)">IND AS 10 — Events After Reporting</button>
+        <button class="book-sb-item" data-std="ind-as-24" onclick="fsBookShow('ind-as-24', this)">IND AS 24 — Related Party</button>
+        <button class="book-sb-item" data-std="ind-as-34" onclick="fsBookShow('ind-as-34', this)">IND AS 34 — Interim Reporting</button>
+        <button class="book-sb-item" data-std="ind-as-118" onclick="fsBookShow('ind-as-118', this)">IND AS 118 — Presentation &amp; Disclosure</button>
       </div>
       <div class="book-sb-group">
-        <div class="book-sb-label">Coming soon</div>
-        <div class="book-sb-item soon">IND AS 109 <span class="soon-tag">soon</span></div>
-        <div class="book-sb-item soon">IND AS 115 <span class="soon-tag">soon</span></div>
-        <div class="book-sb-item soon">IND AS 12 <span class="soon-tag">soon</span></div>
-        <div class="book-sb-item soon">+ 31 more <span class="soon-tag">soon</span></div>
+        <div class="book-sb-label">Assets</div>
+        <button class="book-sb-item" data-std="ind-as-2" onclick="fsBookShow('ind-as-2', this)">IND AS 2 — Inventories</button>
+        <button class="book-sb-item" data-std="ind-as-16" onclick="fsBookShow('ind-as-16', this)">IND AS 16 — PPE</button>
+        <button class="book-sb-item" data-std="ind-as-38" onclick="fsBookShow('ind-as-38', this)">IND AS 38 — Intangible Assets</button>
+        <button class="book-sb-item" data-std="ind-as-40" onclick="fsBookShow('ind-as-40', this)">IND AS 40 — Investment Property</button>
+        <button class="book-sb-item" data-std="ind-as-36" onclick="fsBookShow('ind-as-36', this)">IND AS 36 — Impairment</button>
+        <button class="book-sb-item" data-std="ind-as-105" onclick="fsBookShow('ind-as-105', this)">IND AS 105 — Held for Sale</button>
+        <button class="book-sb-item" data-std="ind-as-20" onclick="fsBookShow('ind-as-20', this)">IND AS 20 — Government Grants</button>
+        <button class="book-sb-item" data-std="ind-as-23" onclick="fsBookShow('ind-as-23', this)">IND AS 23 — Borrowing Costs</button>
+      </div>
+      <div class="book-sb-group">
+        <div class="book-sb-label">Financial instruments</div>
+        <button class="book-sb-item" data-std="ind-as-32" onclick="fsBookShow('ind-as-32', this)">IND AS 32 — FI Presentation</button>
+        <button class="book-sb-item" data-std="ind-as-107" onclick="fsBookShow('ind-as-107', this)">IND AS 107 — FI Disclosures</button>
+        <button class="book-sb-item" data-std="ind-as-109" onclick="fsBookShow('ind-as-109', this)">IND AS 109 — Financial Instruments</button>
+      </div>
+      <div class="book-sb-group">
+        <div class="book-sb-label">Group accounting</div>
+        <button class="book-sb-item" data-std="ind-as-110" onclick="fsBookShow('ind-as-110', this)">IND AS 110 — Consolidated FS</button>
+        <button class="book-sb-item" data-std="ind-as-111" onclick="fsBookShow('ind-as-111', this)">IND AS 111 — Joint Arrangements</button>
+        <button class="book-sb-item" data-std="ind-as-112" onclick="fsBookShow('ind-as-112', this)">IND AS 112 — Disclosure of Interests</button>
+        <button class="book-sb-item" data-std="ind-as-28" onclick="fsBookShow('ind-as-28', this)">IND AS 28 — Associates &amp; JVs</button>
+        <button class="book-sb-item" data-std="ind-as-27" onclick="fsBookShow('ind-as-27', this)">IND AS 27 — Separate FS</button>
+        <button class="book-sb-item" data-std="ind-as-103" onclick="fsBookShow('ind-as-103', this)">IND AS 103 — Business Combinations</button>
+      </div>
+      <div class="book-sb-group">
+        <div class="book-sb-label">The "new model" trio</div>
+        <button class="book-sb-item" data-std="ind-as-115" onclick="fsBookShow('ind-as-115', this)">IND AS 115 — Revenue</button>
+        <button class="book-sb-item" data-std="ind-as-116" onclick="fsBookShow('ind-as-116', this)">IND AS 116 — Leases</button>
+        <button class="book-sb-item" data-std="ind-as-117" onclick="fsBookShow('ind-as-117', this)">IND AS 117 — Insurance Contracts</button>
+      </div>
+      <div class="book-sb-group">
+        <div class="book-sb-label">Measurement &amp; fair value</div>
+        <button class="book-sb-item" data-std="ind-as-113" onclick="fsBookShow('ind-as-113', this)">IND AS 113 — Fair Value</button>
+        <button class="book-sb-item" data-std="ind-as-12" onclick="fsBookShow('ind-as-12', this)">IND AS 12 — Income Taxes</button>
+        <button class="book-sb-item" data-std="ind-as-33" onclick="fsBookShow('ind-as-33', this)">IND AS 33 — EPS</button>
+      </div>
+      <div class="book-sb-group">
+        <div class="book-sb-label">People &amp; equity-linked</div>
+        <button class="book-sb-item" data-std="ind-as-19" onclick="fsBookShow('ind-as-19', this)">IND AS 19 — Employee Benefits</button>
+        <button class="book-sb-item" data-std="ind-as-102" onclick="fsBookShow('ind-as-102', this)">IND AS 102 — Share-Based Payment</button>
+      </div>
+      <div class="book-sb-group">
+        <div class="book-sb-label">Provisions &amp; FX</div>
+        <button class="book-sb-item" data-std="ind-as-37" onclick="fsBookShow('ind-as-37', this)">IND AS 37 — Provisions</button>
+        <button class="book-sb-item" data-std="ind-as-21" onclick="fsBookShow('ind-as-21', this)">IND AS 21 — Foreign Exchange</button>
+      </div>
+      <div class="book-sb-group">
+        <div class="book-sb-label">Adoption &amp; segments</div>
+        <button class="book-sb-item" data-std="ind-as-101" onclick="fsBookShow('ind-as-101', this)">IND AS 101 — First-time Adoption</button>
+        <button class="book-sb-item" data-std="ind-as-108" onclick="fsBookShow('ind-as-108', this)">IND AS 108 — Operating Segments</button>
       </div>
     </div>
 
@@ -277,6 +328,674 @@
       '<div class="box"><h4>Finance lease</h4><p class="lead">The lessor derecognises the underlying asset and recognises a net investment in the lease (a receivable), with finance income recognised over the lease term using a constant periodic rate of return.</p></div>' +
       '<div class="box"><h4>Operating lease</h4><p class="lead">The lessor keeps the underlying asset on its own balance sheet, continues to depreciate it, and recognises lease income — typically on a straight-line basis — over the lease term.</p></div>' +
     '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-7'] = '' +
+    '<div class="std-doc" data-std="ind-as-7">' +
+    '<div class="std-doc-header"><span class="num">IND AS 7</span><h2>Statement of Cash Flows</h2><p>Where the cash actually came from and went — split into operating, investing and financing activities.</p></div>' +
+    '<div class="bar bar-brand">Overall considerations</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Purpose</h4><p class="lead">Cash flow information helps users assess an entity\'s ability to generate cash and cash equivalents, and its needs to utilise them. It is the one primary statement prepared on a strict cash basis rather than accrual.</p></div>' +
+      '<div class="box"><h4>Cash equivalents</h4><p class="lead">Short-term, highly liquid investments readily convertible to known amounts of cash, subject to an insignificant risk of changes in value — typically original maturity of 3 months or less.</p></div>' +
+      '<div class="box"><h4>Bank overdrafts</h4><p class="lead">Included as a component of cash equivalents where repayable on demand and forming an integral part of cash management, rather than being treated as financing.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">The three activity classifications</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Operating</h4><ul><li>Principal revenue-producing activities</li><li>Cash receipts from sale of goods/services</li><li>Cash payments to suppliers and employees</li><li>Usually determined via the indirect method — adjusting profit for non-cash items and working capital movements</li></ul></div>' +
+      '<div class="box"><h4>Investing</h4><ul><li>Acquisition and disposal of long-term assets and other investments not classified as cash equivalents</li><li>Purchase/sale of PPE, intangibles, and investments in other entities</li></ul></div>' +
+      '<div class="box"><h4>Financing</h4><ul><li>Activities that change the size/composition of contributed equity and borrowings</li><li>Proceeds from share issues, borrowings raised/repaid, dividends paid</li></ul></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Special items &amp; disclosures</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Interest &amp; dividends</h4><p class="lead">Classified consistently period to period; interest and dividends paid are commonly classified as financing, interest and dividends received as investing — though operating classification is also permitted for a financial institution.</p></div>' +
+      '<div class="box"><h4>Non-cash transactions</h4><p class="lead">Investing/financing transactions not involving cash (e.g. acquiring an asset via a finance lease, or converting debt to equity) are excluded from the statement but disclosed separately elsewhere.</p></div>' +
+      '<div class="box"><h4>Disclosures</h4><p class="lead">Components of cash and cash equivalents, a reconciliation to the balance sheet, and significant cash/cash-equivalent balances not available for use by the group.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-8'] = '' +
+    '<div class="std-doc" data-std="ind-as-8">' +
+    '<div class="std-doc-header"><span class="num">IND AS 8</span><h2>Accounting Policies, Changes in Accounting Estimates and Errors</h2><p>How to select accounting policies, and the very different treatment for changing an estimate versus correcting an error.</p></div>' +
+    '<div class="bar bar-brand">Accounting policies</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Selection</h4><p class="lead">Where an Ind AS specifically applies, its requirements govern. In its absence, management uses judgement to develop a policy that is relevant and reliable, referring to other Ind AS on similar issues and the Framework.</p></div>' +
+      '<div class="box"><h4>Consistency</h4><p class="lead">Selected policies applied consistently to similar transactions, unless an Ind AS specifically permits categorisation warranting different policies.</p></div>' +
+      '<div class="box"><h4>Changing a policy</h4><p class="lead">Only when required by an Ind AS, or when the change results in more relevant and reliable information — applied retrospectively unless a standard\'s transition provisions say otherwise.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Estimates vs errors — the critical distinction</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Change in accounting estimate</h4><ul><li>A revision resulting from new information or developments — e.g. revising a useful life or a doubtful debt allowance</li><li>Recognised <strong>prospectively</strong> — in the period of change and future periods, never restating the past</li></ul></div>' +
+      '<div class="box"><h4>Prior period error</h4><ul><li>Omissions or misstatements from failing to use, or misusing, reliable information available when the prior statements were authorised</li><li>Corrected <strong>retrospectively</strong> — restating comparatives as if the error had never occurred</li></ul></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Disclosures</div>' +
+    '<div class="box-row cols-1"><div class="box"><ul style="columns:2;">' +
+      '<li>Nature and amount of a change in accounting policy, and the reason</li>' +
+      '<li>Nature and amount of a change in accounting estimate affecting the current or future periods</li>' +
+      '<li>Nature of a prior period error and, for each period presented, the amount of correction for each financial statement line item</li>' +
+    '</ul></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-10'] = '' +
+    '<div class="std-doc" data-std="ind-as-10">' +
+    '<div class="std-doc-header"><span class="num">IND AS 10</span><h2>Events After the Reporting Period</h2><p>Whether a subsequent event should change the numbers in the financial statements, or simply be disclosed in a note.</p></div>' +
+    '<div class="bar bar-brand">The core test</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Adjusting events</h4><ul><li>Provide evidence of conditions that <strong>existed at the reporting date</strong></li><li>Example: a court case confirms an obligation that already existed at year-end</li><li>Financial statements are <strong>adjusted</strong> to reflect the new evidence</li></ul></div>' +
+      '<div class="box"><h4>Non-adjusting events</h4><ul><li>Indicative of conditions that <strong>arose after</strong> the reporting date</li><li>Example: a major acquisition or a decline in market value of investments after year-end</li><li>Financial statements are <strong>not adjusted</strong>, but material items are disclosed</li></ul></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Going concern &amp; dividends</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Going concern deterioration</h4><p class="lead">If management determines after the reporting date that it intends to liquidate, or has no realistic alternative, the financial statements are not prepared on a going concern basis at all — this overrides the adjusting/non-adjusting distinction entirely.</p></div>' +
+      '<div class="box"><h4>Dividends declared after year-end</h4><p class="lead">Dividends proposed or declared after the reporting date are not recognised as a liability at that date — they relate to events after the period and are disclosed in the notes only.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Disclosures</div>' +
+    '<div class="box-row cols-1"><div class="box"><ul style="columns:2;">' +
+      '<li>Date the financial statements were authorised for issue, and who gave that authorisation</li>' +
+      '<li>For each material non-adjusting event: its nature and an estimate of its financial effect (or a statement that estimation isn\'t practicable)</li>' +
+      '<li>Any update to disclosures about conditions existing at the reporting date, in light of new information received after that date</li>' +
+    '</ul></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-24'] = '' +
+    '<div class="std-doc" data-std="ind-as-24">' +
+    '<div class="std-doc-header"><span class="num">IND AS 24</span><h2>Related Party Disclosures</h2><p>Who counts as a related party, and exactly what has to be disclosed about dealings with them.</p></div>' +
+    '<div class="bar bar-brand">Who is a related party</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Control &amp; significant influence</h4><p class="lead">Parents, subsidiaries, fellow subsidiaries, associates, and joint ventures of the reporting entity or its group.</p></div>' +
+      '<div class="box"><h4>Key management personnel (KMP)</h4><p class="lead">Persons with authority and responsibility for planning, directing and controlling the entity\'s activities — directly or through a director — plus their close family members.</p></div>' +
+      '<div class="box"><h4>Post-employment benefit plans</h4><p class="lead">Any benefit plan for the employees of the entity or a related entity is itself treated as a related party.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">What must be disclosed</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Relationships</h4><p class="lead">Parent-subsidiary relationships disclosed regardless of whether any transactions occurred between them — the mere relationship must be stated.</p></div>' +
+      '<div class="box"><h4>KMP compensation</h4><p class="lead">Disclosed in total and by category — short-term benefits, post-employment, other long-term, termination and share-based payment.</p></div>' +
+      '<div class="box"><h4>Transactions &amp; balances</h4><p class="lead">Nature of the relationship, amount of transactions, outstanding balances (with terms/security and any guarantees), and provisions for doubtful debts related to those balances.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Exemptions &amp; common traps</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Government-related entity exemption</h4><p class="lead">A partial exemption from the detailed disclosures applies to transactions with a government that has control, joint control or significant influence, and other entities related to the same government.</p></div>' +
+      '<div class="box"><h4>Common error</h4><p class="lead">Disclosing only transactions above an arbitrary internal materiality threshold, or omitting relationships where no transactions took place in the period — both understate what Ind AS 24 actually requires.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-34'] = '' +
+    '<div class="std-doc" data-std="ind-as-34">' +
+    '<div class="std-doc-header"><span class="num">IND AS 34</span><h2>Interim Financial Reporting</h2><p>Each interim period is treated as its own standalone reporting period, not just a slice carved out of the annual results.</p></div>' +
+    '<div class="bar bar-brand">The discrete view</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Discrete vs integral</h4><p class="lead">Ind AS 34 takes the "discrete" view — each interim period\'s results are determined using the same recognition and measurement principles as for a full year, not by allocating a proportionate share of expected annual results.</p></div>' +
+      '<div class="box"><h4>Practical effect</h4><p class="lead">Costs that benefit more than one interim period (e.g. planned major maintenance) are anticipated or deferred only if it would also be appropriate to anticipate or defer that type of cost at year-end.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Minimum components &amp; recognition</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Minimum components</h4><p class="lead">A condensed balance sheet, condensed statement of P&amp;L (with OCI), condensed statement of changes in equity, condensed cash flow statement, and selected explanatory notes — full statements are not mandated.</p></div>' +
+      '<div class="box"><h4>Recognition &amp; measurement</h4><p class="lead">The same accounting policies as the annual financial statements are applied; a change in policy is reflected by restating prior interim periods of the current year, consistent with Ind AS 8.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Seasonality &amp; tax</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Seasonal businesses</h4><p class="lead">Revenue that is seasonal or occasional is not anticipated or deferred at an interim date if anticipation or deferral would not be appropriate at year-end — disclosure of the seasonality itself is encouraged.</p></div>' +
+      '<div class="box"><h4>Income tax</h4><p class="lead">Interim tax expense is calculated by applying the estimated <strong>weighted average annual effective tax rate</strong> to the interim period\'s pre-tax income, not a literal interim computation.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-118'] = '' +
+    '<div class="std-doc" data-std="ind-as-118">' +
+    '<div class="std-doc-header"><span class="num">IND AS 118</span><h2>Presentation and Disclosure in Financial Statements</h2><p>The newest standard — restructures the statement of profit and loss into defined categories with mandatory subtotals.</p></div>' +
+    '<div class="bar bar-brand">Why it exists</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>The problem it solves</h4><p class="lead">Under the old model, entities had wide discretion over which subtotals to show in the P&amp;L (e.g. "operating profit" meant different things at different companies), making cross-company comparison difficult.</p></div>' +
+      '<div class="box"><h4>The fix</h4><p class="lead">A required structure for the P&amp;L with defined categories and two mandatory subtotals, plus new disclosure requirements for company-specific ("management-defined") performance measures.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">The five P&amp;L categories</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Operating</h4><p class="lead">The default category — includes income and expenses not classified into the other four; effectively a residual category, not a narrow definition.</p></div>' +
+      '<div class="box"><h4>Investing</h4><p class="lead">Returns from assets that generate a return individually and largely independently of an entity\'s other resources, e.g. investment income, associates/JV results.</p></div>' +
+      '<div class="box"><h4>Financing</h4><p class="lead">Income/expenses from transactions involving only the raising of finance, plus interest expense on all liabilities regardless of purpose.</p></div>' +
+    '</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Income tax</h4><p class="lead">Kept as its own separate category, unchanged in spirit from the current approach.</p></div>' +
+      '<div class="box"><h4>Discontinued operations</h4><p class="lead">Also a distinct category, consistent with Ind AS 105\'s existing separate-presentation requirement.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Mandatory subtotals &amp; MPMs</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Two required subtotals</h4><p class="lead"><strong>Operating profit or loss</strong> and <strong>profit or loss before financing and income tax</strong> must both be presented on the face of the P&amp;L.</p></div>' +
+      '<div class="box"><h4>Management-defined performance measures (MPMs)</h4><p class="lead">Company-specific subtotals of income/expense used in public communications (e.g. "adjusted EBITDA") must now be disclosed in a single note, reconciled to the nearest Ind AS-specified subtotal, with the tax and NCI effect of each adjustment explained.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-2'] = '' +
+    '<div class="std-doc" data-std="ind-as-2">' +
+    '<div class="std-doc-header"><span class="num">IND AS 2</span><h2>Inventories</h2><p>Carry inventory at the lower of cost and net realisable value — never above what it originally cost.</p></div>' +
+    '<div class="bar bar-brand">Measurement</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Cost</h4><p class="lead">All costs of purchase, conversion, and other costs incurred in bringing inventories to their present location and condition — including production overheads absorbed on a normal-capacity basis.</p></div>' +
+      '<div class="box"><h4>Net realisable value (NRV)</h4><p class="lead">Estimated selling price in the ordinary course of business, less estimated costs of completion and estimated costs necessary to make the sale.</p></div>' +
+      '<div class="box"><h4>The rule</h4><p class="lead">Inventories are carried at the <strong>lower of cost and NRV</strong> — a write-down to NRV is reversed in a later period if the circumstances that caused it no longer exist, but never above original cost.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Cost formulas</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Specific identification</h4><p class="lead">Used for items that are not ordinarily interchangeable, and goods/services produced and segregated for specific projects.</p></div>' +
+      '<div class="box"><h4>FIFO or weighted average</h4><p class="lead">For interchangeable items, cost is assigned using First-In-First-Out or a weighted average cost formula — applied consistently to inventories of similar nature and use. LIFO is not permitted.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Disclosures</div>' +
+    '<div class="box-row cols-1"><div class="box"><ul style="columns:2;">' +
+      '<li>Accounting policy adopted, including the cost formula used</li>' +
+      '<li>Total carrying amount, in classifications appropriate to the entity</li>' +
+      '<li>Carrying amount of inventories carried at NRV</li>' +
+      '<li>Amount of any write-down recognised as an expense, and the amount of any reversal</li>' +
+      '<li>Carrying amount of inventories pledged as security for liabilities</li>' +
+    '</ul></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-16'] = '' +
+    '<div class="std-doc" data-std="ind-as-16">' +
+    '<div class="std-doc-header"><span class="num">IND AS 16</span><h2>Property, Plant and Equipment</h2><p>Capitalise what brings the asset to working condition, then depreciate it component by component over useful life.</p></div>' +
+    '<div class="bar bar-brand">Initial recognition</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Recognition criteria</h4><p class="lead">Recognised when it is probable that future economic benefits will flow to the entity, and the cost can be measured reliably.</p></div>' +
+      '<div class="box"><h4>Cost includes</h4><p class="lead">Purchase price, import duties, directly attributable costs of bringing the asset to working condition (site prep, installation, professional fees), and the initial estimate of dismantling/restoration costs.</p></div>' +
+      '<div class="box"><h4>Component accounting</h4><p class="lead">Significant parts of an asset with different useful lives (e.g. an aircraft engine vs its frame) are identified and depreciated separately — mandatory, not optional.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Subsequent measurement</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Cost model</h4><p class="lead">Carried at cost less accumulated depreciation and accumulated impairment losses — the default and most common choice in India.</p></div>' +
+      '<div class="box"><h4>Revaluation model</h4><p class="lead">Carried at fair value at the revaluation date less subsequent depreciation; the entire class of assets must be revalued, with regularity sufficient to avoid a material difference from fair value. Increases go to a revaluation surplus in OCI; decreases first reverse any existing surplus, then hit P&amp;L.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Derecognition &amp; disclosures</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Derecognition</h4><p class="lead">On disposal, or when no future economic benefits are expected — the gain/loss (proceeds less carrying amount) is recognised in P&amp;L, never treated as revenue.</p></div>' +
+      '<div class="box"><h4>Disclosures</h4><p class="lead">Measurement bases, depreciation methods and rates, gross carrying amount and accumulated depreciation, and a reconciliation of the carrying amount at the beginning and end of the period.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-20'] = '' +
+    '<div class="std-doc" data-std="ind-as-20">' +
+    '<div class="std-doc-header"><span class="num">IND AS 20</span><h2>Government Grants</h2><p>Recognise the grant in line with the expense or asset it\'s compensating for — never as a direct credit straight to equity.</p></div>' +
+    '<div class="bar bar-brand">The income approach</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Core principle</h4><p class="lead">Grants are recognised in P&amp;L on a systematic basis over the periods in which the entity recognises the related costs the grant is intended to compensate — matching, not immediate recognition on receipt.</p></div>' +
+      '<div class="box"><h4>Recognition threshold</h4><p class="lead">Recognised only when there is reasonable assurance that the entity will comply with attached conditions, and that the grant will actually be received.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Presentation choices</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Grants related to assets</h4><p class="lead">Presented either as deferred income (released to P&amp;L over the asset\'s useful life) or by deducting the grant from the asset\'s carrying amount (reducing future depreciation) — an accounting policy choice.</p></div>' +
+      '<div class="box"><h4>Grants related to income</h4><p class="lead">Presented either as a separate credit/"other income" line, or deducted from the related expense — also a policy choice, consistently applied.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Repayment &amp; non-monetary grants</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Repayable grants</h4><p class="lead">Treated as a change in accounting estimate — any excess of the repayment over unamortised deferred income is expensed immediately.</p></div>' +
+      '<div class="box"><h4>Non-monetary grants</h4><p class="lead">E.g. land transferred for a token amount — recorded at fair value of the non-monetary asset, with the grant recognised on the same income-approach basis.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-23'] = '' +
+    '<div class="std-doc" data-std="ind-as-23">' +
+    '<div class="std-doc-header"><span class="num">IND AS 23</span><h2>Borrowing Costs</h2><p>Interest on funds borrowed specifically to build a qualifying asset is capitalised, not expensed — but only while construction is genuinely active.</p></div>' +
+    '<div class="bar bar-brand">The core rule</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Qualifying asset</h4><p class="lead">An asset that necessarily takes a substantial period of time to get ready for its intended use or sale — e.g. a plant under construction, not an asset ready to use when acquired.</p></div>' +
+      '<div class="box"><h4>Capitalisation requirement</h4><p class="lead">Borrowing costs directly attributable to acquiring, constructing or producing a qualifying asset are capitalised as part of that asset\'s cost — mandatory, not a policy choice.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">How much to capitalise</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Specific borrowings</h4><p class="lead">Actual borrowing costs incurred on that borrowing during the period, less any investment income earned on temporarily investing the unused funds.</p></div>' +
+      '<div class="box"><h4>General borrowings</h4><p class="lead">A weighted average <strong>capitalisation rate</strong> is applied to expenditure on the asset funded from general borrowings, capped at the actual borrowing costs incurred in the period.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Suspension &amp; cessation</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Suspend capitalisation</h4><p class="lead">During extended periods in which active development is interrupted — but not for temporary delays or delays that are a necessary part of getting the asset ready.</p></div>' +
+      '<div class="box"><h4>Cease capitalisation</h4><p class="lead">When substantially all activities necessary to prepare the asset for its intended use are complete — even if minor administrative work remains.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-36'] = '' +
+    '<div class="std-doc" data-std="ind-as-36">' +
+    '<div class="std-doc-header"><span class="num">IND AS 36</span><h2>Impairment of Assets</h2><p>If carrying amount exceeds recoverable amount, write the asset down — recoverable amount is the higher of two possible exits.</p></div>' +
+    '<div class="bar bar-brand">The impairment test</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Trigger</h4><p class="lead">Assets are tested for impairment whenever indicators exist (external: market value decline, adverse changes; internal: obsolescence, poor performance) — goodwill and indefinite-life intangibles are tested annually regardless.</p></div>' +
+      '<div class="box"><h4>Recoverable amount</h4><p class="lead">The <strong>higher of</strong> fair value less costs of disposal, and value in use.</p></div>' +
+      '<div class="box"><h4>Impairment loss</h4><p class="lead">Recognised when carrying amount &gt; recoverable amount — the excess is expensed immediately (or first reduces a revaluation surplus, if any).</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Value in use &amp; CGUs</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Value in use</h4><p class="lead">The present value of future cash flows expected from the asset, using pre-tax cash flows and a pre-tax discount rate reflecting current market assessments of the time value of money and asset-specific risks.</p></div>' +
+      '<div class="box"><h4>Cash-generating unit (CGU)</h4><p class="lead">Where an asset doesn\'t generate independent cash inflows, it\'s tested as part of the smallest identifiable group of assets that does — the CGU. Goodwill is allocated to CGUs (or groups of CGUs) for testing.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Reversals</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Reversal permitted</h4><p class="lead">For assets other than goodwill, an impairment loss is reversed if the estimates used to determine recoverable amount have changed — capped at the carrying amount that would have existed (net of depreciation) had no impairment been recognised.</p></div>' +
+      '<div class="box"><h4>Goodwill impairment</h4><p class="lead">Never reversed, even if the circumstances that caused it improve — a one-way ratchet unique to goodwill.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-38'] = '' +
+    '<div class="std-doc" data-std="ind-as-38">' +
+    '<div class="std-doc-header"><span class="num">IND AS 38</span><h2>Intangible Assets</h2><p>Research is always expensed; development is capitalised only once six strict criteria are all met.</p></div>' +
+    '<div class="bar bar-brand">Recognition — research vs development</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Research phase</h4><p class="lead">Original, planned investigation to gain new knowledge/understanding — expenditure is <strong>always expensed</strong> as incurred; no intangible asset can arise from research.</p></div>' +
+      '<div class="box"><h4>Development phase</h4><p class="lead">Application of research findings to a plan/design for producing something new — capitalised only if <strong>all six</strong> criteria are demonstrated: technical feasibility, intention to complete, ability to use/sell, how it will generate probable future benefits, availability of resources, and reliable measurement of the expenditure.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Useful life &amp; amortisation</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Finite useful life</h4><p class="lead">Amortised on a systematic basis over that useful life, and tested for impairment under Ind AS 36 only when indicators exist.</p></div>' +
+      '<div class="box"><h4>Indefinite useful life</h4><p class="lead">Not amortised — instead tested for impairment <strong>annually</strong> regardless of whether indicators exist, and the "indefinite" assessment itself is reviewed each period.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Items never recognised as assets</div>' +
+    '<div class="box-row cols-1"><div class="box"><ul style="columns:2;">' +
+      '<li>Internally generated goodwill</li>' +
+      '<li>Internally generated brands, mastheads, publishing titles, customer lists — indistinguishable from the cost of developing the business as a whole</li>' +
+      '<li>Start-up, training, advertising and relocation costs</li>' +
+    '</ul></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-40'] = '' +
+    '<div class="std-doc" data-std="ind-as-40">' +
+    '<div class="std-doc-header"><span class="num">IND AS 40</span><h2>Investment Property</h2><p>Property held for rental income or capital appreciation, not for use in the business or for sale in the ordinary course.</p></div>' +
+    '<div class="bar bar-brand">Scope &amp; classification</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Investment property</h4><p class="lead">Land or a building (or part) held to earn rentals or for capital appreciation, or both — held by the owner or under a finance lease.</p></div>' +
+      '<div class="box"><h4>Owner-occupied carve-out</h4><p class="lead">Property used in the production/supply of goods/services, or for administrative purposes, is excluded — it falls under Ind AS 16 instead. Mixed-use property is split proportionately if the portions can be sold/leased separately.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Measurement</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Cost model (mandatory in India)</h4><p class="lead">Ind AS carves out the IFRS fair-value-model option — Indian entities apply the cost model per Ind AS 16, with fair value <strong>disclosed</strong> in the notes rather than used for measurement.</p></div>' +
+      '<div class="box"><h4>Why the carve-out</h4><p class="lead">Reliable fair valuation across India\'s diverse real estate markets was judged impractical at the time of Ind AS convergence — this is one of the clearest Ind AS vs IFRS divergences.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Transfers &amp; disclosures</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Transfers</h4><p class="lead">Transfer to/from investment property only when there is a genuine change in use, evidenced by commencement/end of owner-occupation, development for sale, or an operating lease to another party.</p></div>' +
+      '<div class="box"><h4>Disclosures</h4><p class="lead">The measurement model used, criteria for classification when classification is difficult, and — since the cost model applies — the fair value of investment property disclosed in the notes.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-105'] = '' +
+    '<div class="std-doc" data-std="ind-as-105">' +
+    '<div class="std-doc-header"><span class="num">IND AS 105</span><h2>Non-current Assets Held for Sale and Discontinued Operations</h2><p>Once genuinely held for sale, stop depreciating and carry the asset at the lower of two numbers.</p></div>' +
+    '<div class="bar bar-brand">Classification as held for sale</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Availability</h4><p class="lead">The asset (or disposal group) must be available for immediate sale in its present condition, subject only to terms that are usual and customary.</p></div>' +
+      '<div class="box"><h4>Highly probable</h4><p class="lead">Sale must be highly probable — management committed to a plan, an active programme to locate a buyer, marketed at a reasonable price, and expected to complete within one year.</p></div>' +
+      '<div class="box"><h4>Measurement on classification</h4><p class="lead">Measured at the <strong>lower of</strong> carrying amount and fair value less costs to sell — and depreciation/amortisation <strong>stops</strong> from the date of classification.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Discontinued operations</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Definition</h4><p class="lead">A component that has either been disposed of, or is classified as held for sale, and represents a separate major line of business or geographical area, or is a subsidiary acquired exclusively with a view to resale.</p></div>' +
+      '<div class="box"><h4>Presentation</h4><p class="lead">Results of discontinued operations are presented as a single line on the face of the P&amp;L (post-tax profit/loss plus gain/loss on disposal), separately from continuing operations — with a supporting analysis in the notes.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Common errors</div>' +
+    '<div class="box-row cols-1"><div class="box"><ul style="columns:2;">' +
+      '<li>Continuing to depreciate an asset after it meets the held-for-sale criteria</li>' +
+      '<li>Classifying an asset as held for sale before a genuine, committed plan and active marketing exist</li>' +
+      '<li>Presenting a discontinued operation\'s results within continuing operations instead of as a separate line</li>' +
+    '</ul></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-32'] = '' +
+    '<div class="std-doc" data-std="ind-as-32">' +
+    '<div class="std-doc-header"><span class="num">IND AS 32</span><h2>Financial Instruments: Presentation</h2><p>Substance over form: if there\'s a contractual obligation to deliver cash, it\'s a liability — whatever it\'s legally called.</p></div>' +
+    '<div class="bar bar-brand">The liability vs equity test</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Financial liability</h4><p class="lead">A contractual obligation to deliver cash/another financial asset, or to exchange instruments under potentially unfavourable conditions — e.g. redeemable preference shares with a mandatory redemption date.</p></div>' +
+      '<div class="box"><h4>Equity instrument</h4><p class="lead">Evidences a residual interest after deducting all liabilities — no contractual obligation to deliver cash, and (for a puttable/derivative-on-own-equity instrument) it must also settle via a <strong>fixed number of own shares for a fixed amount of cash</strong> — the "fixed-for-fixed" condition.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Compound instruments &amp; treasury shares</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Compound instruments</h4><p class="lead">E.g. a convertible bond — split into a liability component (PV of cash flows discounted at the market rate for a similar bond without conversion) and an equity component (residual: total proceeds minus the liability component).</p></div>' +
+      '<div class="box"><h4>Treasury shares</h4><p class="lead">An entity\'s own shares reacquired are deducted from equity — no gain/loss is recognised in P&amp;L on purchase, sale, issue or cancellation of own equity instruments.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Offsetting</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">A financial asset and liability are offset (net presented) only when the entity currently has a <strong>legally enforceable right</strong> to set off the recognised amounts, and intends either to settle net or to realise the asset and settle the liability simultaneously — both conditions, not just one.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-107'] = '' +
+    '<div class="std-doc" data-std="ind-as-107">' +
+    '<div class="std-doc-header"><span class="num">IND AS 107</span><h2>Financial Instruments: Disclosures</h2><p>Tell users how significant financial instruments are to the entity, and exactly what risks they carry.</p></div>' +
+    '<div class="bar bar-brand">Significance disclosures</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>By category</h4><p class="lead">Carrying amounts of financial assets/liabilities by each Ind AS 109 measurement category (amortised cost, FVOCI, FVTPL), plus items of income, expense, gains and losses recognised for each.</p></div>' +
+      '<div class="box"><h4>Fair value hierarchy cross-reference</h4><p class="lead">For instruments measured at fair value, disclosed by Ind AS 113 Level 1/2/3 — this standard leans directly on Ind AS 113\'s hierarchy rather than defining its own.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">The three risk categories</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Credit risk</h4><p class="lead">Maximum exposure to credit risk, collateral held, and a description of how credit risk is managed — closely tied to the Ind AS 109 ECL disclosures.</p></div>' +
+      '<div class="box"><h4>Liquidity risk</h4><p class="lead">A maturity analysis for financial liabilities, showing the remaining contractual maturities, and how liquidity risk is managed.</p></div>' +
+      '<div class="box"><h4>Market risk</h4><p class="lead">Sensitivity analysis for each type of market risk (currency, interest rate, other price risk) the entity is exposed to, showing the effect on profit/loss and equity of reasonably possible changes.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Common mistakes</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Providing generic, boilerplate risk disclosures instead of entity-specific quantified sensitivity analysis; and forgetting that hedge accounting disclosures (nominal amounts, ineffectiveness) sit within this standard\'s scope, not Ind AS 109\'s.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-109'] = '' +
+    '<div class="std-doc" data-std="ind-as-109">' +
+    '<div class="std-doc-header"><span class="num">IND AS 109</span><h2>Financial Instruments</h2><p>Two questions decide how a debt asset is classified: the business model, and whether cash flows are just principal and interest.</p></div>' +
+    '<div class="bar bar-brand">Classification of financial assets</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Amortised cost</h4><p class="lead">Business model is to hold and collect contractual cash flows, AND those cash flows are solely payments of principal and interest (the SPPI test).</p></div>' +
+      '<div class="box"><h4>FVOCI</h4><p class="lead">Business model is to both collect cash flows and sell, and cash flows pass SPPI. Equity investments can also elect FVOCI (irrevocably), but gains/losses are never recycled to P&amp;L.</p></div>' +
+      '<div class="box"><h4>FVTPL</h4><p class="lead">The default/residual category — anything not meeting the amortised cost or FVOCI conditions, including all derivatives and most equity investments by default.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Impairment &amp; hedge accounting</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Expected Credit Loss (ECL)</h4><p class="lead">Forward-looking impairment — a simplified approach (always lifetime ECL) for trade receivables, and a 3-stage general approach (12-month vs lifetime ECL, based on Significant Increase in Credit Risk) for loans and other debt instruments.</p></div>' +
+      '<div class="box"><h4>Hedge accounting</h4><p class="lead">Cash flow hedges defer the effective portion of a hedging instrument\'s gain/loss in OCI until the hedged transaction hits P&amp;L; fair value hedges take both the hedged item and instrument\'s changes to P&amp;L immediately. Qualification uses a principles-based test (economic relationship, credit risk not dominant, consistent hedge ratio) rather than the old 80-125% bright line.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Other key mechanics</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Initial measurement</h4><p class="lead">Fair value plus transaction costs (unless FVTPL, where transaction costs are expensed immediately).</p></div>' +
+      '<div class="box"><h4>Financial guarantee contracts</h4><p class="lead">Recognised at fair value on Day 1 even when issued for no fee (common for intra-group guarantees), then measured at the higher of the ECL allowance and the unamortised balance.</p></div>' +
+      '<div class="box"><h4>EIR method</h4><p class="lead">Interest income/expense on amortised-cost and FVOCI debt instruments is recognised using the effective interest rate, not the coupon or a straight-line basis.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-110'] = '' +
+    '<div class="std-doc" data-std="ind-as-110">' +
+    '<div class="std-doc-header"><span class="num">IND AS 110</span><h2>Consolidated Financial Statements</h2><p>Control is the single basis for consolidation — power over the investee, exposure to returns, and the ability to use that power to affect returns.</p></div>' +
+    '<div class="bar bar-brand">The control model</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Power</h4><p class="lead">Existing rights that give the current ability to direct the investee\'s relevant activities — not necessarily majority voting rights; de facto control from a large minority stake plus dispersed other holdings can also qualify.</p></div>' +
+      '<div class="box"><h4>Exposure to returns</h4><p class="lead">Rights to variable returns from involvement with the investee — which can vary and may be positive, negative, or both.</p></div>' +
+      '<div class="box"><h4>Link between the two</h4><p class="lead">The investor must have the ability to use its power to affect the amount of its own returns — power without this link (e.g. a pure agent) does not create control.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Mechanics of consolidation</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Line-by-line consolidation</h4><p class="lead">Assets, liabilities, income and expenses of the parent and subsidiaries are combined line by line, eliminating intra-group balances, transactions, and unrealised profits.</p></div>' +
+      '<div class="box"><h4>Non-controlling interests (NCI)</h4><p class="lead">Presented within equity, separately from the parent\'s own equity — measured either at fair value or at NCI\'s proportionate share of the subsidiary\'s identifiable net assets, an election made per acquisition.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Loss of control</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">On losing control, the parent derecognises the subsidiary\'s assets/liabilities and NCI, recognises any retained investment at fair value, and recognises the resulting gain/loss in P&amp;L — the retained investment\'s new fair value becomes its new cost basis going forward.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-111'] = '' +
+    '<div class="std-doc" data-std="ind-as-111">' +
+    '<div class="std-doc-header"><span class="num">IND AS 111</span><h2>Joint Arrangements</h2><p>Two parties with joint control — but the accounting differs sharply depending on whether it\'s a joint operation or a joint venture.</p></div>' +
+    '<div class="bar bar-brand">Joint control &amp; classification</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Joint control</h4><p class="lead">Contractually agreed sharing of control, existing only when decisions about relevant activities require unanimous consent of the parties sharing control.</p></div>' +
+      '<div class="box"><h4>Classification test</h4><p class="lead">Based on the parties\' <strong>rights and obligations</strong> — assessed from the structure, legal form, contractual terms, and other facts and circumstances, not merely the vehicle\'s legal form.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Joint operation vs joint venture</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Joint operation</h4><p class="lead">Parties have rights to the <strong>assets</strong> and obligations for the <strong>liabilities</strong> — each operator recognises its own share of assets, liabilities, revenue and expenses directly, line by line.</p></div>' +
+      '<div class="box"><h4>Joint venture</h4><p class="lead">Parties have rights to the <strong>net assets</strong> of the arrangement, typically structured through a separate vehicle — accounted for using the <strong>equity method</strong> under Ind AS 28, a single line item.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Common trap</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Assuming a separate legal vehicle automatically means joint venture treatment — the legal wrapper is only one factor; if the contractual terms give the parties rights to the underlying assets and obligations for liabilities, it\'s still a joint operation despite the vehicle.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-112'] = '' +
+    '<div class="std-doc" data-std="ind-as-112">' +
+    '<div class="std-doc-header"><span class="num">IND AS 112</span><h2>Disclosure of Interests in Other Entities</h2><p>One consolidated disclosure standard covering subsidiaries, joint arrangements, associates, and unconsolidated structured entities.</p></div>' +
+    '<div class="bar bar-brand">Why one combined standard</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>The problem before</h4><p class="lead">Disclosure requirements for subsidiaries, JVs and associates were scattered across Ind AS 110, 111 and 28 individually — hard for users to get a single picture of an entity\'s full web of interests.</p></div>' +
+      '<div class="box"><h4>The objective</h4><p class="lead">Enable users to evaluate the nature of, and risks associated with, interests in other entities, and the effects of those interests on financial position, performance and cash flows.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Key disclosures</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Significant judgements</h4><p class="lead">Judgements made in determining control, joint control, or significant influence — especially where the conclusion isn\'t obvious from voting rights alone (de facto control, contractual arrangements).</p></div>' +
+      '<div class="box"><h4>Material NCI</h4><p class="lead">For each subsidiary with material NCI: ownership/voting proportion, profit/TCI allocated to NCI, dividends paid, and summarised financial information.</p></div>' +
+      '<div class="box"><h4>Structured entities</h4><p class="lead">Nature and extent of interests in unconsolidated structured entities, associated risks, and any non-contractual financial support provided.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-28'] = '' +
+    '<div class="std-doc" data-std="ind-as-28">' +
+    '<div class="std-doc-header"><span class="num">IND AS 28</span><h2>Investments in Associates and Joint Ventures</h2><p>Significant influence — not control — means a single line on the balance sheet that grows with the investee\'s profit.</p></div>' +
+    '<div class="bar bar-brand">Significant influence</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Definition</h4><p class="lead">The power to participate in financial and operating policy decisions, without control or joint control — typically presumed at a <strong>20-50%</strong> voting interest, rebuttable either way with evidence.</p></div>' +
+      '<div class="box"><h4>Other indicators</h4><p class="lead">Board representation, participation in policy-making, material transactions, interchange of managerial personnel, or provision of essential technical information — any of these can indicate significant influence below 20%.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">The equity method</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Initial &amp; subsequent</h4><p class="lead">Investment initially recognised at cost, then increased/decreased for the investor\'s share of the investee\'s post-acquisition profit or loss, and reduced for dividends received.</p></div>' +
+      '<div class="box"><h4>OCI &amp; losses</h4><p class="lead">The investor\'s share of the investee\'s OCI is also recognised in the investor\'s own OCI; if losses reduce the investment to nil, further losses stop being recognised unless the investor has incurred obligations on the investee\'s behalf.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Impairment &amp; discontinuing</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Impairment</h4><p class="lead">The entire carrying amount of the investment is tested for impairment as a single asset under Ind AS 36, not by testing the investee\'s underlying assets separately.</p></div>' +
+      '<div class="box"><h4>Loss of significant influence</h4><p class="lead">The equity method stops, and any retained investment is remeasured to fair value, with the difference recognised in P&amp;L.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-27'] = '' +
+    '<div class="std-doc" data-std="ind-as-27">' +
+    '<div class="std-doc-header"><span class="num">IND AS 27</span><h2>Separate Financial Statements</h2><p>The parent\'s own standalone books — investments in subsidiaries are never consolidated here, and there\'s a genuine accounting policy choice for how to carry them.</p></div>' +
+    '<div class="bar bar-brand">Scope</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>What "separate" means</h4><p class="lead">Financial statements prepared in addition to consolidated statements (or by an investor with no subsidiaries but with associates/JVs), in which investments are accounted for on a basis other than reported performance/net assets of the investees.</p></div>' +
+      '<div class="box"><h4>Mandatory in India</h4><p class="lead">Indian company law requires standalone financial statements for every company, in addition to consolidated statements for groups — making this standard relevant to essentially every Indian corporate.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">The measurement choice</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>At cost</h4><p class="lead">The investment in a subsidiary, JV or associate is carried at cost, less any impairment — the most common approach.</p></div>' +
+      '<div class="box"><h4>Per Ind AS 109</h4><p class="lead">Measured as a financial asset — typically FVTPL or FVOCI, bringing fair value volatility into the standalone accounts.</p></div>' +
+      '<div class="box"><h4>Equity method</h4><p class="lead">Also permitted as a policy choice, applying the same mechanics as Ind AS 28 even in the separate statements.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Key point</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">The same accounting policy must be applied for each category of investment (all subsidiaries, all JVs, all associates) — an entity cannot cherry-pick a different basis for individual investments within the same category.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-103'] = '' +
+    '<div class="std-doc" data-std="ind-as-103">' +
+    '<div class="std-doc-header"><span class="num">IND AS 103</span><h2>Business Combinations</h2><p>Identify the acquirer, measure everything at fair value on the acquisition date, and whatever\'s left over is goodwill.</p></div>' +
+    '<div class="bar bar-brand">The acquisition method — four steps</div>' +
+    '<div class="box-row cols-4">' +
+      '<div class="box"><h4>1. Identify the acquirer</h4><p class="lead">The entity that obtains control — using the Ind AS 110 control model, even in a "merger of equals" structure.</p></div>' +
+      '<div class="box"><h4>2. Determine the acquisition date</h4><p class="lead">The date the acquirer obtains control — usually the closing date, not necessarily the legal completion date.</p></div>' +
+      '<div class="box"><h4>3. Recognise assets/liabilities</h4><p class="lead">Identifiable assets acquired and liabilities assumed are measured at acquisition-date <strong>fair value</strong> — largely regardless of how they were carried in the acquiree\'s own books.</p></div>' +
+      '<div class="box"><h4>4. Recognise goodwill</h4><p class="lead">Consideration transferred, plus NCI, plus fair value of any previously-held interest, <strong>less</strong> net identifiable assets acquired at fair value.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Special situations</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Bargain purchase</h4><p class="lead">If net identifiable assets exceed the consideration transferred, the excess is recognised immediately as a <strong>gain in P&amp;L</strong> — after first reassessing whether everything was correctly identified and measured.</p></div>' +
+      '<div class="box"><h4>Contingent consideration</h4><p class="lead">Measured at acquisition-date fair value; classified as a liability (remeasured through P&amp;L each period) or as equity (never remeasured), based on the substance of the arrangement.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Acquisition-related costs</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Costs like advisory, legal, and due-diligence fees are <strong>expensed as incurred</strong> — they are not part of the consideration transferred and do not affect goodwill, a frequent point of confusion.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-115'] = '' +
+    '<div class="std-doc" data-std="ind-as-115">' +
+    '<div class="std-doc-header"><span class="num">IND AS 115</span><h2>Revenue from Contracts with Customers</h2><p>Five steps, and revenue follows the transfer of control — not the receipt of cash.</p></div>' +
+    '<div class="bar bar-brand">The five-step model</div>' +
+    '<div class="box-row cols-1"><div class="box"><ul style="columns:2;">' +
+      '<li><strong>1. Identify the contract</strong> — approved, rights identifiable, payment terms identifiable, commercial substance, collection probable</li>' +
+      '<li><strong>2. Identify performance obligations</strong> — distinct promises within the contract</li>' +
+      '<li><strong>3. Determine the transaction price</strong> — including variable consideration, constrained to avoid probable reversal</li>' +
+      '<li><strong>4. Allocate the price</strong> — to each obligation based on relative standalone selling prices</li>' +
+      '<li><strong>5. Recognise revenue</strong> — as (or when) each obligation is satisfied</li>' +
+    '</ul></div></div>' +
+    '<div class="bar bar-teal">Point in time vs over time</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Over time</h4><p class="lead">Recognised progressively if: the customer simultaneously receives and consumes benefits as the entity performs; the entity\'s performance creates/enhances an asset the customer controls as it\'s created; OR the asset has no alternative use AND the entity has an enforceable right to payment for performance to date.</p></div>' +
+      '<div class="box"><h4>Point in time</h4><p class="lead">The default if none of the over-time criteria are met — revenue is recognised in one lump sum when control transfers (e.g. delivery, or possession for real estate sales).</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Variable consideration &amp; contract balances</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Variable consideration</h4><p class="lead">Discounts, rebates, penalties, bonuses — estimated using expected value or most-likely-amount, included in the price only to the extent a significant reversal is not probable.</p></div>' +
+      '<div class="box"><h4>Contract assets/liabilities</h4><p class="lead">A contract asset arises when the entity has performed but not yet billed; a contract liability arises when consideration is received before performance (e.g. customer advances).</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-117'] = '' +
+    '<div class="std-doc" data-std="ind-as-117">' +
+    '<div class="std-doc-header"><span class="num">IND AS 117</span><h2>Insurance Contracts</h2><p>Premium received is a deposit, not revenue — profit is earned only as the insurer actually provides coverage.</p></div>' +
+    '<div class="bar bar-brand">Building blocks</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Fulfilment cash flows (FCF)</h4><p class="lead">Present value of expected future cash inflows (premiums) less outflows (claims, expenses), discounted at a current market-consistent rate.</p></div>' +
+      '<div class="box"><h4>Risk Adjustment (RA)</h4><p class="lead">An explicit charge for bearing the uncertainty in the amount and timing of cash flows — separately quantified and disclosed, unlike the old regime\'s implicit margins.</p></div>' +
+      '<div class="box"><h4>Contractual Service Margin (CSM)</h4><p class="lead">The unearned profit of a group of contracts — released to P&amp;L as insurance revenue systematically as coverage is provided; can never be negative.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">The three measurement models</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>GMM (default)</h4><p class="lead">Full FCF + RA + CSM building-block approach for long-duration contracts, mainly non-par life insurance.</p></div>' +
+      '<div class="box"><h4>PAA (simplification)</h4><p class="lead">Available for coverage periods of 12 months or less — covers most general insurance. Simplifies the liability for remaining coverage only; claims incurred still use full FCF + RA.</p></div>' +
+      '<div class="box"><h4>VFA (participating)</h4><p class="lead">Modified GMM for contracts where policyholders share in a defined pool\'s returns — changes in the insurer\'s share of underlying item fair value adjust the CSM rather than hitting P&amp;L.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Onerous contracts</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">If a group of contracts is loss-making at inception (FCF + RA exceed expected premiums), the loss is recognised <strong>immediately</strong> in P&amp;L — tested per annual cohort, so a single bad underwriting year can be flagged even if the broader book is profitable.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-113'] = '' +
+    '<div class="std-doc" data-std="ind-as-113">' +
+    '<div class="std-doc-header"><span class="num">IND AS 113</span><h2>Fair Value Measurement</h2><p>One consistent definition of fair value, used everywhere it\'s required or permitted across all other standards.</p></div>' +
+    '<div class="bar bar-brand">The definition</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Exit price</h4><p class="lead">The price that would be received to sell an asset, or paid to transfer a liability, in an orderly transaction between market participants at the measurement date — an exit notion, not an entry/transaction price.</p></div>' +
+      '<div class="box"><h4>Principal/most advantageous market</h4><p class="lead">Measured based on the market with the greatest volume/activity for the asset/liability (principal market), or, absent one, the market that maximises the amount received/minimises the amount paid.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">The three-level hierarchy</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Level 1</h4><p class="lead">Quoted prices in active markets for identical assets/liabilities — the most reliable, given the highest priority.</p></div>' +
+      '<div class="box"><h4>Level 2</h4><p class="lead">Inputs other than quoted prices that are observable, directly or indirectly (e.g. quoted prices for similar instruments, or observable market data).</p></div>' +
+      '<div class="box"><h4>Level 3</h4><p class="lead">Unobservable inputs — used only when relevant observable inputs aren\'t available; requires the most extensive disclosure given the greater judgement involved.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Valuation techniques</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Market approach (prices from actual market transactions), income approach (discounted cash flows or option-pricing models), and cost approach (current replacement cost) — the technique chosen must maximise the use of relevant observable inputs.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-12'] = '' +
+    '<div class="std-doc" data-std="ind-as-12">' +
+    '<div class="std-doc-header"><span class="num">IND AS 12</span><h2>Income Taxes</h2><p>Compare the tax base to the carrying amount of every asset and liability — the gap is deferred tax, recognised on the balance sheet.</p></div>' +
+    '<div class="bar bar-brand">The balance sheet approach</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Temporary differences</h4><p class="lead">The difference between an asset/liability\'s carrying amount and its tax base — <strong>taxable</strong> temporary differences give rise to a deferred tax liability; <strong>deductible</strong> ones give rise to a deferred tax asset.</p></div>' +
+      '<div class="box"><h4>Tax base</h4><p class="lead">The amount attributed to the asset/liability for tax purposes — e.g. for an asset, the amount that will be deductible against future taxable economic benefits.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Recognition of deferred tax assets</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Probability threshold</h4><p class="lead">A DTA is recognised only to the extent it is <strong>probable</strong> that future taxable profit will be available against which the deductible temporary difference (or unused tax loss/credit) can be utilised.</p></div>' +
+      '<div class="box"><h4>Reassessed each period</h4><p class="lead">Unrecognised DTAs are reassessed at each reporting date, and recognised to the extent it becomes probable future profit will allow recovery.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Measurement &amp; presentation</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Measurement</h4><p class="lead">Using tax rates (and laws) that have been enacted or substantively enacted by the reporting date, reflecting the rate expected to apply when the asset is realised or liability settled — <strong>never discounted</strong>.</p></div>' +
+      '<div class="box"><h4>Offsetting DTA/DTL</h4><p class="lead">Only when there\'s a legally enforceable right to set off current tax assets against liabilities, and the deferred amounts relate to the same taxable entity and tax authority.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-33'] = '' +
+    '<div class="std-doc" data-std="ind-as-33">' +
+    '<div class="std-doc-header"><span class="num">IND AS 33</span><h2>Earnings Per Share</h2><p>Basic EPS uses actual weighted shares; diluted EPS adds back every instrument that could convert into more.</p></div>' +
+    '<div class="bar bar-brand">Basic EPS</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Formula</h4><p class="lead">Profit or loss attributable to ordinary equity holders of the parent, divided by the <strong>weighted average number</strong> of ordinary shares outstanding during the period.</p></div>' +
+      '<div class="box"><h4>Weighted average</h4><p class="lead">Shares issued during the period are time-weighted from their issue date; a bonus issue or share split is applied retrospectively to all periods presented, as if it had always been in effect.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Diluted EPS</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Adjustments</h4><p class="lead">Both the numerator (profit) and denominator (shares) are adjusted for the effects of all <strong>dilutive</strong> potential ordinary shares — convertible bonds, options, warrants, and contingently issuable shares.</p></div>' +
+      '<div class="box"><h4>Anti-dilution rule</h4><p class="lead">A potential ordinary share is included only if it would <strong>decrease</strong> EPS (or increase a loss per share) — instruments that would increase EPS are excluded (anti-dilutive) and never used to inflate the reported diluted figure.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Presentation</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Both basic and diluted EPS are presented with equal prominence on the face of the P&amp;L, for profit/loss from continuing operations and for total profit/loss — for every period presented, including retrospective adjustment for any subsequent bonus issue/split.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-19'] = '' +
+    '<div class="std-doc" data-std="ind-as-19">' +
+    '<div class="std-doc-header"><span class="num">IND AS 19</span><h2>Employee Benefits</h2><p>Short-term benefits are simple accrual accounting; defined benefit plans need full actuarial valuation.</p></div>' +
+    '<div class="bar bar-brand">Categories of benefits</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Short-term</h4><p class="lead">Wages, salaries, compensated absences expected to be settled within 12 months — recognised as a simple expense/liability as service is rendered, undiscounted.</p></div>' +
+      '<div class="box"><h4>Post-employment</h4><p class="lead">Pensions, gratuity — split into defined contribution (expense = contribution made) and defined benefit (far more complex, below).</p></div>' +
+      '<div class="box"><h4>Other long-term &amp; termination</h4><p class="lead">Long-service awards, sabbaticals (long-term); and termination benefits, recognised at the earlier of when the offer can\'t be withdrawn or when related restructuring costs are recognised.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Defined benefit plans</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Projected Unit Credit method</h4><p class="lead">The mandatory actuarial technique — each period of service creates an additional unit of benefit entitlement, each valued separately to build up the final obligation.</p></div>' +
+      '<div class="box"><h4>Net defined benefit liability/asset</h4><p class="lead">Present value of the obligation, less the fair value of plan assets — service cost and net interest hit P&amp;L; <strong>actuarial gains/losses (remeasurements) go to OCI</strong> and are never recycled to P&amp;L.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Gratuity in India</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">India\'s statutory Payment of Gratuity Act creates a defined benefit obligation for virtually every employer — requiring an annual actuarial valuation under Ind AS 19, regardless of company size, making this one of the most universally applicable standards on the list.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-102'] = '' +
+    '<div class="std-doc" data-std="ind-as-102">' +
+    '<div class="std-doc-header"><span class="num">IND AS 102</span><h2>Share-Based Payment</h2><p>ESOP cost is fixed at the grant-date fair value and spread over vesting — never remeasured for later share price moves.</p></div>' +
+    '<div class="bar bar-brand">Equity-settled awards</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Measurement</h4><p class="lead">Measured at the <strong>fair value at grant date</strong>, using an option-pricing model where a market price isn\'t available — this value is <strong>locked in</strong> and never adjusted for subsequent share price changes.</p></div>' +
+      '<div class="box"><h4>Expense recognition</h4><p class="lead">Recognised as an expense (with a corresponding credit to equity) over the vesting period, adjusted only for the number of awards actually expected to vest (updated each period for non-market vesting conditions).</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Vesting conditions</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Market conditions</h4><p class="lead">E.g. a share price target — factored into the grant-date fair value itself; the expense is recognised regardless of whether the market condition is actually achieved.</p></div>' +
+      '<div class="box"><h4>Non-market (service/performance) conditions</h4><p class="lead">E.g. continued employment, or an EPS target — not factored into fair value; instead, the number of awards expected to vest is re-estimated each period, truing up the expense.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Cash-settled awards</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Stock appreciation rights and similar cash-settled awards are measured at the fair value of the liability, <strong>remeasured at each reporting date</strong> (and at settlement) with changes recognised in P&amp;L — unlike equity-settled awards, which are never remeasured.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-37'] = '' +
+    '<div class="std-doc" data-std="ind-as-37">' +
+    '<div class="std-doc-header"><span class="num">IND AS 37</span><h2>Provisions, Contingent Liabilities and Contingent Assets</h2><p>Probable and estimable means provide for it; merely possible means disclose only; remote means ignore it entirely.</p></div>' +
+    '<div class="bar bar-brand">Recognising a provision — three tests</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Present obligation</h4><p class="lead">A legal obligation (from a contract, legislation, or other law), or a constructive obligation (from an established pattern of past practice creating a valid expectation in others).</p></div>' +
+      '<div class="box"><h4>Probable outflow</h4><p class="lead">More likely than not that an outflow of resources embodying economic benefits will be required to settle the obligation.</p></div>' +
+      '<div class="box"><h4>Reliable estimate</h4><p class="lead">The amount can be reliably estimated — using the best estimate of expenditure required, discounted where the time value of money is material.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Contingent liabilities &amp; assets</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Contingent liability</h4><p class="lead">A possible obligation depending on an uncertain future event, or a present obligation that fails the probable/reliable-estimate tests — <strong>disclosed only</strong>, never recognised as a liability.</p></div>' +
+      '<div class="box"><h4>Contingent asset</h4><p class="lead">A possible asset depending on an uncertain future event — <strong>never recognised</strong> until realisation is virtually certain; disclosed only where an inflow is probable.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Onerous contracts</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">A provision is recognised for a contract where the unavoidable costs of meeting the obligations exceed the economic benefits expected to be received — the "unavoidable costs" being the lower of the cost of fulfilling it and the cost of any compensation/penalty from failing to fulfil it.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-21'] = '' +
+    '<div class="std-doc" data-std="ind-as-21">' +
+    '<div class="std-doc-header"><span class="num">IND AS 21</span><h2>The Effects of Changes in Foreign Exchange Rates</h2><p>Monetary items are retranslated at every reporting date; non-monetary items generally are not.</p></div>' +
+    '<div class="bar bar-brand">Functional currency</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Determination</h4><p class="lead">The currency of the primary economic environment in which the entity operates — primarily the currency that mainly influences sales prices and costs, not necessarily the entity\'s country of incorporation.</p></div>' +
+      '<div class="box"><h4>Presentation currency</h4><p class="lead">The currency financial statements are presented in — can differ from functional currency; if so, results are translated using the closing rate for assets/liabilities and average rates for income/expenses, with the difference to OCI (foreign currency translation reserve).</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Monetary vs non-monetary at each reporting date</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Monetary items</h4><p class="lead">Cash and amounts to be received/paid in a fixed or determinable number of currency units (receivables, payables, loans) — retranslated at the <strong>closing rate</strong> at every reporting date, with exchange differences to P&amp;L.</p></div>' +
+      '<div class="box"><h4>Non-monetary items</h4><p class="lead">E.g. PPE, inventory carried at historical cost — remain at the <strong>historical exchange rate</strong> on the transaction date; only items carried at fair value are retranslated, using the rate at the date fair value was determined.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Net investment in a foreign operation</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Exchange differences on a monetary item that forms part of the net investment in a foreign operation are recognised in <strong>OCI</strong>, not P&amp;L, and only reclassified to P&amp;L on disposal of that foreign operation.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-101'] = '' +
+    '<div class="std-doc" data-std="ind-as-101">' +
+    '<div class="std-doc-header"><span class="num">IND AS 101</span><h2>First-time Adoption of Indian Accounting Standards</h2><p>Apply every standard retrospectively at the transition date, except for the specific optional and mandatory carve-outs.</p></div>' +
+    '<div class="bar bar-brand">The general principle</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Opening Ind AS balance sheet</h4><p class="lead">Prepared at the <strong>date of transition</strong> (the start of the earliest comparative period), applying every Ind AS in force at the first reporting date <strong>retrospectively</strong> — as if Ind AS had always been applied.</p></div>' +
+      '<div class="box"><h4>Adjustments to retained earnings</h4><p class="lead">Differences between the old GAAP carrying amounts and the new opening Ind AS balance sheet are adjusted directly against retained earnings (or another equity component) at the transition date — not through P&amp;L.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Exemptions</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Optional exemptions</h4><p class="lead">Relief an entity may elect, e.g. the <strong>deemed cost exemption</strong> — using a previous GAAP revaluation or fair value as deemed cost for PPE/intangibles, avoiding a full retrospective cost reconstruction.</p></div>' +
+      '<div class="box"><h4>Mandatory exceptions</h4><p class="lead">Areas where retrospective application is <strong>prohibited</strong> — e.g. estimates made under old GAAP are not revised with hindsight, and derecognition of financial assets/liabilities is generally not reopened.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Disclosures</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Reconciliations of equity reported under previous GAAP to equity under Ind AS, both at the transition date and at the end of the last period reported under old GAAP, plus a reconciliation of total comprehensive income for the latest period.</p></div></div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-108'] = '' +
+    '<div class="std-doc" data-std="ind-as-108">' +
+    '<div class="std-doc-header"><span class="num">IND AS 108</span><h2>Operating Segments</h2><p>Report the business the way management actually looks at it internally — not against a standardised, prescribed grid.</p></div>' +
+    '<div class="bar bar-brand">The management approach</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Operating segment</h4><p class="lead">A component that earns revenue/incurs expenses, whose results are regularly reviewed by the <strong>Chief Operating Decision Maker (CODM)</strong> to assess performance and allocate resources, and for which discrete financial information is available.</p></div>' +
+      '<div class="box"><h4>Why "management approach"</h4><p class="lead">Segments mirror the entity\'s own <strong>internal organisational structure and reporting</strong> — deliberately not a top-down, standardised industry classification, so segments can genuinely differ company to company.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Reportable segment thresholds</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Quantitative thresholds</h4><p class="lead">A segment is reportable if its revenue, absolute profit/loss, or assets are <strong>10% or more</strong> of the combined total of all operating segments.</p></div>' +
+      '<div class="box"><h4>75% test</h4><p class="lead">If reportable segments together account for less than 75% of total external revenue, additional segments must be identified as reportable until that threshold is met.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Disclosures</div>' +
+    '<div class="box-row cols-1"><div class="box"><p class="lead">Factors used to identify segments, types of products/services in each, segment profit/loss and assets, a reconciliation of segment totals to the entity\'s consolidated totals, and entity-wide disclosures on products/services, geographical areas, and major customers.</p></div></div>' +
     '</div>';
 
   var CURRENT_STD = 'ind-as-1';
