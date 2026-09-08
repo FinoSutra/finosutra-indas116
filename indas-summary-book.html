@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>IND AS Summary Book — Detailed Reference | Finosutra</title>
+<meta name="description" content="A detailed, chart-style IND AS summary book — every standard broken into overall considerations, structure and content, with disclosures. Read free after login; full PDF available as a one-time purchase."/>
+<meta name="keywords" content="IND AS summary book, IND AS detailed summary, IND AS reference charts, IND AS PDF, IND AS exam notes detailed"/>
+<meta name="author" content="Finosutra"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://finosutra.com/indas-summary-book.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Finosutra"/>
+<meta property="og:title" content="IND AS Summary Book — Detailed Reference"/>
+<meta property="og:description" content="A detailed, chart-style summary of every IND AS standard. Read free after login; full PDF available as a one-time purchase."/>
+<meta property="og:url" content="https://finosutra.com/indas-summary-book.html"/>
+<meta property="og:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="IND AS Summary Book — Finosutra"/>
+<meta name="twitter:description" content="A detailed, chart-style summary of every IND AS standard."/>
+<meta name="twitter:image" content="https://finosutra.com/og-image.jpg"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="finosutra.css?v=17"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2G710PHNQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z2G710PHNQ');</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js?v=13"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "IND AS Summary Book — Finosutra",
+  "url": "https://finosutra.com/indas-summary-book.html",
+  "description": "A detailed, chart-style summary of every IND AS standard, free to read after login, with a paid full-PDF download.",
+  "publisher": {"@type": "Organization", "name": "Finosutra", "url": "https://finosutra.com", "sameAs": ["https://www.linkedin.com/company/124543898/", "https://www.youtube.com/@cakrishnaswadekar07"]}
+}
+</script>
+<style>
+:root{
+  --brand:#6366F1;--brand-dark:#4F46E5;--brand-light:#EEF2FF;
+  --teal:#0F766E;--teal-light:#F0FDFA;
+  --amber:#B45309;--amber-light:#FFFBEB;
+  --text:#111827;--muted:#6B7280;--border-light:rgba(99,102,241,0.08);
+}
+*{box-sizing:border-box;}
+.book-shell{max-width:1280px;margin:0 auto;padding:32px 24px 80px;font-family:'Inter',sans-serif;}
+
+.book-hero{margin-bottom:24px;}
+.book-tag{display:inline-block;background:var(--brand-light);color:var(--brand);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.4px;margin-bottom:14px;}
+.book-title{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-0.5px;color:var(--text);margin-bottom:10px;}
+.book-sub{font-size:15px;line-height:1.6;color:#374151;max-width:720px;}
+
+.book-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#F9FAFB;border:1px solid var(--border-light);border-radius:12px;padding:14px 18px;margin:24px 0;}
+.book-toolbar-left{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);}
+.book-dl-btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:10px;border:none;cursor:pointer;}
+.book-dl-btn:hover{background:var(--brand-dark);}
+.book-dl-btn i{font-size:13px;}
+
+.book-layout{display:grid;grid-template-columns:250px 1fr;gap:24px;align-items:start;}
+.book-sidebar{position:sticky;top:20px;background:#fff;border:1px solid var(--border-light);border-radius:14px;padding:16px;max-height:80vh;overflow-y:auto;}
+.book-sb-group{margin-bottom:14px;}
+.book-sb-label{font-size:10.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;padding:0 8px;margin-bottom:6px;}
+.book-sb-item{display:block;width:100%;text-align:left;background:none;border:none;padding:8px 10px;border-radius:8px;font-size:13px;color:var(--text);cursor:pointer;font-weight:600;}
+.book-sb-item:hover{background:var(--brand-light);}
+.book-sb-item.active{background:var(--brand-light);color:var(--brand-dark);}
+.book-sb-item.soon{color:var(--muted);cursor:default;font-weight:500;}
+.book-sb-item.soon:hover{background:none;}
+.book-sb-item.soon .soon-tag{float:right;font-size:9px;background:#F1F5F9;color:var(--muted);padding:1px 6px;border-radius:8px;}
+
+.book-main{background:#fff;border:1px solid var(--border-light);border-radius:14px;padding:8px;min-height:400px;position:relative;}
+
+.gate-box{text-align:center;padding:70px 24px;}
+.gate-box i{font-size:34px;color:var(--brand);margin-bottom:16px;}
+.gate-box h3{font-size:19px;font-weight:800;color:var(--text);margin-bottom:8px;}
+.gate-box p{font-size:14px;color:var(--muted);max-width:420px;margin:0 auto 20px;}
+.gate-box button{background:var(--brand);color:#fff;font-size:14px;font-weight:700;padding:11px 24px;border-radius:10px;border:none;cursor:pointer;}
+
+#bookContent{padding:22px 26px;user-select:none;-webkit-user-select:none;-moz-user-select:none;}
+.std-doc{margin-bottom:8px;}
+.std-doc-header{margin-bottom:16px;}
+.std-doc-header .num{display:inline-block;background:var(--brand-light);color:var(--brand-dark);font-size:12px;font-weight:800;padding:4px 12px;border-radius:20px;margin-bottom:8px;}
+.std-doc-header h2{font-size:22px;font-weight:800;color:var(--text);margin:0 0 6px;}
+.std-doc-header p{font-size:13.5px;color:var(--muted);margin:0;}
+
+.bar{padding:9px 16px;font-size:11.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#fff;margin-top:18px;border-radius:6px 6px 0 0;}
+.bar-brand{background:var(--brand);}
+.bar-teal{background:var(--teal);}
+.bar-amber{background:var(--amber);}
+
+.box-row{display:grid;gap:1px;background:var(--border-light);border:1px solid var(--border-light);border-top:none;border-radius:0 0 6px 6px;overflow:hidden;}
+.box{background:#fff;padding:13px 15px;}
+.box h4{font-size:11.5px;font-weight:800;color:var(--text);margin:0 0 7px;}
+.box ul{margin:0;padding-left:15px;}
+.box li{font-size:11.5px;line-height:1.5;color:#374151;margin-bottom:4px;}
+.box p.lead{font-size:11.5px;line-height:1.5;color:#374151;margin:0;}
+
+.cols-6{grid-template-columns:repeat(6,1fr);}
+.cols-4{grid-template-columns:repeat(4,1fr);}
+.cols-3{grid-template-columns:repeat(3,1fr);}
+.cols-2{grid-template-columns:repeat(2,1fr);}
+.cols-1{grid-template-columns:1fr;}
+
+.doc-divider{height:1px;background:var(--border-light);margin:34px 0 0;}
+
+@media(max-width:1000px){.book-layout{grid-template-columns:1fr;}.book-sidebar{position:static;max-height:none;}}
+@media(max-width:800px){.cols-6{grid-template-columns:repeat(3,1fr);}.cols-4,.cols-3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.cols-6,.cols-4,.cols-3,.cols-2{grid-template-columns:1fr;}.book-shell{padding:20px 14px 60px;}}
+
+@media print{
+  body *{visibility:hidden !important;}
+  .print-notice{visibility:visible !important;display:block !important;position:fixed;top:40%;left:0;right:0;text-align:center;font-size:18px;color:#374151;}
+}
+.print-notice{display:none;}
+</style>
+</head>
+<body>
+
+<div id="fs-nav"></div>
+
+<div class="print-notice">This book is available to view on finosutra.com only.<br/>Printing and downloading outside the site are disabled — use the Download PDF button instead.</div>
+
+<div class="book-shell">
+
+  <div class="book-hero">
+    <span class="book-tag"><i class="fa-solid fa-book"></i>&nbsp; Detailed Reference</span>
+    <h1 class="book-title">IND AS Summary Book</h1>
+    <p class="book-sub">Every standard broken into overall considerations, structure &amp; content, and disclosures — free to read once you're logged in. Want it as a PDF to keep? That's a one-time ₹79 unlock.</p>
+  </div>
+
+  <div class="book-toolbar">
+    <div class="book-toolbar-left"><i class="fa-solid fa-circle-info"></i> 2 of 36 standards available now — more added regularly.</div>
+    <button class="book-dl-btn" id="bookDlBtn" onclick="window.fsInitiateNotebookPurchase()"><i class="fa-solid fa-lock"></i> Download Full PDF — ₹79</button>
+  </div>
+
+  <div class="book-layout">
+    <div class="book-sidebar" id="bookSidebar">
+      <div class="book-sb-group">
+        <div class="book-sb-label">Available now</div>
+        <button class="book-sb-item active" data-std="ind-as-1" onclick="fsBookShow('ind-as-1', this)">IND AS 1 — Presentation of FS</button>
+        <button class="book-sb-item" data-std="ind-as-116" onclick="fsBookShow('ind-as-116', this)">IND AS 116 — Leases</button>
+      </div>
+      <div class="book-sb-group">
+        <div class="book-sb-label">Coming soon</div>
+        <div class="book-sb-item soon">IND AS 109 <span class="soon-tag">soon</span></div>
+        <div class="book-sb-item soon">IND AS 115 <span class="soon-tag">soon</span></div>
+        <div class="book-sb-item soon">IND AS 12 <span class="soon-tag">soon</span></div>
+        <div class="book-sb-item soon">+ 31 more <span class="soon-tag">soon</span></div>
+      </div>
+    </div>
+
+    <div class="book-main">
+      <div id="bookGate" class="gate-box">
+        <i class="fa-solid fa-lock"></i>
+        <h3>Log in to read the Summary Book</h3>
+        <p>Free with any Finosutra account — no payment needed to read. Only the downloadable PDF is a paid extra.</p>
+        <button onclick="fsShowAuthModal('login')">Log in — it's free</button>
+      </div>
+      <div id="bookContent" style="display:none;"></div>
+    </div>
+  </div>
+
+</div>
+
+<div id="fs-footer"></div>
+<script src="nav.js?v=9"></script>
+<script src="footer.js?v=8"></script>
+<script>
+(function(){
+
+  var STD_CONTENT = {};
+
+  STD_CONTENT['ind-as-1'] = '' +
+    '<div class="std-doc" data-std="ind-as-1">' +
+    '<div class="std-doc-header"><span class="num">IND AS 1</span><h2>Presentation of Financial Statements</h2><p>The rulebook for what a complete set of financial statements must contain and how it must be structured.</p></div>' +
+    '<div class="bar bar-brand">Overall considerations</div>' +
+    '<div class="box-row cols-6">' +
+      '<div class="box"><h4>Fair presentation</h4><p class="lead">Faithful representation of transactions per the Framework\'s recognition criteria; compliance with all applicable Ind AS is presumed to achieve it. Departure is permitted only in extremely rare circumstances, with detailed disclosure.</p></div>' +
+      '<div class="box"><h4>Going concern</h4><p class="lead">Prepared on a going concern basis unless management intends to liquidate, cease trading, or has no realistic alternative. Material uncertainties about going concern must be disclosed even if the basis is retained.</p></div>' +
+      '<div class="box"><h4>Accrual basis</h4><p class="lead">All statements are prepared on the accrual basis except the cash flow statement, which is inherently a cash-basis statement by design.</p></div>' +
+      '<div class="box"><h4>Consistency</h4><p class="lead">Presentation and classification of items is retained from one period to the next unless a change is justified by a new Ind AS, a significant change in operations, or a genuinely more appropriate presentation.</p></div>' +
+      '<div class="box"><h4>Materiality &amp; aggregation</h4><p class="lead">Each material class of similar items is presented separately; items of a dissimilar nature or function are presented separately unless immaterial. Immaterial items may be aggregated with similar items.</p></div>' +
+      '<div class="box"><h4>Offsetting</h4><p class="lead">Assets/liabilities and income/expenses are not offset against each other unless a specific Ind AS requires or permits it — offsetting reduces the ability of users to understand transactions.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Complete set of financial statements</div>' +
+    '<div class="box-row cols-1"><div class="box"><ul style="columns:2;">' +
+      '<li>Balance sheet as at the end of the period</li>' +
+      '<li>Statement of profit and loss (including OCI) for the period</li>' +
+      '<li>Statement of changes in equity for the period</li>' +
+      '<li>Statement of cash flows for the period</li>' +
+      '<li>Notes, comprising significant accounting policies and other explanatory information</li>' +
+      '<li>Comparative information for the preceding period</li>' +
+      '<li>A third balance sheet when a retrospective restatement, reclassification, or policy change has a material effect on the opening balance sheet of the earliest comparative period</li>' +
+    '</ul></div></div>' +
+    '<div class="bar bar-amber">Structure &amp; content</div>' +
+    '<div class="box-row cols-4">' +
+      '<div class="box"><h4>Balance sheet</h4><ul>' +
+        '<li>Current/non-current split is the norm; a liquidity-based order is used only when it is more relevant and reliable</li>' +
+        '<li>Current asset: expected to be realised, sold or consumed in the normal operating cycle, held primarily for trading, expected to be realised within 12 months, or is cash/cash equivalent unless restricted</li>' +
+        '<li>Current liability: expected to be settled in the normal operating cycle, held primarily for trading, due within 12 months, or the entity has no unconditional right to defer settlement for at least 12 months</li>' +
+        '<li>Minimum line items include PPE, investment property, intangible assets, financial assets, investments (equity method), biological assets, inventories, trade/other receivables, cash, provisions, financial liabilities, current/deferred tax, NCI, and issued capital &amp; reserves</li>' +
+      '</ul></div>' +
+      '<div class="box"><h4>Statement of P&amp;L</h4><ul>' +
+        '<li>Two sections presented together: profit or loss, followed directly by other comprehensive income</li>' +
+        '<li>Expenses classified either by nature (raw materials, employee costs, depreciation) or by function (cost of sales, distribution, admin) — an accounting policy choice, disclosed either way in the notes if function is chosen</li>' +
+        '<li>OCI items are split between those that may subsequently be reclassified to profit or loss and those that will not</li>' +
+        '<li>No items of income or expense may be presented as "extraordinary items" — this category does not exist under Ind AS</li>' +
+      '</ul></div>' +
+      '<div class="box"><h4>Statement of changes in equity</h4><ul>' +
+        '<li>Total comprehensive income for the period, showing separately amounts attributable to owners of the parent and to non-controlling interests</li>' +
+        '<li>For each component of equity, the effects of retrospective application or retrospective restatement recognised per Ind AS 8</li>' +
+        '<li>For each component of equity, a reconciliation between the carrying amount at the beginning and end of the period, separately disclosing each change</li>' +
+        '<li>Amount of dividends recognised as distributions, and the related per-share amount (disclosed here or in the notes)</li>' +
+      '</ul></div>' +
+      '<div class="box"><h4>Notes to the financial statements</h4><ul>' +
+        '<li>A statement of compliance with Ind AS</li>' +
+        '<li>Significant accounting policies applied, including measurement bases used</li>' +
+        '<li>Judgements management has made in applying accounting policies that have the most significant effect on the amounts recognised</li>' +
+        '<li>Key sources of estimation uncertainty that carry a significant risk of a material adjustment within the next financial year</li>' +
+        '<li>Information not presented elsewhere in the statements but relevant to understanding any of them</li>' +
+      '</ul></div>' +
+    '</div>' +
+    '<div class="bar bar-brand">Identification &amp; reporting period</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Identification requirements</h4><ul><li>Name of the reporting entity</li><li>Whether the statements cover the individual entity or a group</li><li>The reporting date/period covered</li><li>Presentation currency and level of rounding used</li></ul></div>' +
+      '<div class="box"><h4>Reporting period</h4><ul><li>Financial statements are presented at least annually</li><li>If the period is longer or shorter than a year, the entity discloses that fact, the reason, and that comparative amounts are not entirely comparable</li></ul></div>' +
+      '<div class="box"><h4>Capital disclosures</h4><ul><li>Information enabling users to evaluate the entity\'s objectives, policies and processes for managing capital, including any externally imposed capital requirements and compliance with them</li></ul></div>' +
+    '</div>' +
+    '</div>';
+
+  STD_CONTENT['ind-as-116'] = '' +
+    '<div class="std-doc" data-std="ind-as-116">' +
+    '<div class="std-doc-header"><span class="num">IND AS 116</span><h2>Leases</h2><p>A single lessee model — almost every lease comes onto the balance sheet as a right-of-use asset and a lease liability.</p></div>' +
+    '<div class="bar bar-brand">Scope &amp; the lease test</div>' +
+    '<div class="box-row cols-6">' +
+      '<div class="box"><h4>Definition</h4><p class="lead">A contract, or part of a contract, that conveys the right to control the use of an identified asset for a period of time in exchange for consideration.</p></div>' +
+      '<div class="box"><h4>Identified asset</h4><p class="lead">Explicitly or implicitly specified in the contract. A supplier\'s substantive right to substitute the asset throughout the period of use defeats identification.</p></div>' +
+      '<div class="box"><h4>Right to control</h4><p class="lead">The customer obtains substantially all of the economic benefits from use AND has the right to direct how and for what purpose the asset is used throughout the period.</p></div>' +
+      '<div class="box"><h4>Short-term exemption</h4><p class="lead">Optional. Lease term of 12 months or less at commencement, with no purchase option. Elected by class of underlying asset.</p></div>' +
+      '<div class="box"><h4>Low-value exemption</h4><p class="lead">Optional, elected lease by lease. Assets of low value when new (e.g. laptops, small office furniture) regardless of materiality to the lessee overall.</p></div>' +
+      '<div class="box"><h4>Lease term</h4><p class="lead">Non-cancellable period, plus extension options the lessee is reasonably certain to exercise, less termination options it is reasonably certain to exercise.</p></div>' +
+    '</div>' +
+    '<div class="bar bar-teal">Lessee — initial measurement</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Lease liability</h4><ul>' +
+        '<li>Present value of unpaid lease payments at commencement</li>' +
+        '<li>Discounted at the rate implicit in the lease, or the lessee\'s incremental borrowing rate (IBR) if the implicit rate isn\'t readily determinable</li>' +
+        '<li>Includes fixed payments (less incentives receivable), in-substance fixed payments, variable payments linked to an index/rate, expected residual value guarantees, purchase-option price if reasonably certain, and termination penalties if the term reflects exercising a termination option</li>' +
+      '</ul></div>' +
+      '<div class="box"><h4>Right-of-use (ROU) asset</h4><ul>' +
+        '<li>Initial lease liability amount</li>' +
+        '<li>Plus lease payments made at or before commencement, less any incentives received</li>' +
+        '<li>Plus initial direct costs incurred by the lessee</li>' +
+        '<li>Plus an estimate of restoration/dismantling/removal costs, if the lessee has an obligation to incur them</li>' +
+      '</ul></div>' +
+    '</div>' +
+    '<div class="bar bar-amber">Lessee — subsequent measurement</div>' +
+    '<div class="box-row cols-2">' +
+      '<div class="box"><h4>Lease liability</h4><ul>' +
+        '<li>Increased for interest on the liability, calculated using the effective interest rate (EIR) method at the discount rate determined at commencement</li>' +
+        '<li>Reduced for lease payments made</li>' +
+        '<li>Remeasured — with a corresponding ROU asset adjustment — on a lease modification not accounted for as a separate lease, or when there\'s a change in the lease term, in the assessment of a purchase option, or in amounts expected under a residual value guarantee or an index/rate-linked payment</li>' +
+      '</ul></div>' +
+      '<div class="box"><h4>ROU asset</h4><ul>' +
+        '<li>Cost model (default): depreciated on a straight-line basis over the shorter of the asset\'s useful life and the lease term (or to the end of useful life if ownership transfers or a purchase option is reasonably certain)</li>' +
+        '<li>Tested for impairment under Ind AS 36, like any other non-financial asset</li>' +
+        '<li>Adjusted for any remeasurement of the lease liability</li>' +
+      '</ul></div>' +
+    '</div>' +
+    '<div class="bar bar-brand">Lessor accounting (largely unchanged from the old model)</div>' +
+    '<div class="box-row cols-3">' +
+      '<div class="box"><h4>Classification</h4><p class="lead">Each lease is classified as a finance lease or an operating lease at inception, based on whether substantially all the risks and rewards of ownership are transferred.</p></div>' +
+      '<div class="box"><h4>Finance lease</h4><p class="lead">The lessor derecognises the underlying asset and recognises a net investment in the lease (a receivable), with finance income recognised over the lease term using a constant periodic rate of return.</p></div>' +
+      '<div class="box"><h4>Operating lease</h4><p class="lead">The lessor keeps the underlying asset on its own balance sheet, continues to depreciate it, and recognises lease income — typically on a straight-line basis — over the lease term.</p></div>' +
+    '</div>' +
+    '</div>';
+
+  var CURRENT_STD = 'ind-as-1';
+
+  window.fsBookShow = function(std, btn){
+    CURRENT_STD = std;
+    document.querySelectorAll('.book-sb-item[data-std]').forEach(function(el){ el.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+    var content = document.getElementById('bookContent');
+    if (content && STD_CONTENT[std]) content.innerHTML = STD_CONTENT[std];
+  };
+
+  function fsBookRenderGate(){
+    var gate = document.getElementById('bookGate');
+    var content = document.getElementById('bookContent');
+    if (window.currentUser) {
+      if (gate) gate.style.display = 'none';
+      if (content) {
+        content.style.display = 'block';
+        if (!content.innerHTML) content.innerHTML = STD_CONTENT[CURRENT_STD];
+      }
+    } else {
+      if (gate) gate.style.display = 'block';
+      if (content) content.style.display = 'none';
+    }
+  }
+
+  // auth.js resolves the session asynchronously — poll briefly for supaClient
+  // then check the session directly, rather than racing global.currentUser.
+  var pollTries = 0;
+  function fsBookWaitForAuth(){
+    pollTries++;
+    if (window.supaClient) {
+      window.supaClient.auth.getSession().then(function(res){
+        fsBookRenderGate();
+      }).catch(function(){ fsBookRenderGate(); });
+      // Also re-render on any later auth state change (login/logout while on this page)
+      try {
+        window.supaClient.auth.onAuthStateChange(function(){ setTimeout(fsBookRenderGate, 200); });
+      } catch(e) {}
+      return;
+    }
+    if (pollTries < 60) { setTimeout(fsBookWaitForAuth, 50); }
+    else { fsBookRenderGate(); }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    fsBookWaitForAuth();
+
+    // Best-effort print blocking — not foolproof (no client-side technique
+    // can fully stop a determined user), but removes the easy paths.
+    document.addEventListener('keydown', function(e){
+      var key = (e.key || '').toLowerCase();
+      if ((e.ctrlKey || e.metaKey) && key === 'p') {
+        e.preventDefault();
+        if (window.showToast) window.showToast('Printing is disabled — use Download PDF instead.', '#EF4444');
+      }
+    });
+    document.getElementById('bookContent').addEventListener('contextmenu', function(e){ e.preventDefault(); });
+  });
+
+  // ── PDF generation, called by auth.js after a successful ₹79 payment (or
+  // immediately for Pro users). Renders ALL available standards into one PDF,
+  // not just the one currently on screen — this is the whole-book purchase.
+  window.fsNotebookDownloadPDF = function(){
+    var wrap = document.createElement('div');
+    wrap.style.padding = '20px';
+    Object.keys(STD_CONTENT).forEach(function(key){
+      var section = document.createElement('div');
+      section.innerHTML = STD_CONTENT[key];
+      section.style.pageBreakAfter = 'always';
+      wrap.appendChild(section);
+    });
+    if (window.showToast) window.showToast('Generating your PDF…', '#6366F1');
+    html2pdf().set({
+      margin: 10,
+      filename: 'finosutra-indas-summary-book.pdf',
+      image: { type: 'jpeg', quality: 0.95 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    }).from(wrap).save();
+  };
+
+})();
+</script>
+</body>
+</html>

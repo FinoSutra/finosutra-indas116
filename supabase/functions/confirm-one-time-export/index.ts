@@ -172,7 +172,13 @@ serve(async (req: Request) => {
     const page = (payment.notes && payment.notes.page) || "unknown page"
     const amountRupees = (amount / 100).toFixed(0)
 
-    const ownerHtml = "<p>A one-time Excel export was purchased.</p><ul>" +
+    // Product label varies by what was actually purchased — driven by the
+    // `plan` note the frontend sends, so this one function can confirm
+    // multiple ₹79 one-time products without per-product edge functions.
+    const planTag = (payment.notes && payment.notes.plan) || "one_time_export"
+    const productLabel = planTag === "indas_notebook" ? "IND AS Notebook PDF" : "one-time Excel export"
+
+    const ownerHtml = "<p>A " + productLabel + " was purchased.</p><ul>" +
       "<li><strong>Amount:</strong> Rs" + amountRupees + "</li>" +
       "<li><strong>Payment ID:</strong> " + payment_id + "</li>" +
       "<li><strong>Page:</strong> " + page + "</li>" +
@@ -180,16 +186,17 @@ serve(async (req: Request) => {
       "<li><strong>Customer contact:</strong> " + (customerContact || "(not captured)") + "</li>" +
       "<li><strong>When:</strong> " + when + " IST</li></ul>"
 
-    await sendEmail(OWNER_EMAIL, "New sale: Rs" + amountRupees + " one-time export", ownerHtml)
+    await sendEmail(OWNER_EMAIL, "New sale: Rs" + amountRupees + " " + productLabel, ownerHtml)
 
     if (customerEmail) {
       const receiptHtml = "<p>Thanks for your purchase!</p><ul>" +
+        "<li><strong>Item:</strong> " + productLabel + "</li>" +
         "<li><strong>Amount paid:</strong> Rs" + amountRupees + "</li>" +
         "<li><strong>Payment ID:</strong> " + payment_id + "</li>" +
         "<li><strong>Date:</strong> " + when + " IST</li></ul>" +
         "<p>If you have any questions, reply to this email or write to billing@finosutra.com.</p>"
 
-      await sendEmail(customerEmail, "Your Finosutra receipt - Excel export", receiptHtml)
+      await sendEmail(customerEmail, "Your Finosutra receipt - " + productLabel, receiptHtml)
     }
 
     return jsonResponse(200, { success: true })

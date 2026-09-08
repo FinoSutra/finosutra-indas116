@@ -620,6 +620,89 @@
     }
   };
 
+  // ── IND AS Notebook — ₹79 one-time PDF unlock (separate, additive product;
+  // does not touch fsInitiateOneTimeExport or its state above). Reuses the
+  // same confirm-one-time-export Edge Function for verification/receipt,
+  // since it already checks amount === ₹79 and doesn't care what the product
+  // is. Entitlement is stored locally only (localStorage, no expiry) — this
+  // is a v1 client-side check, not a cross-device server-verified one; a
+  // future iteration could read a server-side purchases table instead.
+  // Usage: page defines window.fsNotebookDownloadPDF() before calling this.
+  var NOTEBOOK_PRICE = 79;
+
+  global.fsIsNotebookPaid = function () {
+    try { return localStorage.getItem('fs_notebook_paid_v1') === '1'; } catch (e) { return false; }
+  };
+
+  global.fsInitiateNotebookPurchase = function () {
+    if (global.isProUser || global.fsIsNotebookPaid()) {
+      if (typeof global.fsNotebookDownloadPDF === 'function') global.fsNotebookDownloadPDF();
+      return;
+    }
+
+    if (typeof Razorpay === 'undefined') {
+      global.showToast('Loading payment…', '#6366F1');
+      var rzpScript2 = document.createElement('script');
+      rzpScript2.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      rzpScript2.onload = function () { global.fsInitiateNotebookPurchase(); };
+      rzpScript2.onerror = function () { global.showToast('Could not load payment. Check connection.', '#EF4444'); };
+      document.head.appendChild(rzpScript2);
+      return;
+    }
+
+    var nbOptions = {
+      key:         RZP_KEY,
+      amount:      NOTEBOOK_PRICE * 100,
+      currency:    'INR',
+      name:        'Finosutra',
+      description: 'IND AS Notebook — Full PDF',
+      image:       '',
+      theme:       { color: '#6366F1' },
+      modal:       { ondismiss: function () { global.showToast('Payment cancelled. No charges made.', '#9CA3AF'); } },
+      prefill:     { email: global.currentUser ? global.currentUser.email : '', name: '', contact: '' },
+      notes:       { plan: 'indas_notebook', page: location.pathname },
+      handler:     function (response) {
+        try { localStorage.setItem('fs_notebook_paid_v1', '1'); } catch (e) {}
+        try {
+          fetch(EDGE_URL_ONE_TIME, {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json', 'apikey': SUPA_KEY },
+            body:    JSON.stringify({ payment_id: response.razorpay_payment_id })
+          }).catch(function (e) { console.warn('[auth.js] notebook purchase notification failed (non-blocking):', e); });
+        } catch (e) { console.warn('[auth.js] notebook purchase notification failed (non-blocking):', e); }
+        global.showToast('Payment received! Preparing your PDF…', '#5EC98A');
+        if (typeof global.gtag === 'function') {
+          global.gtag('event', 'purchase', {
+            transaction_id: response.razorpay_payment_id,
+            value:          NOTEBOOK_PRICE,
+            currency:       'INR',
+            items: [{ item_id: 'indas_notebook_pdf', item_name: 'IND AS Notebook — Full PDF', price: NOTEBOOK_PRICE, quantity: 1 }]
+          });
+        }
+        if (typeof global.gaEvent === 'function') {
+          global.gaEvent('excel_downloaded', { trigger: 'notebook_paid', page: location.pathname });
+        }
+        setTimeout(function () {
+          if (typeof global.fsNotebookDownloadPDF === 'function') global.fsNotebookDownloadPDF();
+        }, 300);
+      }
+    };
+
+    try {
+      var nbRzp = new Razorpay(nbOptions);
+      nbRzp.on('payment.failed', function (resp) {
+        global.showToast('Payment failed: ' + (resp.error && resp.error.description || 'Unknown error'), '#FF8A80');
+      });
+      if (typeof global.gaEvent === 'function') {
+        global.gaEvent('begin_checkout', { tool_name: 'IND AS Notebook PDF', value: NOTEBOOK_PRICE, currency: 'INR' });
+      }
+      nbRzp.open();
+    } catch (e) {
+      alert('Could not open payment window. Please check your connection and try again.');
+      console.error(e);
+    }
+  };
+
   // ── Wrap the export button: Pro bypasses; logged-out users get the same
   // FREE_DOWNLOADS_PER_MONTH quota as logged-in free users (tracked
   // device-locally via fsAnonRemaining/fsConsumeAnonDownload since there's no
